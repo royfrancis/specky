@@ -1,0 +1,681 @@
+[
+  {
+    "objectID": "home_contents.html",
+    "href": "home_contents.html",
+    "title": "Contents",
+    "section": "",
+    "text": "HTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
+  },
+  {
+    "objectID": "home_contents.html#reports",
+    "href": "home_contents.html#reports",
+    "title": "Contents",
+    "section": "",
+    "text": "HTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
+  },
+  {
+    "objectID": "home_contents.html#slides",
+    "href": "home_contents.html#slides",
+    "title": "Contents",
+    "section": "Slides",
+    "text": "Slides\nPresentation using the Quarto revealjs format.\nListing page for all slides.\n\nMinimal demo \nQuarto with R"
+  },
+  {
+    "objectID": "home_syllabus.html",
+    "href": "home_syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "SyllabusLearning outcomesEntry requirements\n\n\nThe syllabus for this workshop are as follows.\n\nWorking on the unix/linux command line\n\nCommand line navigation and related commands: cd, mkdir, rm, rmdir\nCommonly used linux tools: cp, mv, tar, less, more, head, tail, nano, grep, top, man\nWildcards\nOwnership and permissions\nSymbolic links\nPiping commands\n\nWorking on remote computing cluster\n\nLogging on to UPPMAX\nBooking resources\nJob templates, submission and queues\nModules\n\n\n\n\nAfter this workshop you should be able to:\n\nDescribe the basic principles of next generation sequencing.\nUse the Linux command line interface to manage simple file processing operations, and organise directory structures.\nConnect to and work on a remote compute cluster.\nApply programs in Linux for analysis of NGS data.\n\n\n\n\nThis is a national course open to PhD students, postdocs, group leaders and core facility staff.\nA background in genetics, cell biology, biomedicine, biochemistry, bioinformatics or comparable is desirable."
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Presentation\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Presentation\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "reports/more/index.html",
+    "href": "reports/more/index.html",
+    "title": "ObservableJS and Mermaid",
+    "section": "",
+    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\nFigure 1: Scatterplot A."
+  },
+  {
+    "objectID": "reports/more/index.html#observablejs",
+    "href": "reports/more/index.html#observablejs",
+    "title": "ObservableJS and Mermaid",
+    "section": "",
+    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\nFigure 1: Scatterplot A."
+  },
+  {
+    "objectID": "reports/more/index.html#mermaidjs",
+    "href": "reports/more/index.html#mermaidjs",
+    "title": "ObservableJS and Mermaid",
+    "section": "2 MermaidJS",
+    "text": "2 MermaidJS\nQuarto natively supports diagrams using mermaid. Using mermaid in quarto is documented here.\n\n2.1 Flow diagram\nSpecify mermaid as the language.\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n2.2 Gant charts\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d\n\n\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d"
+  },
+  {
+    "objectID": "reports/index.html",
+    "href": "reports/index.html",
+    "title": "Reports",
+    "section": "",
+    "text": "ObservableJS and Mermaid\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Basics\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nReport\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Quarto\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "reports/demo/index.html",
+    "href": "reports/demo/index.html",
+    "title": "Quarto Basics",
+    "section": "",
+    "text": "This is a quarto document"
+  },
+  {
+    "objectID": "reports/demo/index.html#text-formatting",
+    "href": "reports/demo/index.html#text-formatting",
+    "title": "Quarto Basics",
+    "section": "1 Text formatting",
+    "text": "1 Text formatting\n\n1.1 Headings\n## Level 2 heading  \n### Level 3 heading  \n#### Level 4 heading  \n##### Level 5 heading  \n###### Level 6 heading\n\n\n1.2 Character sizes\nCustom character sizes. This is an enchanced feature.\n\n\n\nMarkdown\nRendered\n\n\n\n\n[Largest text]{.largest}\nLargest text\n\n\n[Larger text]{.larger}\nLarger text\n\n\n[Large text]{.large}\nLarge text\n\n\nNormal text\nNormal text\n\n\n[Small text]{.small}\nSmall text\n\n\n[Smaller text]{.smaller}\nSmaller text\n\n\n[Smallest text]{.smallest}\nSmallest text\n\n\n\n\n\n1.3 Character styles\n\n\n\nMarkdown\nRendered\n\n\n\n\n__Bold text__\nBold text\n\n\n_Italic text_\nItalic text\n\n\n~~Strikethrough~~\nStrikethrough\n\n\nH~2~O\nH2O\n\n\nx^2\nx^2\n\n\n--\n–\n\n\n---\n—\n\n\n[link](r-project.org)\nlink\n\n\n{{&lt; kbd Shift-Ctrl-P &gt;}}\nShift-Ctrl-P\n\n\n\n\n\n1.4 Blockquote\n&gt; This is a block quote. This\n&gt; paragraph has two lines.\n&gt;\n&gt; 1. This is a list inside a block quote.\n&gt; 2. Second item.\n\nThis is a block quote. This paragraph has two lines.\n\nThis is a list inside a block quote.\nSecond item.\n\n\n\n\n1.5 Line block\nLine block preserves spaces and new lines.\n| This\n|     block\n|          preserves\n|                   formatting\nThis\n    block\n         preserves\n                  formatting\n\n\n1.6 Rule\nA horizontal line can be created using three or more * or -.\n***\n\n\n\n1.7 Footnote\nAn example of footnote reference 1\n\n\n1.8 Aside\n[This content lives in the right margin]{.aside}\nThis content lives in the right margin\n\n\n1.9 Badge\nBadges are defined as such:\n[badge]{.badge .badge-primary} badge\n[badge]{.badge .badge-secondary} badge"
+  },
+  {
+    "objectID": "reports/demo/index.html#code-formatting",
+    "href": "reports/demo/index.html#code-formatting",
+    "title": "Quarto Basics",
+    "section": "2 Code formatting",
+    "text": "2 Code formatting\nVerbatim code is text formatted using monospaced font intended as code. Verbatim code can be defined inline where `date()` looks like date().\nCode can also be defined inside code blocks.\n```\ndate()\n```\ndate()\nSource code, ie; code that is highlighted or executed in a quarto document is not covered here."
+  },
+  {
+    "objectID": "reports/demo/index.html#lists",
+    "href": "reports/demo/index.html#lists",
+    "title": "Quarto Basics",
+    "section": "3 Lists",
+    "text": "3 Lists\n\n3.1 Unordered\nUnordered lists are created using dashes.\n\n\n- Bullet 1\n- Bullet 2\n  - Sub-bullet 2.1\n  - Sub-bullet 2.2\n- Bullet 3\n\n\n\nBullet 1\nBullet 2\n\nSub-bullet 2.1\nSub-bullet 2.2\n\nBullet 3\n\n\n\n\n\n3.2 Ordered\nOrdered lists are created using numbers.\n\n\n1. Point 1\n2. Point 2\n3. Point 3\n\n\n\nPoint 1\nPoint 2\nPoint 3\n\n\n\n\n\n3.3 Multiple Lists\n\n\n::: {}\n1. Point 1\n2. Point 2\n:::\n\n:::{}\n1. Point 1\n2. Point 2\n:::\n\n\n\n\nPoint 1\nPoint 2\n\n\n\n\nPoint 1\nPoint 2"
+  },
+  {
+    "objectID": "reports/demo/index.html#images",
+    "href": "reports/demo/index.html#images",
+    "title": "Quarto Basics",
+    "section": "4 Images",
+    "text": "4 Images\nImages can be inserted using plain markdown or HTML directly. Plain markdown can be embellished with custom quarto adjustments to modify aspects of the image. Clicking the image opens the image in a lightbox. This is made possible using the lightbox extension.\n\n4.1 Using Markdown\nUsing regular markdown.\n![](assets/image.jpg)\n\n\n\n\n\nThe dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.\n![This is a caption](assets/image.jpg){width=30%}  \n\n\n\nThis is a caption\n\n\nThis image above is now 30% of it’s original width.\n\n4.1.1 Figure layout\n::: {#fig-mylabel layout-ncol=2}\n![Caption for figure 1](assets/image.jpg){width=\"40%\"}\n\n![Caption for figure 2](assets/image.jpg){width=\"40%\"}\n\nThese figures are interesting.\n:::\n\n\n\n\n\n\nCaption for figure 1\n\n\n\n\n\nCaption for figure 2\n\n\n\nFigure 1: These figures are interesting.\n\n\nMore figure options and layouts are described here. Cross referencing described here.\n\n\n\n4.2 Using HTML\nThis image below is 30% size.\n&lt;img src=\"assets/image.jpg\" style=\"width:30%;\"/&gt;\n\nFor more information on figures, see here. Images generated through code is not covered here."
+  },
+  {
+    "objectID": "reports/demo/index.html#math-expressions",
+    "href": "reports/demo/index.html#math-expressions",
+    "title": "Quarto Basics",
+    "section": "5 Math expressions",
+    "text": "5 Math expressions\nSome examples of rendering equations.\n\n\n$e^{i\\pi} + 1 = 0$\n\n\n\\(e^{i\\pi} + 1 = 0\\)\n\n\n\n\n$$\\frac{E \\times X^2 \\prod I}{2+7} = 432$$\n\n\n\\[\\frac{E \\times X^2 \\prod I}{2+7} = 432\\]\n\n\n\n\n$$\\sum_{i=1}^n X_i$$\n\n\n\\[\\sum_{i=1}^n X_i\\]\n\n\n\n\n$$\\int_0^{2\\pi} \\sin x~dx$$\n\n\n\\[\\int_0^{2\\pi} \\sin x~dx\\]\n\n\n\n\n$\\left( \\sum_{i=1}^{n}{i} \\right)^2 = \\left( \\frac{n(n-1)}{2}\\right)^2 = \\frac{n^2(n-1)^2}{4}$\n\n\n\\(\\left( \\sum_{i=1}^{n}{i} \\right)^2 = \\left( \\frac{n(n-1)}{2}\\right)^2 = \\frac{n^2(n-1)^2}{4}\\)\n\n\n\n\n$\\begin{eqnarray} X & \\sim & \\mathrm{N}(0,1)\\\\ Y & \\sim & \\chi^2_{n-p}\\\\ R & \\equiv & X/Y \\sim t_{n-p} \\end{eqnarray}$\n\n\n\\(\\begin{eqnarray} X & \\sim & \\mathrm{N}(0,1)\\\\ Y & \\sim & \\chi^2_{n-p}\\\\ R & \\equiv & X/Y \\sim t_{n-p} \\end{eqnarray}\\)\n\n\n\n\n$\\begin{eqnarray} P(|X-\\mu| &gt; k) & = & P(|X-\\mu|^2 &gt; k^2)\\\\ & \\leq & \\frac{\\mathbb{E}\\left[|X-\\mu|^2\\right]}{k^2}\\\\ & \\leq & \\frac{\\mathrm{Var}[X]}{k^2} \\end{eqnarray}$\n\n\n\\(\\begin{eqnarray} P(|X-\\mu| &gt; k) & = & P(|X-\\mu|^2 &gt; k^2)\\\\ & \\leq & \\frac{\\mathbb{E}\\left[|X-\\mu|^2\\right]}{k^2}\\\\ & \\leq & \\frac{\\mathrm{Var}[X]}{k^2} \\end{eqnarray}\\)"
+  },
+  {
+    "objectID": "reports/demo/index.html#tables",
+    "href": "reports/demo/index.html#tables",
+    "title": "Quarto Basics",
+    "section": "6 Tables",
+    "text": "6 Tables\nFor simple cases, tables can be manually created in markdown.\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\nTable caption and numbering can be added as such:\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n: These are exciting results. {#tbl-mylabel}\n\n\n\n\nTable 1: These are exciting results.\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\n\nTables can also be generated through code which is not covered here.\n\n6.1 Margin table\nA table placed in the margin.\n::: {.column-margin}\n\n| speed | dist |\n|-------|------|\n| 4     | 2    |\n| 4     | 10   |\n| 7     | 4    |\n\n:::\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\nMore information about tables."
+  },
+  {
+    "objectID": "reports/demo/index.html#icons",
+    "href": "reports/demo/index.html#icons",
+    "title": "Quarto Basics",
+    "section": "7 Icons",
+    "text": "7 Icons\n\n7.1 Bootstrap icons\nBootstrap icons are directly available since quarto uses bootstrap for styling. Optionally, one could also use the quarto extension bsicons for more control.\n&lt;i class=\"bi bi-lightbulb-fill\"&gt;&lt;/i&gt; \n&lt;i class=\"bi bi-exclamation-circle-fill\"&gt;&lt;/i&gt; \n&lt;i class=\"bi bi-clipboard2-check-fill\"&gt;&lt;/i&gt; \n&lt;i class=\"bi bi-chat-fill\"&gt;&lt;/i&gt; \n&lt;i class=\"bi bi-laptop-fill\"&gt;&lt;/i&gt; \n&lt;i class=\"bi bi-cloud-fill\"&gt;&lt;/i&gt; \n&lt;i class=\"bi bi-github\"&gt;&lt;/i&gt; \n\n\n7.2 Fontawesome\nTo use fontawesome icons as shortcodes, quarto extension fontawesome needs to be installed.\nIcons can be placed using shortcodes.\n{{&lt; fa lightbulb &gt;}} \n{{&lt; fa exclamation &gt;}} \n{{&lt; fa clipboard-list &gt;}} \n{{&lt; fa comments &gt;}} \n{{&lt; fa desktop &gt;}} \n{{&lt; fa cloud &gt;}} \n{{&lt; fa check &gt;}} \n{{&lt; fa times &gt;}} \n{{&lt; fa skull &gt;}} \n{{&lt; fa skull size=2x &gt;}} \n{{&lt; fa brands github &gt;}} \nIcons can be displayed using the HTML &lt;i&gt; tag. Note that not all icons may work.\nHere is a &lt;i class='fa fa-calendar'&gt;&lt;/i&gt; calendar and a &lt;i class='fa fa-couch'&gt;&lt;/i&gt; couch.\nHere is a  calendar and a  couch.\nThere are many other quarto extensions for icons such as academicons, iconify and lordicons."
+  },
+  {
+    "objectID": "reports/demo/index.html#call-outs",
+    "href": "reports/demo/index.html#call-outs",
+    "title": "Quarto Basics",
+    "section": "8 Call-Outs",
+    "text": "8 Call-Outs\nCall-Out blocks are explained here.\n::: {.callout-note}\nThis is a call-out.\n:::\n\n::: {.callout-warning}\nThis is a call-out.\n:::\n\n::: {.callout-important}\nThis is a call-out.\n:::\n\n::: {.callout-tip}\nThis is a call-out.\n:::\n\n::: {.callout-caution}\nThis is a call-out.\n:::\n\n::: {.callout-tip collapse=\"true\"}\n## Call-out with collapse\n\nThis content is behind an accordion.\n:::\n\n\n\n\n\n\nNote\n\n\n\nThis is a call-out.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nThis is a call-out.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThis is a call-out.\n\n\n\n\n\n\n\n\nTip\n\n\n\nThis is a call-out.\n\n\n\n\n\n\n\n\nCaution\n\n\n\nThis is a call-out.\n\n\n\n\n\n\n\n\nCall-out with collapse\n\n\n\n\n\nThis content is behind an accordion."
+  },
+  {
+    "objectID": "reports/demo/index.html#alerts",
+    "href": "reports/demo/index.html#alerts",
+    "title": "Quarto Basics",
+    "section": "9 Alerts",
+    "text": "9 Alerts\n::: {.alert .alert-primary}\n**Note:** This is an alert!\n:::\n::: {.alert .alert-secondary}\n**Note:** This is an alert!\n:::\n::: {.alert .alert-success}\n**Note:** This is a success alert!\n:::\n::: {.alert .alert-danger}\n**Note:** This is a danger alert!\n:::\n::: {.alert .alert-warning}\n**Note:** This is a warning alert!\n:::\n::: {.alert .alert-info}\n**Note:** This is an info alert!\n:::\n\nNote: This is an alert!\n\n\nNote: This is an alert!\n\n\nNote: This is a success alert!\n\n\nNote: This is a danger alert!\n\n\nNote: This is a warning alert!\n\n\nNote: This is an info alert!"
+  },
+  {
+    "objectID": "reports/demo/index.html#layout",
+    "href": "reports/demo/index.html#layout",
+    "title": "Quarto Basics",
+    "section": "10 Layout",
+    "text": "10 Layout\n\n10.1 Span\n[Content inside span]{style=\"background-color: gray\"}\nContent inside span\n\n\n10.2 Div\n::: {style=\"background-color: gray\"}\nContent inside div\n:::\n\nContent inside div\n\nDivs can be nested like this:\n:::: {.class}\n::: {.class}\n:::\n::::\nBoth spans and divs support attributes in this specific order: identifiers, classes, and then key-value attributes.\n[Content inside span]{#id .class key1=\"val1\" key2=\"val2\"}\n\n\n10.3 Hidden div\n::: {.hidden}\nHidden content\n:::\n\n\n10.4 Conditional content\n::: {{.content-visible when-format=\"html\"}}\nWill only appear in HTML.\n:::\n::: {{.content-hidden when-format=\"html\"}}\nWill not appear in HTML.\n:::\nConditional content is documented here.\n\n\n10.5 Inner columns\nOrganisation of content into columns within the body container.\n:::: {.columns}\n::: {.column style=\"background-color: aliceblue\"}\nContent is left.\n:::\n::: {.column style=\"background-color:  #f5b7b1\"}\nContent is right.\n:::\n::::\n\n\nContent in left column.\n\nContent in right column.\n\n\n\nThis is an example of nested columns.\n:::: {.columns}\n\n::: {.column style=\"background-color: aliceblue\"}\nContent in left column.\n:::\n\n::: {.column}\nContent in right column.\n\n:::: {.columns}\n::: {.column style=\"background-color: #d0ece7\"}\nNested left.\n:::\n::: {.column style=\"background-color: #f2d7d5\"}\nNested right.\n:::\n::::\n\n:::\n\n::::\n\n\nContent in left column.\n\nContent in right column.\n\n\nNested left.\n\nNested right.\n\n\n\n\n\n\n10.6 Outer columns\nExtending content outside the body container.\n::: {.column-body style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-body\n:::\n\n::: {.column-body-outset style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-body-outset\n:::\n\n::: {.column-page-inset style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-page-inset\n:::\n\n::: {.column-page style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-page\n:::\n\n::: {.column-screen-inset style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-screen-inset\n:::\n\n::: {.column-screen style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-screen\n:::\n\n::: {.column-body-outset-right style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-body-outset-right\n:::\n\n::: {.column-page-inset-right style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-page-inset-right\n:::\n\n::: {.column-page-right style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-page-right\n:::\n\n::: {.column-screen-inset-right style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-screen-inset-right\n:::\n\n::: {.column-screen-right style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-screen-right\n:::\n\n::: {.column-body-outset-left style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-body-outset-left\n:::\n\n::: {.column-page-inset-left style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-page-inset-left\n:::\n\n::: {.column-page-left style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-page-left\n:::\n\n::: {.column-screen-inset-left style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-screen-inset-left\n:::\n\n::: {.column-screen-left style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-screen-left\n:::\n\n::: {.column-margin style=\"background-color: lightgray; margin-bottom:0.5em;\"}\n.column-margin\n:::\n\n.column-body\n\n\n.column-body-outset\n\n\n.column-page-inset\n\n\n.column-page\n\n\n.column-screen-inset\n\n\n.column-screen\n\n\n.column-body-outset-right\n\n\n.column-page-inset-right\n\n\n.column-page-right\n\n\n.column-screen-inset-right\n\n\n.column-screen-right\n\n\n.column-body-outset-left\n\n\n.column-page-inset-left\n\n\n.column-page-left\n\n\n.column-screen-inset-left\n\n\n.column-screen-left\n\n\n\n.column-margin\n\n\n10.7 Panel layout\n::: {.panel-tabset}\n#### Sub topic 1\n\nThis is some material for topic 1.\n\n#### Sub topic 2\n\nThis is some material for topic 2.\n\n:::\n\nSub topic 1Sub topic 2\n\n\nThis is some material for topic 1.\n\n\nThis is some material for topic 2.\n\n\n\nMore layout settings are described here and here."
+  },
+  {
+    "objectID": "reports/demo/index.html#general-tips",
+    "href": "reports/demo/index.html#general-tips",
+    "title": "Quarto Basics",
+    "section": "11 General tips",
+    "text": "11 General tips\n\nUse level 2 heading as the highest level\n\n## Section A\n\nAdd custom css under YAML if needed css: \"my-theme.css\"\nCheck out the Quarto website"
+  },
+  {
+    "objectID": "reports/demo/index.html#footnotes",
+    "href": "reports/demo/index.html#footnotes",
+    "title": "Quarto Basics",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThat reference refers to this footnote.↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 02-01-2024 at 19:35:26."
+  },
+  {
+    "objectID": "index.html#specky-course-template",
+    "href": "index.html#specky-course-template",
+    "title": "",
+    "section": "",
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 02-01-2024 at 19:35:26."
+  },
+  {
+    "objectID": "home_schedule.html",
+    "href": "home_schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Topic\nAuthor\nLinks\n\n\n\n\n12-Jan-2024 (Fri)\n\n\n\n\nMinimal demo\nRoy Francis\nSlides, Report\n\n\nUsing custom theme\nRoy Francis\nReport\n\n\nQuarto basics\nRoy Francis\nReport\n\n\nQuarto and R\nRoy Francis\nSlides, Report\n\n\nOJS and mermaid\nRoy Francis\nReport"
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html",
+    "href": "reports/demo-with-r/index.html",
+    "title": "Quarto with R",
+    "section": "",
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-02.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-02\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#code-execution",
+    "href": "reports/demo-with-r/index.html#code-execution",
+    "title": "Quarto with R",
+    "section": "",
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-02.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-02\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#chunk-attributes",
+    "href": "reports/demo-with-r/index.html#chunk-attributes",
+    "title": "Quarto with R",
+    "section": "2 Chunk attributes",
+    "text": "2 Chunk attributes\nProperties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: #| eval: false.\nIn this example, the R source code and results are hidden but the code is evaluated.\n```{r}\n#| eval: true\n#| echo: false\n#| results: hide\nSys.Date()\n```\nA code chunk can be given a code filename using the chunk attribute filename.\n```{r}\n#| filename: R code\nSys.Date()\n```\n\n\n\nR code\n\nSys.Date()\n\n\nEnable line numbers using code-line-numbers: true.\n```{r}\n#| code-line-numbers: true\nSys.Date()\nsessionInfo()\n```\n\nSys.Date()\nsessionInfo()\n\nCode chunk attributes are documented here."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#tables",
+    "href": "reports/demo-with-r/index.html#tables",
+    "title": "Quarto with R",
+    "section": "3 Tables",
+    "text": "3 Tables\n\n3.1 Manual\nFor simple cases, tables can be manually created in markdown.\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\n\n\n3.2 kable\nSimple table using kable from R package knitr. This is the default output for quarto.\n\nlibrary(knitr)\nhead(iris)\n\n\n\n  \n\n\n\n\n3.2.1 Layout\n```{r}\n#| column: body-outset\n#| label: tbl-dual-table\n#| tbl-cap: \"Example\"\n#| tbl-subcap: \n#|   - \"Cars\"\n#|   - \"Pressure\"\n#| layout-ncol: 2\n\nkable(head(cars))\nkable(head(pressure))\n```\n\n\nTable 1: Example\n\n\n\n\n(a) Cars\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n7\n22\n\n\n8\n16\n\n\n9\n10\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Pressure\n\n\ntemperature\npressure\n\n\n\n\n0\n0.0002\n\n\n20\n0.0012\n\n\n40\n0.0060\n\n\n60\n0.0300\n\n\n80\n0.0900\n\n\n100\n0.2700\n\n\n\n\n\n\n\n\n\n\n\n\n3.2.2 Cross referencing\nImages and tables can be automatically numbered by using label attribute. Image label must start with fig- and tables with tbl-. Tables and images can also be cross-referenced when using the label attribute. For example, the table above can be referenced like @tbl-dual-table which renders as Table 1.\n\n\n3.2.3 Margin table\n```{r}\n#| fig-caption: This table is in the margin.\n#| column: margin\n\nhead(cars)\n```\n\n\n\n\n\n  \n\n\n\n\n\n3.3 gt\nTables using the gt package. A structured approach to creating tables using grammar of tables with extensive customization options.\n\nlibrary(gt)\n\niris %&gt;%\n    group_by(Species) %&gt;%\n    slice(1:4) %&gt;%\n    gt() %&gt;%\n    cols_label(\n      Sepal.Length = \"Sepal Length\", Sepal.Width = \"Sepal Width\",\n      Petal.Length = \"Petal Length\", Petal.Width = \"Petal Width\"\n    ) %&gt;%\n    tab_source_note(\n        source_note = md(\"Source: Iris data. Anderson, 1936; Fisher, 1936)\")\n    )\n\n\n\n\n\n  \n    \n    \n      Sepal Length\n      Sepal Width\n      Petal Length\n      Petal Width\n    \n  \n  \n    \n      setosa\n    \n    5.1\n3.5\n1.4\n0.2\n    4.9\n3.0\n1.4\n0.2\n    4.7\n3.2\n1.3\n0.2\n    4.6\n3.1\n1.5\n0.2\n    \n      versicolor\n    \n    7.0\n3.2\n4.7\n1.4\n    6.4\n3.2\n4.5\n1.5\n    6.9\n3.1\n4.9\n1.5\n    5.5\n2.3\n4.0\n1.3\n    \n      virginica\n    \n    6.3\n3.3\n6.0\n2.5\n    5.8\n2.7\n5.1\n1.9\n    7.1\n3.0\n5.9\n2.1\n    6.3\n2.9\n5.6\n1.8\n  \n  \n    \n      Source: Iris data. Anderson, 1936; Fisher, 1936)\n    \n  \n  \n\n\n\n\n\n\n3.4 htmlTable\nMarkdown tables can be enhanced using the R package htmlTable.\n\nlibrary(htmlTable)\n\niris1 &lt;- iris[c(1:4,51:53,105:108),]\nhtmlTable(iris1, rgroup=unique(iris1$Species), n.rgroup=rle(as.character(iris1$Species))$lengths)\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\nsetosa\n\n\n  1\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n  2\n4.9\n3\n1.4\n0.2\nsetosa\n\n\n  3\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n  4\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\nversicolor\n\n\n  51\n7\n3.2\n4.7\n1.4\nversicolor\n\n\n  52\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n  53\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\nvirginica\n\n\n  105\n6.5\n3\n5.8\n2.2\nvirginica\n\n\n  106\n7.6\n3\n6.6\n2.1\nvirginica\n\n\n  107\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n  108\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n\n\n\n\n\n3.5 kableExtra\nMore advanced table using kableExtra and formattable.\n\nlibrary(kableExtra)\n\niris[c(1:4,51:53,105:108),] %&gt;%\n  mutate(Sepal.Length=color_bar(\"lightsteelblue\")(Sepal.Length)) %&gt;%\n  mutate(Sepal.Width=color_tile(\"white\",\"orange\")(Sepal.Width)) %&gt;%\n  mutate(Species=cell_spec(Species,\"html\",color=\"white\",bold=T,\n    background=c(\"#8dd3c7\",\"#fb8072\",\"#bebada\")[factor(.$Species)])) %&gt;%\n  kable(\"html\",escape=F) %&gt;%\n  kable_styling(bootstrap_options=c(\"striped\",\"hover\",\"responsive\"),\n                full_width=F,position=\"left\") %&gt;%\n  column_spec(5,width=\"3cm\")\n\n\n\nTable using kableextra. \n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n1\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n2\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n3\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n51\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n52\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n53\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n105\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n106\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n107\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n108\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n\n\n\n\n\n\n\n\n3.6 DT\nInteractive table using R package DT.\n\nlibrary(DT)\n\niris %&gt;%\n  slice(1:15) %&gt;%\n  datatable(options=list(pageLength=7))\n\n\n\n\n\n\n\n\n3.7 reactable\nAdvanced interactive tables with reactable.\n\nlibrary(reactable)\n\nreactable(iris[sample(1:150,10),],\n  columns = list(\n    Sepal.Length = colDef(name = \"Sepal Length\"),\n    Sepal.Width = colDef(name = \"Sepal Width\"),\n    Petal.Width = colDef(name = \"Petal Width\"),\n    Petal.Width = colDef(name = \"Petal Width\")\n  ),\n  striped = TRUE,\n  highlight = TRUE,\n  filterable = TRUE\n)\n\n\n\n\n\n\nreactable creation can be simplified as well as enhanced by using reactablefmtr."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#static-images-using-r",
+    "href": "reports/demo-with-r/index.html#static-images-using-r",
+    "title": "Quarto with R",
+    "section": "4 Static images using R",
+    "text": "4 Static images using R\nQuarto chunks can be used to control image display size using the argument out.width.\nThis image below is displayed at a size of 300 pixels.\n```{r}\n#| out-width: 300px\nknitr::include_graphics(\"assets/image.jpg\")\n```\n\n\n\n\n\n\n\n\n\nThis image below is displayed at a size of 75 pixels and a caption added.\n```{r}\n#| out-width: 75px\n#| fig-cap: This is a caption\nknitr::include_graphics(\"assets/image.jpg\")\n```\n\n\n\n\n\nThis is a caption\n\n\n\n\nFor more information on figures, see here. For plots generated through R, see section further below."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#static-plots",
+    "href": "reports/demo-with-r/index.html#static-plots",
+    "title": "Quarto with R",
+    "section": "5 Static plots",
+    "text": "5 Static plots\n\n5.1 Base plot\n\nPlots using base R are widely used and may be good enough for most situations.\nBut they lack a consistent coding framework.\n\n\n{\n  plot(x=iris$Sepal.Length,y=iris$Sepal.Width,\n      col=c(\"coral\",\"steelblue\",\"forestgreen\")[iris$Species],\n      xlab=\"Sepal Length\",ylab=\"Sepal Width\",pch=19)\n\n  legend(x=7,y=4.47,legend=c(\"setosa\",\"versicolor\",\"virginica\"),\n        col=c(\"coral\",\"steelblue\",\"forestgreen\"),pch=19)\n}\n\n\n\n\nFigure 1: Static plot using base plot.\n\n\n\n\n\n5.1.1 Multiple plots\n```{r}\n#| column: screen-inset-shaded\n#| layout-nrow: 1\n#| fig-cap:\n#|   - \"Scatterplot of speed vs distance\"\n#|   - \"Pairwise scatterplot of all variables\"\n#|   - \"Scatterplot of temperature vs pressure\"\n\nplot(cars)\nplot(iris)\nplot(pressure)\n```\n\n\n\n\n\nScatterplot of speed vs distance\n\n\n\n\n\nPairwise scatterplot of all variables\n\n\n\n\n\nScatterplot of temperature vs pressure\n\n\n\n\n\n\n5.1.2 Margin plot\n```{{r}}\n#| column: margin\n\nplot(cars)\n```\n\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n5.2 ggplot2\nR package ggplot2 is one of the most versatile and complete plotting solutions.\n\nlibrary(ggplot2)\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_report()\n\n\n\n\nStatic plot using ggplot2."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#interactive-plots",
+    "href": "reports/demo-with-r/index.html#interactive-plots",
+    "title": "Quarto with R",
+    "section": "6 Interactive plots",
+    "text": "6 Interactive plots\n\n6.1 highcharter\nR package highcharter is a wrapper around javascript library highcharts.\n\nlibrary(highcharter)\n\nh &lt;- iris %&gt;%\n  hchart(.,\"scatter\",hcaes(x=\"Sepal.Length\",y=\"Sepal.Width\",group=\"Species\")) %&gt;%\n  hc_xAxis(title=list(text=\"Sepal Length\"),crosshair=TRUE) %&gt;%\n  hc_yAxis(title=list(text=\"Sepal Width\"),crosshair=TRUE) %&gt;%\n  hc_chart(zoomType=\"xy\",inverted=FALSE) %&gt;%\n  hc_legend(verticalAlign=\"top\",align=\"right\") %&gt;%\n  hc_size(height=400)\n\nhtmltools::tagList(list(h))\n\n\n\n\nInteractive scatterplot using highcharter.\n\n\n\n\n6.2 plotly\nR package plotly provides R binding around javascript plotting library plotly.\n\nlibrary(plotly)\n\np &lt;- iris %&gt;%\n  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %&gt;%\n  add_markers()\np\n\n\n\nInteractive scatterplot using plotly.\n\n\n\n\n6.3 ggplotly\nplotly also has a function called ggplotly which converts a static ggplot2 object into an interactive plot.\n\nlibrary(plotly)\n\np &lt;- iris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point()+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_bw(base_size=12)\n\nggplotly(p,width=500,height=400)\n\n\n\nInteractive scatterplot using ggplotly.\n\n\n\n\n6.4 ggiraph\nggiraph is also an R package that can be used to convert a static ggplot2 object into an interactive plot.\n\nlibrary(ggiraph)\n\np &lt;- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+\n      geom_point_interactive(aes(tooltip=paste0(\"&lt;b&gt;Petal Length:&lt;/b&gt; \",Petal.Length,\"\\n&lt;b&gt;Sepal Length: &lt;/b&gt;\",Sepal.Length,\"\\n&lt;b&gt;Species: &lt;/b&gt;\",Species)),size=2)+\n  theme_bw()\n\ntooltip_css &lt;- \"background-color:#e7eef3;font-family:Roboto;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;\"\n\nggiraph(code=print(p),hover_css=\"cursor:pointer;stroke:black;fill-opacity:0.3\",zoom_max=5,tooltip_extra_css=tooltip_css,tooltip_opacity=0.9)\n\n\n\nInteractive scatterplot using ggiraph.\n\n\n\n\n6.5 dygraphs\nR package dygraphs provides R bindings for javascript library dygraphs for time series data.\n\nlibrary(dygraphs)\n\nlungDeaths &lt;- cbind(ldeaths, mdeaths, fdeaths)\ndygraph(lungDeaths,main=\"Deaths from Lung Disease (UK)\") %&gt;%\n  dyOptions(colors=c(\"#66C2A5\",\"#FC8D62\",\"#8DA0CB\"))\n\n\n\nInteractive time series plot using dygraph.\n\n\n\n\n6.6 Network graph\nR package networkD3 allows the use of interactive network graphs from the D3.js javascript library.\n\nlibrary(networkD3)\n\ndata(MisLinks,MisNodes)\nforceNetwork(Links=MisLinks,Nodes=MisNodes,Source=\"source\",\n             Target=\"target\",Value=\"value\",NodeID=\"name\",\n             Group=\"group\",opacity=0.4)\n\n\n\nInteractive network plot.\n\n\n\n\n6.7 leaflet\nR package leaflet provides R bindings for javascript mapping library; leafletjs.\n\nlibrary(leaflet)\n\nleaflet(height=500,width=700) %&gt;%\n  addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n  #addProviderTiles(providers$Esri.NatGeoWorldMap) %&gt;%\n  addMarkers(lat=57.639327,lng=18.288534,popup=\"RaukR\") %&gt;%\n  setView(lat=57.639327,lng=18.288534,zoom=15)\n\n\n\nInteractive map using leaflet.\n\n\n\n\n6.8 crosstalk\nR package crosstalk allows crosstalk enabled plotting libraries to be linked. Through the shared ‘key’ variable, data points can be manipulated simultaneously on two independent plots.\n\nlibrary(crosstalk)\n\nshared_quakes &lt;- SharedData$new(quakes[sample(nrow(quakes), 100),])\nlf &lt;- leaflet(shared_quakes,height=300) %&gt;%\n        addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n        addMarkers()\npy &lt;- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %&gt;%\n        add_markers()\n\nhtmltools::div(lf,py)\n\n\n\n\n\n\n\nLinking independent plots using crosstalk."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#observablejs",
+    "href": "reports/demo-with-r/index.html#observablejs",
+    "title": "Quarto with R",
+    "section": "7 ObservableJS",
+    "text": "7 ObservableJS\nQuarto supports ObservableJS for interactive visualisations in the browser.\nPass data from R to OJS\n\nirism &lt;- iris\ncolnames(irism) &lt;- gsub(\"[.]\",\"_\",tolower(colnames(irism)))\nojs_define(ojsd = irism)\n\n\nojsdata = transpose(ojsd)\n\n\n\n\n\n\nDisplay as a table\n\nviewof filtered_table = Inputs.table(ojsdata)\n\n\n\n\n\n\nDefine inputs\n\nviewof x = Inputs.select(Object.keys(ojsdata[0]), {value: \"sepal_length\", multiple: false, label: \"X axis\"})\n\n\n\n\n\n\n\nviewof y = Inputs.select(Object.keys(ojsdata[0]), {value: \"sepal_width\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\nDisplay plot\n\nPlot.plot({\n  marks: [\n    Plot.dot(ojsdata, {\n      x: x,\n      y: y,\n      fill: \"species\",\n      title: (d) =&gt;\n        `${d.species} \\n Petal length: ${d.petal_length} \\n Sepal length: ${d.sepal_length}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\nObservableJS in quarto documentation."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#icons",
+    "href": "reports/demo-with-r/index.html#icons",
+    "title": "Quarto with R",
+    "section": "8 Icons",
+    "text": "8 Icons\nIcons can be placed programatically through R using the R package fontawesome.\n`r fontawesome::fa('lightbulb')`\n\nOptional arguments are height and fill.\n`r fontawesome::fa('lightbulb',height='30px',fill='steelblue')`\n\nFor full list of icons check out FontAwesome."
+  },
+  {
+    "objectID": "reports/usage/index.html",
+    "href": "reports/usage/index.html",
+    "title": "Using Quarto",
+    "section": "",
+    "text": "The custom template is a Quarto website project with html reports and revealjs presentation."
+  },
+  {
+    "objectID": "reports/usage/index.html#initialize",
+    "href": "reports/usage/index.html#initialize",
+    "title": "Using Quarto",
+    "section": "1 Initialize",
+    "text": "1 Initialize\nTo download a starter template, run in the terminal:\n\n\n\nbash\n\nquarto use template royfrancis/specky\n\n\nThis creates a website template that you can modify as needed. The directory structure is as follows:\n.\n├── 404.md\n├── assets/\n├── _extensions/\n├── home_contents.qmd\n├── home_precourse.qmd\n├── home_schedule.qmd\n├── home_syllabus.qmd\n├── index.qmd\n├── _quarto.yml\n├── reports/\n└── slides/"
+  },
+  {
+    "objectID": "reports/usage/index.html#settings",
+    "href": "reports/usage/index.html#settings",
+    "title": "Using Quarto",
+    "section": "2 Settings",
+    "text": "2 Settings\nStart by updating the settings. The website/project settings are contained in the _quarto.yml file. A website is a quarto project. Projects are documented [here]{https://quarto.org/docs/projects/quarto-projects.html} and websites are documented here.\n\nThe output directory is set to docs; output-dir: docs\nNavigation bar links are set under website: navbar. Add or remove as needed\nPage footer settings are set under website: page-footer. Update as needed\nChange site-url to your intended destination\nHTML report settings are under format: html:\n\nwarnings and messages from chunks are disabled\nA default subtitle has been set\n\nRevealJS slides settings are under format: revealjs\nAdd custom css under YAML if needed: css: \"styles.css\""
+  },
+  {
+    "objectID": "reports/usage/index.html#content",
+    "href": "reports/usage/index.html#content",
+    "title": "Using Quarto",
+    "section": "3 Content",
+    "text": "3 Content\nNow you can start adding content.\n The starter template should render completely using quarto alone. You can add R or Python for example as needed.\n\nThe homepage is index.qmd\nFiles starting with home are essential pages linked in the top navigation menu. Remove or modify them as needed\nAll reports are organised under reports/ as separate folders\nAll slides are organised under slides/ as separate folders\nTo create additional Quarto documents in RStudio, File &gt; New File &gt; Quarto Document"
+  },
+  {
+    "objectID": "reports/usage/index.html#usage-tips-and-conventions",
+    "href": "reports/usage/index.html#usage-tips-and-conventions",
+    "title": "Using Quarto",
+    "section": "4 Usage tips and conventions",
+    "text": "4 Usage tips and conventions\n\nMarkdown basics are covered here\nUse level 2 heading (##) as the highest level\nUse quarto style chunk options; #| eval: false rather than `{r eval=FALSE}`\nQmds starting with _ such as _content.qmd are child documents and are not rendered alone\nChild qmd files can be included by using {{&lt; include _content.qmd &gt;&gt;}}. They do not work in .ipynb notebooks. Includes is documented here.\nDynamic variables can be defined in _variables.yml and used as {{&lt; var variable_name &gt;&gt;}}. Dynamic variables are documented here.\nDynamic variables can be defined in _metadata.yml and used as {{&lt; meta variable_name &gt;&gt;}}\nEnvironment variables can be used as {{&lt; env variable_name &gt;&gt;}}\nWhen using R or Python, declare all libraries at the beginning of each document"
+  },
+  {
+    "objectID": "reports/usage/index.html#preview",
+    "href": "reports/usage/index.html#preview",
+    "title": "Using Quarto",
+    "section": "5 Preview",
+    "text": "5 Preview\nQuarto allows for live preview of changes.\n\n\n\nbash\n\nquarto preview report.qmd\n\n\n\n\n\n\n\n\nNote\n\n\n\nPreview will build all the files in the project. So, this might not be a good option if there are incomplete documents."
+  },
+  {
+    "objectID": "reports/usage/index.html#export",
+    "href": "reports/usage/index.html#export",
+    "title": "Using Quarto",
+    "section": "6 Export",
+    "text": "6 Export\nA quarto document can be rendered from the terminal as follows:\n\n\n\nbash\n\nquarto render report.qmd\n\n\nRendering from the R console using the quarto R package.\n\n\n\nR\n\nquarto::quarto_render(\"report.qmd\")\n\n\nTo render from RStudio, click the Render button. Rendered output is moved into the docs directory. This is set in _quarto.yml as output-dir:"
+  },
+  {
+    "objectID": "reports/sample/index.html",
+    "href": "reports/sample/index.html",
+    "title": "Report",
+    "section": "",
+    "text": "Content"
+  },
+  {
+    "objectID": "reports/sample/index.html#heading-1",
+    "href": "reports/sample/index.html#heading-1",
+    "title": "Report",
+    "section": "",
+    "text": "Content"
+  },
+  {
+    "objectID": "reports/sample/index.html#heading-2",
+    "href": "reports/sample/index.html#heading-2",
+    "title": "Report",
+    "section": "2 Heading 2",
+    "text": "2 Heading 2\nMore Contents"
+  },
+  {
+    "objectID": "slides/demo/index.html#introduction",
+    "href": "slides/demo/index.html#introduction",
+    "title": "Quarto Presentation",
+    "section": "Introduction",
+    "text": "Introduction\n\nThis is a Quarto revealjs presentation with Abstrave theme. This demo showcases the usage and capabilities of this system. Revealjs in Quarto is documented here."
+  },
+  {
+    "objectID": "slides/demo/index.html#getting-started",
+    "href": "slides/demo/index.html#getting-started",
+    "title": "Quarto Presentation",
+    "section": "Getting started",
+    "text": "Getting started\n\nIn RStudio, File &gt; New File &gt; Quarto Presentation\nAdd YAML matter to the top if not already there.\n\n---\ntitle: \"This is a title\"\nformat:\n  revealjs\n---\n\nClick the Render button for a rendered preview.\nOr use quarto::quarto_render() in R:\n\n\nquarto::quarto_render(\"slide.qmd\")\n\n\nOr use quarto render in the terminal:\n\n\nquarto render slide.qmd"
+  },
+  {
+    "objectID": "slides/demo/index.html#slides",
+    "href": "slides/demo/index.html#slides",
+    "title": "Quarto Presentation",
+    "section": "Slides",
+    "text": "Slides\nSlide separators\nSlides are separated by ##. Incremental content on is separated by . . . like below.\nHide or not count a slide:\n## Slide Title {visibility=\"hidden\"}\n## Slide Title {visibility=\"uncounted\"}\n. . .\nSlide notes\nAny content inside class .notes on a slide are notes. This is only visible in presenter mode (by pressing s).\n. . .\nKeyboard shortcuts\n\nPress ? for help.\n\n\nHere are some slide notes. Press s again to exit presenter mode."
+  },
+  {
+    "objectID": "slides/demo/index.html#layout",
+    "href": "slides/demo/index.html#layout",
+    "title": "Quarto Presentation",
+    "section": "Layout",
+    "text": "Layout\nThe slide content can be organized into columns which can be nested if needed.\n:::{.columns}\n:::{.column width=\"50%\"}\n&lt;div style=\"background-color:#fdebd0\"&gt;Left content&lt;/div&gt;\n:::\n\n:::{.column width=\"50%\"}\n&lt;div style=\"background-color:#eaf2f8\"&gt;Right content&lt;/div&gt;\n\n:::{.column width=\"60%\"}\n&lt;div style=\"background-color:#d0ece7\"&gt;Inner left&lt;/div&gt;\n:::\n:::{.column width=\"40%\"}\n&lt;div style=\"background-color:#f2d7d5\"&gt;Inner right&lt;/div&gt;\n:::\n\n:::\n:::\n\n\n\nLeft content\n\n\n\nRight content\n\n\n\nInner left\n\n\n\n\nInner right"
+  },
+  {
+    "objectID": "slides/demo/index.html#panel-tabs",
+    "href": "slides/demo/index.html#panel-tabs",
+    "title": "Quarto Presentation",
+    "section": "Panel tabs",
+    "text": "Panel tabs\n\nTab ATab B\n\n\nContent for Tab A\n\n\nContent for Tab B"
+  },
+  {
+    "objectID": "slides/demo/index.html#text-formatting",
+    "href": "slides/demo/index.html#text-formatting",
+    "title": "Quarto Presentation",
+    "section": "Text Formatting",
+    "text": "Text Formatting\nRendering of normal text, numbers and symbols.\nABCDEFGHIJKLMNOPQRSTUYWXYZÅÄÖ\nabcdefghijklmnopqrstuvwxyzåäö\n0123456789\n!“#%&/()$@*^~&lt;&gt;-:;,_±|?+=\n!\"#%&/\\()$@*^~&lt;&gt;-:;,_±|?+="
+  },
+  {
+    "objectID": "slides/demo/index.html#text-formatting-1",
+    "href": "slides/demo/index.html#text-formatting-1",
+    "title": "Quarto Presentation",
+    "section": "Text formatting",
+    "text": "Text formatting\n\n\nHeadings can be defined as shown below.\n## Level 2 heading  \n### Level 3 heading  \n#### Level 4 heading  \n##### Level 5 heading  \n###### Level 6 heading\nLevel 3 heading\nLevel 4 heading\nLevel 5 heading\nLevel 6 heading\nLevel 1 usage is not recommended. Use level 2 for slide titles. Use level 3 and below for other titles.\n\nText scaling classes\n[Largest text]{.largest}\n[Larger text]{.larger}\n[Large text]{.large}\nNormal text.  \n[Small text]{.small}\n[Smaller text]{.smaller}\n[Smallest text]{.smallest}\nLargest text\nLarger text\nLarge text\nNormal text\nSmall text\nSmaller text\nSmallest text"
+  },
+  {
+    "objectID": "slides/demo/index.html#text-formatting-2",
+    "href": "slides/demo/index.html#text-formatting-2",
+    "title": "Quarto Presentation",
+    "section": "Text Formatting",
+    "text": "Text Formatting\n\n\nHorizontal alignment of text can be adjusted as shown below.\n[Left aligned text]{.left}\n[Center aligned text]{.center}\n[Right aligned text]{.right}\nLeft aligned text\nCenter aligned text\nRight aligned text\n::: {.blockquote}\nThis line is quoted\n:::\n\nThis line is quoted\n\n\nA horizontal line can be created using ---\n\nThis is **Bold text** This is Bold text\nThis is *Italic text* This is Italic text\n~~Strikethrough~~ text Strikethrough text\nThis is subscript H~2~O H2O\nThis is superscript 2^10 210\nThis is a [badge]{.badge .badge-primary}\nThis is a badge\nThis is a [badge]{.badge .badge-secondary}\nThis is a badge\nThis is a [link](r-project.org) This is a link"
+  },
+  {
+    "objectID": "slides/demo/index.html#text-formatting-3",
+    "href": "slides/demo/index.html#text-formatting-3",
+    "title": "Quarto Presentation",
+    "section": "Text formatting",
+    "text": "Text formatting\nFit text to full width.\n::: {.r-fit-text}\nAttention\n:::\n\nAttention"
+  },
+  {
+    "objectID": "slides/demo/index.html#text-formatting-4",
+    "href": "slides/demo/index.html#text-formatting-4",
+    "title": "Quarto Presentation",
+    "section": "Text formatting",
+    "text": "Text formatting\nIn reports, .aside pushes content into the margin while in revealjs, it is pushed to the bottom.\n::: {.aside}\nContent inside aside.\n:::\n\n\nContent inside aside."
+  },
+  {
+    "objectID": "slides/demo/index.html#lists",
+    "href": "slides/demo/index.html#lists",
+    "title": "Quarto Presentation",
+    "section": "Lists",
+    "text": "Lists\n\n\nUnordered List\n- Bullet 1\n- Bullet 2\n  - Sub-bullet 2.1\n\nBullet 1\nBullet 2\n\nSub-bullet 2.1\n\n\n\nIncremental List\n:::{.incremental}\n1. Incremental Bullet 1\n2. Incremental Bullet 2\n3. Incremental Bullet 3\n:::\n\n\nIncremental Bullet 1\nIncremental Bullet 2\nIncremental Bullet 3\n\n\nFor more options, see here."
+  },
+  {
+    "objectID": "slides/demo/index.html#custom-css-styling",
+    "href": "slides/demo/index.html#custom-css-styling",
+    "title": "Quarto Presentation",
+    "section": "Custom CSS styling",
+    "text": "Custom CSS styling\n\nYou can style text using any custom CSS\nThis is a block level element\n\n::: {style=\"color: red\"}\nThis paragraph is red.\n:::\n\nThis paragraph is red.\n\n\nThis is a span. ie; A word or one line.\n\n[This text is blue]{style=\"color: blue\"}\nThis text is blue"
+  },
+  {
+    "objectID": "slides/demo/index.html#callouts",
+    "href": "slides/demo/index.html#callouts",
+    "title": "Quarto Presentation",
+    "section": "Callouts",
+    "text": "Callouts\n\n\n::: {.callout-note}\nThis is a callout.\n:::\n\n::: {.callout-warning}\nThis is a callout.\n:::\n\n::: {.callout-important}\nThis is a callout.\n:::\n\n::: {.callout-tip}\nThis is a callout.\n:::\n\n::: {.callout-caution}\nThis is a callout.\n:::\n\n\n\n\n\n\n\nNote\n\n\nThis is a callout.\n\n\n\n\n\n\n\n\n\nWarning\n\n\nThis is a callout.\n\n\n\n\n\n\n\n\n\nImportant\n\n\nThis is a callout.\n\n\n\n\n\n\n\n\n\nTip\n\n\nThis is a callout.\n\n\n\n\n\n\n\n\n\nCaution\n\n\nThis is a callout.\n\n\n\n\n\n\n\nCallOut blocks are documented here"
+  },
+  {
+    "objectID": "slides/demo/index.html#callouts-1",
+    "href": "slides/demo/index.html#callouts-1",
+    "title": "Quarto Presentation",
+    "section": "Callouts",
+    "text": "Callouts\nVariants of callout\n\n\n::: {.callout-note icon=false}\nIcon is disabled\n:::\n\n::: {.callout-note appearance=\"simple\"}\nAppearance is simple\n:::\n\n::: {.callout-note appearance=\"minimal\"}\nAppearance is minimal\n:::\n\n::: {.callout-note appearance=\"simple\"}\n## Custom title\nSimple appearance and a custom title\n:::\n\n::: {.callout-note appearance=\"minimal\"}\n## Custom title\nMinimal appearance and a custom title\n:::\n\n\n\n\nNote\n\n\nIcon is disabled\n\n\n\n\n\n\n\n\n\nAppearance is simple\n\n\n\n\n\n\nAppearance is minimal\n\n\n\n\n\n\n\n\n\nCustom title\n\n\nSimple appearance and a custom title\n\n\n\n\n\n\nCustom title\n\n\nMinimal appearance and a custom title"
+  },
+  {
+    "objectID": "slides/demo/index.html#callouts-2",
+    "href": "slides/demo/index.html#callouts-2",
+    "title": "Quarto Presentation",
+    "section": "Callouts",
+    "text": "Callouts\n::: {.callout-note}\n\nThis contains code\n\n## Callout with code\n\n```\nSys.Date()\n```\n\n:::\n\n\n\n\n\n\nCallout with code\n\n\nThis contains code\nSys.Date()"
+  },
+  {
+    "objectID": "slides/demo/index.html#code-formatting",
+    "href": "slides/demo/index.html#code-formatting",
+    "title": "Quarto Presentation",
+    "section": "Code formatting",
+    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2024-01-02.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
+  },
+  {
+    "objectID": "slides/demo/index.html#code-formatting-1",
+    "href": "slides/demo/index.html#code-formatting-1",
+    "title": "Quarto Presentation",
+    "section": "Code formatting",
+    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2024-01-02\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n\n\n\n\n\nSepal.Length\n\n\nSepal.Width\n\n\n\n\n\n\n5.1\n\n\n3.5\n\n\n\n\n4.9\n\n\n3.0\n\n\n\n\n4.7\n\n\n3.2\n\n\n\n\n\n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
+  },
+  {
+    "objectID": "slides/demo/index.html#code-highlighting",
+    "href": "slides/demo/index.html#code-highlighting",
+    "title": "Quarto Presentation",
+    "section": "Code highlighting",
+    "text": "Code highlighting\n\n\n```{r}\n#| eval: false\n#| echo: true\n#| code-line-numbers: \"2-3\"\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_report()\n```\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_report()\n\n\n```{r}\n#| eval: false\n#| echo: true\n#| code-line-numbers: \"2|3|5\"\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_report()\n```\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_report()\n\n\n\nFor more code highlighting documentation, see here."
+  },
+  {
+    "objectID": "slides/demo/index.html#images-markdown",
+    "href": "slides/demo/index.html#images-markdown",
+    "title": "Quarto Presentation",
+    "section": "Images • Markdown",
+    "text": "Images • Markdown\nUsing Markdown\n\n\nUsing regular markdown.\n![](assets/image.jpg)\n\nThe dimensions are based on image and/or fill up the entire width.\n\nControl image dimensions.\n![](assets/image.jpg){width=50%}\n![](assets/image.jpg){width=20%}\n \nFor more image documentation, see here."
+  },
+  {
+    "objectID": "slides/demo/index.html#images-markdown-layout",
+    "href": "slides/demo/index.html#images-markdown-layout",
+    "title": "Quarto Presentation",
+    "section": "Images • Markdown • Layout",
+    "text": "Images • Markdown • Layout\nFigure layout\n::: {layout-ncol=3}\n![Caption for figure 1](assets/image.jpg){#fig-layout-1}\n\n![Caption for figure 2](assets/image.jpg){#fig-layout-2}\n\n![Caption for figure 3](assets/image.jpg){#fig-layout-3}\n:::\n\n\n\n\n\n\nFigure 1: Caption for figure 1\n\n\n\n\n\n\n\nFigure 2: Caption for figure 2\n\n\n\n\n\n\n\nFigure 3: Caption for figure 3"
+  },
+  {
+    "objectID": "slides/demo/index.html#images-markdown-layout-1",
+    "href": "slides/demo/index.html#images-markdown-layout-1",
+    "title": "Quarto Presentation",
+    "section": "Images • Markdown • Layout",
+    "text": "Images • Markdown • Layout\nAbsolute positioning\n![](assets/image.jpg){.absolute top=250 left=0 height=\"450\"}\n![](assets/image.jpg){.absolute top=200 right=50 height=\"250\"}\n![](assets/image.jpg){.absolute bottom=0 right=200 height=\"200\"}"
+  },
+  {
+    "objectID": "slides/demo/index.html#images-html",
+    "href": "slides/demo/index.html#images-html",
+    "title": "Quarto Presentation",
+    "section": "Images • HTML",
+    "text": "Images • HTML\nUsing Raw HTML\nThis image is 30% size. &lt;img src=\"assets/image.jpg\" style=\"width:30%;\"/&gt;"
+  },
+  {
+    "objectID": "slides/demo/index.html#images-r",
+    "href": "slides/demo/index.html#images-r",
+    "title": "Quarto Presentation",
+    "section": "Images • R",
+    "text": "Images • R\nUsing R\nR chunks in RMarkdown can be used to control image display size using the argument out.width.\nThis image is displayed at a size of 200 pixels.\n```{r}\n#| out-width: \"200px\"\nknitr::include_graphics(\"assets/image.jpg\")\n```"
+  },
+  {
+    "objectID": "slides/demo/index.html#math-expressions",
+    "href": "slides/demo/index.html#math-expressions",
+    "title": "Quarto Presentation",
+    "section": "Math expressions",
+    "text": "Math expressions\nSome examples of rendering equations.\n\n\n$e^{i\\pi} + 1 = 0$\n\n$$\\frac{E \\times X^2 \\prod I}{2+7} = 432$$\n\n$$\\sum_{i=1}^n X_i$$\n\n$$\\int_0^{2\\pi} \\sin x~dx$$\n\n\\(e^{i\\pi} + 1 = 0\\) \\[\\frac{E \\times X^2 \\prod I}{2+7} = 432\\] \\[\\sum_{i=1}^n X_i\\] \\[\\int_0^{2\\pi} \\sin x~dx\\]"
+  },
+  {
+    "objectID": "slides/demo/index.html#math-expressions-1",
+    "href": "slides/demo/index.html#math-expressions-1",
+    "title": "Quarto Presentation",
+    "section": "Math expressions",
+    "text": "Math expressions\nSome examples of rendering equations.\n\n\n$\\left( \\sum_{i=1}^{n}{i} \\right)^2 = \\left( \\frac{n(n-1)}{2}\\right)^2 = \\frac{n^2(n-1)^2}{4}$\n\n$\\begin{eqnarray} X & \\sim & \\mathrm{N}(0,1)\\\\ Y & \\sim & \\chi^2_{n-p}\\\\ R & \\equiv & X/Y \\sim t_{n-p} \\end{eqnarray}$\n\n$\\begin{eqnarray} P(|X-\\mu| &gt; k) & = & P(|X-\\mu|^2 &gt; k^2)\\\\ & \\leq & \\frac{\\mathbb{E}\\left[|X-\\mu|^2\\right]}{k^2}\\\\ & \\leq & \\frac{\\mathrm{Var}[X]}{k^2} \\end{eqnarray}$\n\n\\(\\left( \\sum_{i=1}^{n}{i} \\right)^2 = \\left( \\frac{n(n-1)}{2}\\right)^2 = \\frac{n^2(n-1)^2}{4}\\)\n\\(\\begin{eqnarray} X & \\sim & \\mathrm{N}(0,1)\\\\ Y & \\sim & \\chi^2_{n-p}\\\\ R & \\equiv & X/Y \\sim t_{n-p} \\end{eqnarray}\\)\n\\(\\begin{eqnarray} P(|X-\\mu| &gt; k) & = & P(|X-\\mu|^2 &gt; k^2)\\\\ & \\leq & \\frac{\\mathbb{E}\\left[|X-\\mu|^2\\right]}{k^2}\\\\ & \\leq & \\frac{\\mathrm{Var}[X]}{k^2} \\end{eqnarray}\\)"
+  },
+  {
+    "objectID": "slides/demo/index.html#tables-kable",
+    "href": "slides/demo/index.html#tables-kable",
+    "title": "Quarto Presentation",
+    "section": "Tables • kable",
+    "text": "Tables • kable\nThe most simple table using kable from R package knitr.\n\nknitr::kable(head(iris),'html')\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa"
+  },
+  {
+    "objectID": "slides/demo/index.html#tables-gt",
+    "href": "slides/demo/index.html#tables-gt",
+    "title": "Quarto Presentation",
+    "section": "Tables • gt",
+    "text": "Tables • gt\nTables using the gt package. Grammar of tables with extensive customization options.\n\n\n\nlibrary(gt)\n\niris %&gt;%\n    group_by(Species) %&gt;%\n    slice(1:2) %&gt;%\n    gt() %&gt;%\n    cols_label(\n      Sepal.Length = \"Sepal Length\", Sepal.Width = \"Sepal Width\",\n      Petal.Length = \"Petal Length\", Petal.Width = \"Petal Width\"\n    ) %&gt;%\n    tab_source_note(\n        source_note = md(\"Source: Iris data. Anderson, 1936; Fisher, 1936)\")\n    )\n\n\n\n\n\n\n\n\n  \n    \n    \n      Sepal Length\n      Sepal Width\n      Petal Length\n      Petal Width\n    \n  \n  \n    \n      setosa\n    \n    5.1\n3.5\n1.4\n0.2\n    4.9\n3.0\n1.4\n0.2\n    \n      versicolor\n    \n    7.0\n3.2\n4.7\n1.4\n    6.4\n3.2\n4.5\n1.5\n    \n      virginica\n    \n    6.3\n3.3\n6.0\n2.5\n    5.8\n2.7\n5.1\n1.9\n  \n  \n    \n      Source: Iris data. Anderson, 1936; Fisher, 1936)"
+  },
+  {
+    "objectID": "slides/demo/index.html#tables-kableextra",
+    "href": "slides/demo/index.html#tables-kableextra",
+    "title": "Quarto Presentation",
+    "section": "Tables • kableExtra",
+    "text": "Tables • kableExtra\nMore advanced table using kableExtra and formattable.\n\n iris[c(1:2,51:52,105:106),] %&gt;%\n  mutate(Sepal.Length=color_bar(\"lightsteelblue\")(Sepal.Length)) %&gt;%\n  mutate(Sepal.Width=color_tile(\"white\",\"orange\")(Sepal.Width)) %&gt;%\n  mutate(Species=cell_spec(Species,\"html\",color=\"white\",bold=T,\n    background=c(\"#8dd3c7\",\"#fb8072\",\"#bebada\")[factor(.$Species)])) %&gt;%\n  kable(\"html\",escape=F) %&gt;%\n  kable_styling(bootstrap_options=c(\"striped\",\"hover\",\"responsive\"),full_width=F) %&gt;%\n  column_spec(5,width=\"3cm\")\n\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n1\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n2\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n51\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n52\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n105\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n106\n7.6\n3.0\n6.6\n2.1\nvirginica"
+  },
+  {
+    "objectID": "slides/demo/index.html#tables-interactive-dt",
+    "href": "slides/demo/index.html#tables-interactive-dt",
+    "title": "Quarto Presentation",
+    "section": "Tables • Interactive • DT",
+    "text": "Tables • Interactive • DT\nInteractive table using R package DT.\n\nlibrary(DT)\nDT::datatable(iris[1:20,],options=list(pageLength=7))"
+  },
+  {
+    "objectID": "slides/demo/index.html#tables-interactive-reactable",
+    "href": "slides/demo/index.html#tables-interactive-reactable",
+    "title": "Quarto Presentation",
+    "section": "Tables • Interactive • reactable",
+    "text": "Tables • Interactive • reactable\nInteractive tables with reactable.\n\nlibrary(reactable)\n\nreactable(iris[sample(1:150,6),],\n  striped = TRUE, highlight = TRUE, filterable = TRUE\n)"
+  },
+  {
+    "objectID": "slides/demo/index.html#static-plots-base-plot",
+    "href": "slides/demo/index.html#static-plots-base-plot",
+    "title": "Quarto Presentation",
+    "section": "Static plots • Base Plot",
+    "text": "Static plots • Base Plot\nPlots using base R.\n\n{par(mar=c(5,5,0,0))\n  plot(x=iris$Sepal.Length,y=iris$Sepal.Width,\n      col=c(\"coral\",\"steelblue\",\"forestgreen\")[iris$Species],\n      xlab=\"Sepal Length\",ylab=\"Sepal Width\",pch=19)\n  legend(x=7,y=4.47,legend=c(\"setosa\",\"versicolor\",\"virginica\"),\n       col=c(\"coral\",\"steelblue\",\"forestgreen\"),pch=19)}"
+  },
+  {
+    "objectID": "slides/demo/index.html#static-plots-ggplot2",
+    "href": "slides/demo/index.html#static-plots-ggplot2",
+    "title": "Quarto Presentation",
+    "section": "Static plots • ggplot2",
+    "text": "Static plots • ggplot2\nPlotting using ggplot2.\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_bw(base_size=18)"
+  },
+  {
+    "objectID": "slides/demo/index.html#interactive-plots-highcharter",
+    "href": "slides/demo/index.html#interactive-plots-highcharter",
+    "title": "Quarto Presentation",
+    "section": "Interactive plots • highcharter",
+    "text": "Interactive plots • highcharter\nR package highcharter is a wrapper around javascript library highcharts.\n\nlibrary(highcharter)\nh &lt;- iris %&gt;%\n  hchart(\"scatter\",hcaes(x=\"Sepal.Length\",y=\"Sepal.Width\",group=\"Species\")) %&gt;%\n  hc_xAxis(title=list(text=\"Sepal Length\"),crosshair=TRUE) %&gt;%\n  hc_yAxis(title=list(text=\"Sepal Width\"),crosshair=TRUE) %&gt;%\n  hc_chart(zoomType=\"xy\",inverted=FALSE) %&gt;%\n  hc_legend(verticalAlign=\"top\",align=\"right\") %&gt;% hc_size(height=300,width=500)\nhtmltools::tagList(list(h))"
+  },
+  {
+    "objectID": "slides/demo/index.html#interactive-plots-plotly",
+    "href": "slides/demo/index.html#interactive-plots-plotly",
+    "title": "Quarto Presentation",
+    "section": "Interactive plots • plotly",
+    "text": "Interactive plots • plotly\nR package plotly provides R binding around javascript plotting library plotly.\n\nlibrary(plotly)\np &lt;- iris %&gt;%\n  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=550,height=400) %&gt;%\n  add_markers()\np"
+  },
+  {
+    "objectID": "slides/demo/index.html#interactive-plots-ggplotly",
+    "href": "slides/demo/index.html#interactive-plots-ggplotly",
+    "title": "Quarto Presentation",
+    "section": "Interactive plots • ggplotly",
+    "text": "Interactive plots • ggplotly\nplotly also has a function called ggplotly which converts a static ggplot2 object into an interactive plot.\n\nlibrary(plotly)\np &lt;- ggplot(iris,aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point()+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_bw(base_size=12)\n\nplotly::ggplotly(p,width=460,height=360)"
+  },
+  {
+    "objectID": "slides/demo/index.html#interactive-plots-ggiraph",
+    "href": "slides/demo/index.html#interactive-plots-ggiraph",
+    "title": "Quarto Presentation",
+    "section": "Interactive plots • ggiraph",
+    "text": "Interactive plots • ggiraph\nR package ggiraph converts a static ggplot2 object into an interactive plot.\n\nlibrary(ggiraph)\np &lt;- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+\n      geom_point_interactive(aes(tooltip=paste0(\"&lt;b&gt;Petal Length:&lt;/b&gt; \",Petal.Length,\"\\n&lt;b&gt;Sepal Length: &lt;/b&gt;\",Sepal.Length,\"\\n&lt;b&gt;Species: &lt;/b&gt;\",Species)),size=2)+\n  theme_bw()\ntooltip_css &lt;- \"background-color:#f8f9f9;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;\"\nggiraph(code=print(p),hover_css=\"cursor:pointer;stroke:black;fill-opacity:0.3\",zoom_max=5,tooltip_extra_css=tooltip_css,tooltip_opacity=0.9,height_svg=2,width_svg=4,width=0.6)"
+  },
+  {
+    "objectID": "slides/demo/index.html#interactive-time-series-dygraphs",
+    "href": "slides/demo/index.html#interactive-time-series-dygraphs",
+    "title": "Quarto Presentation",
+    "section": "Interactive time series • dygraphs",
+    "text": "Interactive time series • dygraphs\nR package dygraphs provides R bindings for javascript library dygraphs for time series data.\n\nlibrary(dygraphs)\nlungDeaths &lt;- cbind(ldeaths, mdeaths, fdeaths)\ndygraph(lungDeaths,main=\"Deaths from Lung Disease (UK)\") %&gt;%\n  dyOptions(colors=c(\"#66C2A5\",\"#FC8D62\",\"#8DA0CB\"))"
+  },
+  {
+    "objectID": "slides/demo/index.html#network-graph",
+    "href": "slides/demo/index.html#network-graph",
+    "title": "Quarto Presentation",
+    "section": "Network graph",
+    "text": "Network graph\nR package networkD3 allows the use of interactive network graphs from the D3.js javascript library.\n\nlibrary(networkD3)\ndata(MisLinks,MisNodes)\nforceNetwork(Links=MisLinks,Nodes=MisNodes,Source=\"source\",\n             Target=\"target\",Value=\"value\",NodeID=\"name\",\n             Group=\"group\",opacity=0.4,\n             height=300,width=500)"
+  },
+  {
+    "objectID": "slides/demo/index.html#interactive-maps-leaflet",
+    "href": "slides/demo/index.html#interactive-maps-leaflet",
+    "title": "Quarto Presentation",
+    "section": "Interactive maps • leaflet",
+    "text": "Interactive maps • leaflet\nR package leaflet provides R bindings for javascript mapping library; leafletjs.\n\nlibrary(leaflet)\nleaflet(height=300,width=800) %&gt;%\n  addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n  #addProviderTiles(providers$Esri.NatGeoWorldMap) %&gt;%\n  addMarkers(lat=57.639327,lng=18.288534,popup=\"RaukR\") %&gt;%\n  setView(lat=57.639327,lng=18.288534,zoom=15)"
+  },
+  {
+    "objectID": "slides/demo/index.html#linking-plots-crosstalk",
+    "href": "slides/demo/index.html#linking-plots-crosstalk",
+    "title": "Quarto Presentation",
+    "section": "Linking Plots • crosstalk",
+    "text": "Linking Plots • crosstalk\nR package crosstalk allows crosstalk enabled plotting libraries to be linked. Through the shared ‘key’ variable, data points can be manipulated simultaneously on two independent plots.\n\nlibrary(crosstalk)\nshared_quakes &lt;- SharedData$new(quakes[sample(nrow(quakes), 100),])\nlf &lt;- leaflet(shared_quakes,height=300) %&gt;%\n        addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n        addMarkers()\npy &lt;- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %&gt;%\n        add_markers()\ndiv(div(lf,style=\"float:left;width:49%\"),div(py,style=\"float:right;width:49%\"))"
+  },
+  {
+    "objectID": "slides/demo/index.html#observablejs",
+    "href": "slides/demo/index.html#observablejs",
+    "title": "Quarto Presentation",
+    "section": "ObservableJS",
+    "text": "ObservableJS\n\nQuarto supports ObservableJS for interactive visualisations in the browser.\n\n\n\nPass data from R to OJS\n\nirism &lt;- iris\ncolnames(irism) &lt;- gsub(\"[.]\",\"_\",tolower(colnames(irism)))\nojs_define(ojsd = irism)\n\n\nojsdata = transpose(ojsd)\n\n\n\n\n\n\n\nDisplay as a table\n\nviewof filtered_table = Inputs.table(ojsdata)"
+  },
+  {
+    "objectID": "slides/demo/index.html#observablejs-1",
+    "href": "slides/demo/index.html#observablejs-1",
+    "title": "Quarto Presentation",
+    "section": "ObservableJS",
+    "text": "ObservableJS\n\n\nDefine inputs\n\nviewof x = Inputs.select(Object.keys(ojsdata[0]), {\n  value: \"sepal_length\", multiple: false, label: \"X axis\"\n  })\n\n\n\n\n\n\n\nviewof y = Inputs.select(Object.keys(ojsdata[0]), {\n  value: \"sepal_width\", multiple: false, label: \"Y axis\"\n  })\n\n\n\n\n\n\n\nDisplay plot\n\nPlot.plot({\n  marks: [\n    Plot.dot(ojsdata, {\n      x: x, y: y, fill: \"species\",\n      title: (d) =&gt; `${d.species} \\n Petal length: ${d.petal_length} \\n Sepal length: ${d.sepal_length}`\n    })\n  ], grid: true\n})\n\n\n\n\n\n\n\n\nObservableJS in quarto documentation."
+  },
+  {
+    "objectID": "slides/demo/index.html#diagrams",
+    "href": "slides/demo/index.html#diagrams",
+    "title": "Quarto Presentation",
+    "section": "Diagrams",
+    "text": "Diagrams\n\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\nDiagram documentation."
+  },
+  {
+    "objectID": "slides/demo/index.html#colourful",
+    "href": "slides/demo/index.html#colourful",
+    "title": "Quarto Presentation",
+    "section": "Colourful",
+    "text": "Colourful\nThis slide has a colourful background\n##  Colourful {background-color=\"#ABEBC6\"}"
+  },
+  {
+    "objectID": "slides/demo/index.html#big-image",
+    "href": "slides/demo/index.html#big-image",
+    "title": "Quarto Presentation",
+    "section": "Big Image",
+    "text": "Big Image\nThis slide has a background image\n##  Big Image {background-image=\"assets/image.jpg\"}"
+  },
+  {
+    "objectID": "slides/demo/index.html#general-tips",
+    "href": "slides/demo/index.html#general-tips",
+    "title": "Quarto Presentation",
+    "section": "General tips",
+    "text": "General tips\n\nReplace assets/cover.jpg to change cover slide picture\nReplace assets/end.jpg to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.2.0-1018-azure\" \n                                              version \n\"#18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023\" \n                                             nodename \n                                      \"fv-az1542-577\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+  },
+  {
+    "objectID": "slides/demo/index.html#section",
+    "href": "slides/demo/index.html#section",
+    "title": "Quarto Presentation",
+    "section": "",
+    "text": "Thank you! Questions?\n\n\n         _                  \nplatform x86_64-pc-linux-gnu\nos       linux-gnu          \nmajor    4                  \nminor    3.2                \n\n\n2024 • Specky"
+  },
+  {
+    "objectID": "slides/sample/index.html#heading-1",
+    "href": "slides/sample/index.html#heading-1",
+    "title": "Presentation",
+    "section": "Heading 1",
+    "text": "Heading 1\nContent"
+  },
+  {
+    "objectID": "slides/sample/index.html#heading-2",
+    "href": "slides/sample/index.html#heading-2",
+    "title": "Presentation",
+    "section": "Heading 2",
+    "text": "Heading 2\nMore content"
+  },
+  {
+    "objectID": "slides/sample/index.html#section",
+    "href": "slides/sample/index.html#section",
+    "title": "Presentation",
+    "section": "",
+    "text": "Thank you! Questions?\n2024 • Specky"
+  },
+  {
+    "objectID": "home_precourse.html",
+    "href": "home_precourse.html",
+    "title": "Precourse",
+    "section": "",
+    "text": "Remote computing cluster will be use for data analyses. A SUPR/NAISS account is needed to use these resources.\n\n\n\n\n\n\nTip\n\n\n\nThis is where you might run into trouble if you don’t have a SWAMID connected account. You will not be able to accept the user agreement online without it, so you will have to send in your acceptance in paper form together with a copy of your passport. This process can take a week or more, so please make sure you can accept the user agreement in good time.\n\n\nYou need to request login accounts to NSC and UPPMAX. These are the accounts you use to log in to the actual computers, so they are not the same as your SUPR account. Login to SUPR and go to the Accounts page. Under the Possible Resource Account Requests heading click on Request Account on Tetralith @ NSC and Request Account on Rackham @ UPPMAX button and confirm it on the next page. If either of them are missing from this page, it could be because you already have a login account created (only 1 account per person allowed), or that you have not yet gotten your project memberships approved.\n\n\n\n\n\n\nNote\n\n\n\nYou will get one username & password for the account on UPPMAX, and one username and password for the account on NSC. Please keep track of both, we will tell you when to use which account during the workshop."
+  },
+  {
+    "objectID": "home_precourse.html#cluster",
+    "href": "home_precourse.html#cluster",
+    "title": "Precourse",
+    "section": "",
+    "text": "Remote computing cluster will be use for data analyses. A SUPR/NAISS account is needed to use these resources.\n\n\n\n\n\n\nTip\n\n\n\nThis is where you might run into trouble if you don’t have a SWAMID connected account. You will not be able to accept the user agreement online without it, so you will have to send in your acceptance in paper form together with a copy of your passport. This process can take a week or more, so please make sure you can accept the user agreement in good time.\n\n\nYou need to request login accounts to NSC and UPPMAX. These are the accounts you use to log in to the actual computers, so they are not the same as your SUPR account. Login to SUPR and go to the Accounts page. Under the Possible Resource Account Requests heading click on Request Account on Tetralith @ NSC and Request Account on Rackham @ UPPMAX button and confirm it on the next page. If either of them are missing from this page, it could be because you already have a login account created (only 1 account per person allowed), or that you have not yet gotten your project memberships approved.\n\n\n\n\n\n\nNote\n\n\n\nYou will get one username & password for the account on UPPMAX, and one username and password for the account on NSC. Please keep track of both, we will tell you when to use which account during the workshop."
+  },
+  {
+    "objectID": "home_precourse.html#install-tools",
+    "href": "home_precourse.html#install-tools",
+    "title": "Precourse",
+    "section": "2 Install tools",
+    "text": "2 Install tools\n\n2.1 ThinLinc\nThinLinc allows graphical connection to UPPMAX. It can be used directly from the browser but it is recommended to download and install the client for better copy/paste operation.\n\n\n2.2 XQuartz\nMac users will need to download and install XQuartz for X11 forwarding. ie; to forward remotely opened windows to local machine.\n\n\n2.3 MobaXterm (Optional)\nIf you are on a Windows system, and you want to open graphical applications from the terminal, we recommend MobaXterm. It is recommended that you INSTALL the program and not use the portable version. MobaXterm also has an integrated SFTP file browser.\n\n\n2.4 Filezilla (Optional)\nWhen you need to transfer data between the remote cluster and your computer, you can use the tools SCP or SFTP through the terminal. Windows users can use the SFTP browser available with MobaXterm. If you prefer a GUI to upload and download files from the remote cluster, we recommend installing FileZilla."
+  }
+]

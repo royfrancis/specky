@@ -1,0 +1,19 @@
+[
+  {
+    "listing": "/slides/index.html",
+    "items": [
+      "/slides/sample/index.html",
+      "/slides/demo/index.html"
+    ]
+  },
+  {
+    "listing": "/reports/index.html",
+    "items": [
+      "/reports/more/index.html",
+      "/reports/demo/index.html",
+      "/reports/demo-with-r/index.html",
+      "/reports/sample/index.html",
+      "/reports/usage/index.html"
+    ]
+  }
+]

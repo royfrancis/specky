@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Roy Francis">
+<meta name="description" content="This document showcases some of the in-built capabilities of quarto. It also shows the custom theme, style and usage.">
+
+<title>Quarto Basics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/kbd/kbd.js"></script>
+<link href="../../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background-image: url(../../assets/images/banner.jpg);
+background-size: cover;
+      }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&amp;family=Ubuntu+Mono&amp;display=swap" rel="stylesheet">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../assets/logos/nbis-scilifelab.png" alt="logo" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../home_schedule.html" rel="" target="">
+ <span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../home_contents.html" rel="" target="">
+ <span class="menu-text">Contents</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../home_syllabus.html" rel="" target="">
+ <span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../home_precourse.html" rel="" target="">
+ <span class="menu-text">Precourse</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Quarto Basics</h1>
+            <p class="subtitle lead">Specky quarto theme</p>
+                  <div>
+        <div class="description">
+          This document showcases some of the in-built capabilities of quarto. It also shows the custom theme, style and usage.
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Roy Francis </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">02-Jan-2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#text-formatting" id="toc-text-formatting" class="nav-link active" data-scroll-target="#text-formatting"><span class="header-section-number">1</span> Text formatting</a>
+  <ul>
+  <li><a href="#headings" id="toc-headings" class="nav-link" data-scroll-target="#headings"><span class="header-section-number">1.1</span> Headings</a></li>
+  <li><a href="#character-sizes" id="toc-character-sizes" class="nav-link" data-scroll-target="#character-sizes"><span class="header-section-number">1.2</span> Character sizes</a></li>
+  <li><a href="#character-styles" id="toc-character-styles" class="nav-link" data-scroll-target="#character-styles"><span class="header-section-number">1.3</span> Character styles</a></li>
+  <li><a href="#blockquote" id="toc-blockquote" class="nav-link" data-scroll-target="#blockquote"><span class="header-section-number">1.4</span> Blockquote</a></li>
+  <li><a href="#line-block" id="toc-line-block" class="nav-link" data-scroll-target="#line-block"><span class="header-section-number">1.5</span> Line block</a></li>
+  <li><a href="#rule" id="toc-rule" class="nav-link" data-scroll-target="#rule"><span class="header-section-number">1.6</span> Rule</a></li>
+  <li><a href="#footnote" id="toc-footnote" class="nav-link" data-scroll-target="#footnote"><span class="header-section-number">1.7</span> Footnote</a></li>
+  <li><a href="#aside" id="toc-aside" class="nav-link" data-scroll-target="#aside"><span class="header-section-number">1.8</span> Aside</a></li>
+  <li><a href="#badge" id="toc-badge" class="nav-link" data-scroll-target="#badge"><span class="header-section-number">1.9</span> Badge</a></li>
+  </ul></li>
+  <li><a href="#code-formatting" id="toc-code-formatting" class="nav-link" data-scroll-target="#code-formatting"><span class="header-section-number">2</span> Code formatting</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link" data-scroll-target="#lists"><span class="header-section-number">3</span> Lists</a>
+  <ul>
+  <li><a href="#unordered" id="toc-unordered" class="nav-link" data-scroll-target="#unordered"><span class="header-section-number">3.1</span> Unordered</a></li>
+  <li><a href="#ordered" id="toc-ordered" class="nav-link" data-scroll-target="#ordered"><span class="header-section-number">3.2</span> Ordered</a></li>
+  <li><a href="#multiple-lists" id="toc-multiple-lists" class="nav-link" data-scroll-target="#multiple-lists"><span class="header-section-number">3.3</span> Multiple Lists</a></li>
+  </ul></li>
+  <li><a href="#images" id="toc-images" class="nav-link" data-scroll-target="#images"><span class="header-section-number">4</span> Images</a>
+  <ul>
+  <li><a href="#using-markdown" id="toc-using-markdown" class="nav-link" data-scroll-target="#using-markdown"><span class="header-section-number">4.1</span> Using Markdown</a>
+  <ul class="collapse">
+  <li><a href="#figure-layout" id="toc-figure-layout" class="nav-link" data-scroll-target="#figure-layout"><span class="header-section-number">4.1.1</span> Figure layout</a></li>
+  </ul></li>
+  <li><a href="#using-html" id="toc-using-html" class="nav-link" data-scroll-target="#using-html"><span class="header-section-number">4.2</span> Using HTML</a></li>
+  </ul></li>
+  <li><a href="#math-expressions" id="toc-math-expressions" class="nav-link" data-scroll-target="#math-expressions"><span class="header-section-number">5</span> Math expressions</a></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="header-section-number">6</span> Tables</a>
+  <ul>
+  <li><a href="#margin-table" id="toc-margin-table" class="nav-link" data-scroll-target="#margin-table"><span class="header-section-number">6.1</span> Margin table</a></li>
+  </ul></li>
+  <li><a href="#icons" id="toc-icons" class="nav-link" data-scroll-target="#icons"><span class="header-section-number">7</span> Icons</a>
+  <ul>
+  <li><a href="#bootstrap-icons" id="toc-bootstrap-icons" class="nav-link" data-scroll-target="#bootstrap-icons"><span class="header-section-number">7.1</span> Bootstrap icons</a></li>
+  <li><a href="#fontawesome" id="toc-fontawesome" class="nav-link" data-scroll-target="#fontawesome"><span class="header-section-number">7.2</span> Fontawesome</a></li>
+  </ul></li>
+  <li><a href="#call-outs" id="toc-call-outs" class="nav-link" data-scroll-target="#call-outs"><span class="header-section-number">8</span> Call-Outs</a></li>
+  <li><a href="#alerts" id="toc-alerts" class="nav-link" data-scroll-target="#alerts"><span class="header-section-number">9</span> Alerts</a></li>
+  <li><a href="#layout" id="toc-layout" class="nav-link" data-scroll-target="#layout"><span class="header-section-number">10</span> Layout</a>
+  <ul>
+  <li><a href="#span" id="toc-span" class="nav-link" data-scroll-target="#span"><span class="header-section-number">10.1</span> Span</a></li>
+  <li><a href="#div" id="toc-div" class="nav-link" data-scroll-target="#div"><span class="header-section-number">10.2</span> Div</a></li>
+  <li><a href="#hidden-div" id="toc-hidden-div" class="nav-link" data-scroll-target="#hidden-div"><span class="header-section-number">10.3</span> Hidden div</a></li>
+  <li><a href="#conditional-content" id="toc-conditional-content" class="nav-link" data-scroll-target="#conditional-content"><span class="header-section-number">10.4</span> Conditional content</a></li>
+  <li><a href="#inner-columns" id="toc-inner-columns" class="nav-link" data-scroll-target="#inner-columns"><span class="header-section-number">10.5</span> Inner columns</a></li>
+  <li><a href="#outer-columns" id="toc-outer-columns" class="nav-link" data-scroll-target="#outer-columns"><span class="header-section-number">10.6</span> Outer columns</a></li>
+  <li><a href="#panel-layout" id="toc-panel-layout" class="nav-link" data-scroll-target="#panel-layout"><span class="header-section-number">10.7</span> Panel layout</a></li>
+  </ul></li>
+  <li><a href="#general-tips" id="toc-general-tips" class="nav-link" data-scroll-target="#general-tips"><span class="header-section-number">11</span> General tips</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+
+
+
+
+
+<p>This is a <a href="https://quarto.org/">quarto</a> document</p>
+<section id="text-formatting" class="level2 page-columns page-full" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="text-formatting"><span class="header-section-number">1</span> Text formatting</h2>
+<section id="headings" class="level3" data-number="1.1">
+<h3 data-number="1.1" class="anchored" data-anchor-id="headings"><span class="header-section-number">1.1</span> Headings</h3>
+<pre><code>## Level 2 heading  
+### Level 3 heading  
+#### Level 4 heading  
+##### Level 5 heading  
+###### Level 6 heading</code></pre>
+</section>
+<section id="character-sizes" class="level3" data-number="1.2">
+<h3 data-number="1.2" class="anchored" data-anchor-id="character-sizes"><span class="header-section-number">1.2</span> Character sizes</h3>
+<p>Custom character sizes. This is an enchanced feature.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Markdown</th>
+<th>Rendered</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>[Largest text]{.largest}</code></td>
+<td><span class="largest">Largest text</span></td>
+</tr>
+<tr class="even">
+<td><code>[Larger text]{.larger}</code></td>
+<td><span class="larger">Larger text</span></td>
+</tr>
+<tr class="odd">
+<td><code>[Large text]{.large}</code></td>
+<td><span class="large">Large text</span></td>
+</tr>
+<tr class="even">
+<td>Normal text</td>
+<td>Normal text</td>
+</tr>
+<tr class="odd">
+<td><code>[Small text]{.small}</code></td>
+<td><span class="small">Small text</span></td>
+</tr>
+<tr class="even">
+<td><code>[Smaller text]{.smaller}</code></td>
+<td><span class="smaller">Smaller text</span></td>
+</tr>
+<tr class="odd">
+<td><code>[Smallest text]{.smallest}</code></td>
+<td><span class="smallest">Smallest text</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="character-styles" class="level3" data-number="1.3">
+<h3 data-number="1.3" class="anchored" data-anchor-id="character-styles"><span class="header-section-number">1.3</span> Character styles</h3>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Markdown</th>
+<th>Rendered</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>__Bold text__</code></td>
+<td><strong>Bold text</strong></td>
+</tr>
+<tr class="even">
+<td><code>_Italic text_</code></td>
+<td><em>Italic text</em></td>
+</tr>
+<tr class="odd">
+<td><code>~~Strikethrough~~</code></td>
+<td><del>Strikethrough</del></td>
+</tr>
+<tr class="even">
+<td><code>H~2~O</code></td>
+<td>H<sub>2</sub>O</td>
+</tr>
+<tr class="odd">
+<td><code>x^2</code></td>
+<td>x^2</td>
+</tr>
+<tr class="even">
+<td><code>--</code></td>
+<td>–</td>
+</tr>
+<tr class="odd">
+<td><code>---</code></td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td><code>[link](r-project.org)</code></td>
+<td><a href="r-project.org">link</a></td>
+</tr>
+<tr class="odd">
+<td><code>{{&lt; kbd Shift-Ctrl-P &gt;}}</code></td>
+<td><p><kbd>Shift-Ctrl-P</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="blockquote" class="level3" data-number="1.4">
+<h3 data-number="1.4" class="anchored" data-anchor-id="blockquote"><span class="header-section-number">1.4</span> Blockquote</h3>
+<pre><code>&gt; This is a block quote. This
+&gt; paragraph has two lines.
+&gt;
+&gt; 1. This is a list inside a block quote.
+&gt; 2. Second item.</code></pre>
+<blockquote class="blockquote">
+<p>This is a block quote. This paragraph has two lines.</p>
+<ol type="1">
+<li>This is a list inside a block quote.</li>
+<li>Second item.</li>
+</ol>
+</blockquote>
+</section>
+<section id="line-block" class="level3" data-number="1.5">
+<h3 data-number="1.5" class="anchored" data-anchor-id="line-block"><span class="header-section-number">1.5</span> Line block</h3>
+<p>Line block preserves spaces and new lines.</p>
+<pre><code>| This
+|     block
+|          preserves
+|                   formatting</code></pre>
+<p>This<br>
+&nbsp;&nbsp;&nbsp;&nbsp;block<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;preserves<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formatting</p>
+</section>
+<section id="rule" class="level3" data-number="1.6">
+<h3 data-number="1.6" class="anchored" data-anchor-id="rule"><span class="header-section-number">1.6</span> Rule</h3>
+<p>A horizontal line can be created using three or more <code>*</code> or <code>-</code>.</p>
+<p><code>***</code></p>
+<hr>
+</section>
+<section id="footnote" class="level3" data-number="1.7">
+<h3 data-number="1.7" class="anchored" data-anchor-id="footnote"><span class="header-section-number">1.7</span> Footnote</h3>
+<p>An example of footnote reference <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="aside" class="level3 page-columns page-full" data-number="1.8">
+<h3 data-number="1.8" class="anchored" data-anchor-id="aside"><span class="header-section-number">1.8</span> Aside</h3>
+<p><code>[This content lives in the right margin]{.aside}</code></p>
+<div class="page-columns page-full"><p></p><div class="no-row-height column-margin column-container"><span class="">This content lives in the right margin</span></div></div>
+</section>
+<section id="badge" class="level3" data-number="1.9">
+<h3 data-number="1.9" class="anchored" data-anchor-id="badge"><span class="header-section-number">1.9</span> Badge</h3>
+<p>Badges are defined as such:</p>
+<p><code>[badge]{.badge .badge-primary}</code> <span class="badge badge-primary">badge</span><br>
+<code>[badge]{.badge .badge-secondary}</code> <span class="badge badge-secondary">badge</span></p>
+</section>
+</section>
+<section id="code-formatting" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="code-formatting"><span class="header-section-number">2</span> Code formatting</h2>
+<p>Verbatim code is text formatted using monospaced font intended as code. Verbatim code can be defined inline where <code>`date()`</code> looks like <code>date()</code>.</p>
+<p>Code can also be defined inside code blocks.</p>
+<pre><code>```
+date()
+```</code></pre>
+<pre><code>date()</code></pre>
+<p>Source code, ie; code that is highlighted or executed in a quarto document is not covered here.</p>
+</section>
+<section id="lists" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="lists"><span class="header-section-number">3</span> Lists</h2>
+<section id="unordered" class="level3" data-number="3.1">
+<h3 data-number="3.1" class="anchored" data-anchor-id="unordered"><span class="header-section-number">3.1</span> Unordered</h3>
+<p>Unordered lists are created using dashes.</p>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>- Bullet 1
+- Bullet 2
+  - Sub-bullet 2.1
+  - Sub-bullet 2.2
+- Bullet 3</code></pre>
+</div>
+<div class="g-col-6">
+<ul>
+<li>Bullet 1</li>
+<li>Bullet 2
+<ul>
+<li>Sub-bullet 2.1</li>
+<li>Sub-bullet 2.2</li>
+</ul></li>
+<li>Bullet 3</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ordered" class="level3" data-number="3.2">
+<h3 data-number="3.2" class="anchored" data-anchor-id="ordered"><span class="header-section-number">3.2</span> Ordered</h3>
+<p>Ordered lists are created using numbers.</p>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>1. Point 1
+2. Point 2
+3. Point 3</code></pre>
+</div>
+<div class="g-col-6">
+<ol type="1">
+<li>Point 1</li>
+<li>Point 2</li>
+<li>Point 3</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="multiple-lists" class="level3" data-number="3.3">
+<h3 data-number="3.3" class="anchored" data-anchor-id="multiple-lists"><span class="header-section-number">3.3</span> Multiple Lists</h3>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>::: {}
+1. Point 1
+2. Point 2
+:::
+
+:::{}
+1. Point 1
+2. Point 2
+:::</code></pre>
+</div>
+<div class="g-col-6">
+<div>
+<ol type="1">
+<li>Point 1</li>
+<li>Point 2</li>
+</ol>
+</div>
+<div>
+<ol type="1">
+<li>Point 1</li>
+<li>Point 2</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="images" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="images"><span class="header-section-number">4</span> Images</h2>
+<p>Images can be inserted using plain markdown or HTML directly. Plain markdown can be embellished with custom quarto adjustments to modify aspects of the image. Clicking the image opens the image in a lightbox. This is made possible using the <a href="https://github.com/quarto-ext/lightbox">lightbox</a> extension.</p>
+<section id="using-markdown" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="using-markdown"><span class="header-section-number">4.1</span> Using Markdown</h3>
+<p>Using regular markdown.</p>
+<pre><code>![](assets/image.jpg)</code></pre>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="assets/image.jpg" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/image.jpg" class="img-fluid figure-img"></a></p>
+</figure>
+</div>
+<p>The dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.</p>
+<pre><code>![This is a caption](assets/image.jpg){width=30%}  </code></pre>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><a href="assets/image.jpg" class="lightbox" title="This is a caption" data-gallery="quarto-lightbox-gallery-2"><img src="assets/image.jpg" class="img-fluid figure-img" style="width:30.0%"></a></p>
+<figcaption class="figure-caption">This is a caption</figcaption>
+</figure>
+</div>
+<p>This image above is now 30% of it’s original width.</p>
+<section id="figure-layout" class="level4" data-number="4.1.1">
+<h4 data-number="4.1.1" class="anchored" data-anchor-id="figure-layout"><span class="header-section-number">4.1.1</span> Figure layout</h4>
+<pre><code>::: {#fig-mylabel layout-ncol=2}
+![Caption for figure 1](assets/image.jpg){width="40%"}
+
+![Caption for figure 2](assets/image.jpg){width="40%"}
+
+These figures are interesting.
+:::</code></pre>
+<div id="fig-mylabel" class="quarto-layout-panel">
+<figure class="figure">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-figure quarto-figure-left" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="assets/image.jpg" class="lightbox" title="Caption for figure 1" data-gallery="quarto-lightbox-gallery-3"><img src="assets/image.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Caption for figure 1</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left" style="flex-basis: 50.0%;justify-content: center;">
+<figure class="figure">
+<p><a href="assets/image.jpg" class="lightbox" title="Caption for figure 2" data-gallery="quarto-lightbox-gallery-4"><img src="assets/image.jpg" class="img-fluid figure-img"></a></p>
+<figcaption class="figure-caption">Caption for figure 2</figcaption>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: These figures are interesting.</figcaption><p></p>
+</figure>
+</div>
+<p>More figure options and layouts are described <a href="https://quarto.org/docs/authoring/figures.html">here</a>. Cross referencing described <a href="https://quarto.org/docs/authoring/cross-references.html">here</a>.</p>
+</section>
+</section>
+<section id="using-html" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="using-html"><span class="header-section-number">4.2</span> Using HTML</h3>
+<p>This image below is 30% size.<br>
+<code>&lt;img src="assets/image.jpg" style="width:30%;"/&gt;</code></p>
+<p><img src="assets/image.jpg" style="width:30%;"></p>
+<p>For more information on figures, see <a href="https://quarto.org/docs/authoring/figures.html">here</a>. Images generated through code is not covered here.</p>
+</section>
+</section>
+<section id="math-expressions" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="math-expressions"><span class="header-section-number">5</span> Math expressions</h2>
+<p>Some examples of rendering equations.</p>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>$e^{i\pi} + 1 = 0$</code></pre>
+</div>
+<div class="g-col-6">
+<p><span class="math inline">\(e^{i\pi} + 1 = 0\)</span></p>
+</div>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>$$\frac{E \times X^2 \prod I}{2+7} = 432$$</code></pre>
+</div>
+<div class="g-col-6">
+<p><span class="math display">\[\frac{E \times X^2 \prod I}{2+7} = 432\]</span></p>
+</div>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>$$\sum_{i=1}^n X_i$$</code></pre>
+</div>
+<div class="g-col-6">
+<p><span class="math display">\[\sum_{i=1}^n X_i\]</span></p>
+</div>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>$$\int_0^{2\pi} \sin x~dx$$</code></pre>
+</div>
+<div class="g-col-6">
+<p><span class="math display">\[\int_0^{2\pi} \sin x~dx\]</span></p>
+</div>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>$\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}$</code></pre>
+</div>
+<div class="g-col-6">
+<p><span class="math inline">\(\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n-1)}{2}\right)^2 = \frac{n^2(n-1)^2}{4}\)</span></p>
+</div>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>$\begin{eqnarray} X &amp; \sim &amp; \mathrm{N}(0,1)\\ Y &amp; \sim &amp; \chi^2_{n-p}\\ R &amp; \equiv &amp; X/Y \sim t_{n-p} \end{eqnarray}$</code></pre>
+</div>
+<div class="g-col-6">
+<p><span class="math inline">\(\begin{eqnarray} X &amp; \sim &amp; \mathrm{N}(0,1)\\ Y &amp; \sim &amp; \chi^2_{n-p}\\ R &amp; \equiv &amp; X/Y \sim t_{n-p} \end{eqnarray}\)</span></p>
+</div>
+</div>
+<div class="grid">
+<div class="g-col-6">
+<pre><code>$\begin{eqnarray} P(|X-\mu| &gt; k) &amp; = &amp; P(|X-\mu|^2 &gt; k^2)\\ &amp; \leq &amp; \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ &amp; \leq &amp; \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$</code></pre>
+</div>
+<div class="g-col-6">
+<p><span class="math inline">\(\begin{eqnarray} P(|X-\mu| &gt; k) &amp; = &amp; P(|X-\mu|^2 &gt; k^2)\\ &amp; \leq &amp; \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ &amp; \leq &amp; \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}\)</span></p>
+</div>
+</div>
+</section>
+<section id="tables" class="level2 page-columns page-full" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="tables"><span class="header-section-number">6</span> Tables</h2>
+<p>For simple cases, tables can be manually created in markdown.</p>
+<div class="grid">
+<div class="g-col-7">
+<pre><code>|speed|dist|
+|-----|----|
+|4    |   2|
+|4    |  10|
+|7    |   4|</code></pre>
+</div>
+<div class="g-col-5">
+<table class="table">
+<thead>
+<tr class="header">
+<th>speed</th>
+<th>dist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Table caption and numbering can be added as such:</p>
+<div class="grid">
+<div class="g-col-7">
+<pre><code>|speed|dist|
+|-----|----|
+|4    |   2|
+|4    |  10|
+|7    |   4|
+
+: These are exciting results. {#tbl-mylabel}</code></pre>
+</div>
+<div class="g-col-5">
+<div id="tbl-mylabel" class="anchored">
+<table class="table">
+<caption>Table&nbsp;1: These are exciting results.</caption>
+<thead>
+<tr class="header">
+<th>speed</th>
+<th>dist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Tables can also be generated through code which is not covered here.</p>
+<section id="margin-table" class="level3 page-columns page-full" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="margin-table"><span class="header-section-number">6.1</span> Margin table</h3>
+<p>A table placed in the margin.</p>
+<pre><code>::: {.column-margin}
+
+| speed | dist |
+|-------|------|
+| 4     | 2    |
+| 4     | 10   |
+| 7     | 4    |
+
+:::</code></pre>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<table class="table">
+<thead>
+<tr class="header">
+<th>speed</th>
+<th>dist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>10</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+</div></div><p>More information about <a href="https://quarto.org/docs/authoring/tables.html">tables</a>.</p>
+</section>
+</section>
+<section id="icons" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="icons"><span class="header-section-number">7</span> Icons</h2>
+<section id="bootstrap-icons" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="bootstrap-icons"><span class="header-section-number">7.1</span> Bootstrap icons</h3>
+<p><a href="https://icons.getbootstrap.com">Bootstrap icons</a> are directly available since quarto uses bootstrap for styling. Optionally, one could also use the quarto extension <a href="https://github.com/shafayetShafee/bsicons">bsicons</a> for more control.</p>
+<p><code>&lt;i class="bi bi-lightbulb-fill"&gt;&lt;/i&gt;</code> <i class="bi bi-lightbulb-fill"></i><br>
+<code>&lt;i class="bi bi-exclamation-circle-fill"&gt;&lt;/i&gt;</code> <i class="bi bi-exclamation-circle-fill"></i><br>
+<code>&lt;i class="bi bi-clipboard2-check-fill"&gt;&lt;/i&gt;</code> <i class="bi bi-clipboard2-check-fill"></i><br>
+<code>&lt;i class="bi bi-chat-fill"&gt;&lt;/i&gt;</code> <i class="bi bi-chat-fill"></i><br>
+<code>&lt;i class="bi bi-laptop-fill"&gt;&lt;/i&gt;</code> <i class="bi bi-laptop-fill"></i><br>
+<code>&lt;i class="bi bi-cloud-fill"&gt;&lt;/i&gt;</code> <i class="bi bi-cloud-fill"></i><br>
+<code>&lt;i class="bi bi-github"&gt;&lt;/i&gt;</code> <i class="bi bi-github"></i></p>
+</section>
+<section id="fontawesome" class="level3" data-number="7.2">
+<h3 data-number="7.2" class="anchored" data-anchor-id="fontawesome"><span class="header-section-number">7.2</span> Fontawesome</h3>
+<p>To use <a href="https://fontawesome.com/search?m=free">fontawesome</a> icons as shortcodes, quarto extension <a href="https://github.com/quarto-ext/fontawesome">fontawesome</a> needs to be installed.</p>
+<p>Icons can be placed using shortcodes.</p>
+<p><code>{{&lt; fa lightbulb &gt;}}</code> <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i><br>
+<code>{{&lt; fa exclamation &gt;}}</code> <i class="fa-solid fa-exclamation" aria-label="exclamation"></i><br>
+<code>{{&lt; fa clipboard-list &gt;}}</code> <i class="fa-solid fa-clipboard-list" aria-label="clipboard-list"></i><br>
+<code>{{&lt; fa comments &gt;}}</code> <i class="fa-solid fa-comments" aria-label="comments"></i><br>
+<code>{{&lt; fa desktop &gt;}}</code> <i class="fa-solid fa-desktop" aria-label="desktop"></i><br>
+<code>{{&lt; fa cloud &gt;}}</code> <i class="fa-solid fa-cloud" aria-label="cloud"></i><br>
+<code>{{&lt; fa check &gt;}}</code> <i class="fa-solid fa-check" aria-label="check"></i><br>
+<code>{{&lt; fa times &gt;}}</code> <i class="fa-solid fa-times" aria-label="times"></i><br>
+<code>{{&lt; fa skull &gt;}}</code> <i class="fa-solid fa-skull" aria-label="skull"></i><br>
+<code>{{&lt; fa skull size=2x &gt;}}</code> <i class="fa-solid fa-skull fa-2x" aria-label="skull"></i><br>
+<code>{{&lt; fa brands github &gt;}}</code> <i class="fa-brands fa-github" aria-label="github"></i></p>
+<p>Icons can be displayed using the HTML <code>&lt;i&gt;</code> tag. Note that not all icons may work.</p>
+<p><code>Here is a &lt;i class='fa fa-calendar'&gt;&lt;/i&gt; calendar and a &lt;i class='fa fa-couch'&gt;&lt;/i&gt; couch.</code></p>
+<p>Here is a <i class="fa fa-calendar"></i> calendar and a <i class="fa fa-couch"></i> couch.</p>
+<p>There are many other quarto extensions for icons such as <a href="https://github.com/schochastics/academicons">academicons</a>, <a href="https://github.com/mcanouil/quarto-iconify">iconify</a> and <a href="https://github.com/jmgirard/lordicon">lordicons</a>.</p>
+</section>
+</section>
+<section id="call-outs" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="call-outs"><span class="header-section-number">8</span> Call-Outs</h2>
+<p>Call-Out blocks are explained <a href="https://quarto.org/docs/authoring/callouts.html">here</a>.</p>
+<pre><code>::: {.callout-note}
+This is a call-out.
+:::
+
+::: {.callout-warning}
+This is a call-out.
+:::
+
+::: {.callout-important}
+This is a call-out.
+:::
+
+::: {.callout-tip}
+This is a call-out.
+:::
+
+::: {.callout-caution}
+This is a call-out.
+:::
+
+::: {.callout-tip collapse="true"}
+## Call-out with collapse
+
+This content is behind an accordion.
+:::</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a call-out.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a call-out.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a call-out.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a call-out.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is a call-out.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Call-out with collapse
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This content is behind an accordion.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="alerts" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="alerts"><span class="header-section-number">9</span> Alerts</h2>
+<pre><code>::: {.alert .alert-primary}
+**Note:** This is an alert!
+:::
+::: {.alert .alert-secondary}
+**Note:** This is an alert!
+:::
+::: {.alert .alert-success}
+**Note:** This is a success alert!
+:::
+::: {.alert .alert-danger}
+**Note:** This is a danger alert!
+:::
+::: {.alert .alert-warning}
+**Note:** This is a warning alert!
+:::
+::: {.alert .alert-info}
+**Note:** This is an info alert!
+:::</code></pre>
+<div class="alert alert-primary">
+<p><strong>Note:</strong> This is an alert!</p>
+</div>
+<div class="alert alert-secondary">
+<p><strong>Note:</strong> This is an alert!</p>
+</div>
+<div class="alert alert-success">
+<p><strong>Note:</strong> This is a success alert!</p>
+</div>
+<div class="alert alert-danger">
+<p><strong>Note:</strong> This is a danger alert!</p>
+</div>
+<div class="alert alert-warning">
+<p><strong>Note:</strong> This is a warning alert!</p>
+</div>
+<div class="alert alert-info">
+<p><strong>Note:</strong> This is an info alert!</p>
+</div>
+</section>
+<section id="layout" class="level2 page-columns page-full" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="layout"><span class="header-section-number">10</span> Layout</h2>
+<section id="span" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="span"><span class="header-section-number">10.1</span> Span</h3>
+<p><code>[Content inside span]{style="background-color: gray"}</code></p>
+<p><span style="background-color: gray">Content inside span</span></p>
+</section>
+<section id="div" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="div"><span class="header-section-number">10.2</span> Div</h3>
+<pre><code>::: {style="background-color: gray"}
+Content inside div
+:::</code></pre>
+<div style="background-color: gray">
+<p>Content inside div</p>
+</div>
+<p>Divs can be nested like this:</p>
+<pre><code>:::: {.class}
+::: {.class}
+:::
+::::</code></pre>
+<p>Both spans and divs support attributes in this specific order: identifiers, classes, and then key-value attributes.</p>
+<p><code>[Content inside span]{#id .class key1="val1" key2="val2"}</code></p>
+</section>
+<section id="hidden-div" class="level3" data-number="10.3">
+<h3 data-number="10.3" class="anchored" data-anchor-id="hidden-div"><span class="header-section-number">10.3</span> Hidden div</h3>
+<pre><code>::: {.hidden}
+Hidden content
+:::</code></pre>
+</section>
+<section id="conditional-content" class="level3" data-number="10.4">
+<h3 data-number="10.4" class="anchored" data-anchor-id="conditional-content"><span class="header-section-number">10.4</span> Conditional content</h3>
+<pre><code>::: {{.content-visible when-format="html"}}
+Will only appear in HTML.
+:::</code></pre>
+<pre><code>::: {{.content-hidden when-format="html"}}
+Will not appear in HTML.
+:::</code></pre>
+<p>Conditional content is documented <a href="https://quarto.org/docs/authoring/conditional.html">here</a>.</p>
+</section>
+<section id="inner-columns" class="level3" data-number="10.5">
+<h3 data-number="10.5" class="anchored" data-anchor-id="inner-columns"><span class="header-section-number">10.5</span> Inner columns</h3>
+<p>Organisation of content into columns within the body container.</p>
+<pre><code>:::: {.columns}
+::: {.column style="background-color: aliceblue"}
+Content is left.
+:::
+::: {.column style="background-color:  #f5b7b1"}
+Content is right.
+:::
+::::</code></pre>
+<div class="columns">
+<div class="column" style="background-color: aliceblue">
+<p>Content in left column.</p>
+</div><div class="column" style="background-color:  #f5b7b1">
+<p>Content in right column.</p>
+</div>
+</div>
+<p><br></p>
+<p>This is an example of nested columns.</p>
+<pre><code>:::: {.columns}
+
+::: {.column style="background-color: aliceblue"}
+Content in left column.
+:::
+
+::: {.column}
+Content in right column.
+
+:::: {.columns}
+::: {.column style="background-color: #d0ece7"}
+Nested left.
+:::
+::: {.column style="background-color: #f2d7d5"}
+Nested right.
+:::
+::::
+
+:::
+
+::::</code></pre>
+<div class="columns">
+<div class="column" style="background-color: aliceblue">
+<p>Content in left column.</p>
+</div><div class="column">
+<p>Content in right column.</p>
+<div class="columns">
+<div class="column" style="background-color: #d0ece7">
+<p>Nested left.</p>
+</div><div class="column" style="background-color: #f2d7d5">
+<p>Nested right.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="outer-columns" class="level3 page-columns page-full" data-number="10.6">
+<h3 data-number="10.6" class="anchored" data-anchor-id="outer-columns"><span class="header-section-number">10.6</span> Outer columns</h3>
+<p>Extending content outside the body container.</p>
+<pre><code>::: {.column-body style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-body
+:::
+
+::: {.column-body-outset style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-body-outset
+:::
+
+::: {.column-page-inset style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-page-inset
+:::
+
+::: {.column-page style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-page
+:::
+
+::: {.column-screen-inset style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-screen-inset
+:::
+
+::: {.column-screen style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-screen
+:::
+
+::: {.column-body-outset-right style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-body-outset-right
+:::
+
+::: {.column-page-inset-right style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-page-inset-right
+:::
+
+::: {.column-page-right style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-page-right
+:::
+
+::: {.column-screen-inset-right style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-screen-inset-right
+:::
+
+::: {.column-screen-right style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-screen-right
+:::
+
+::: {.column-body-outset-left style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-body-outset-left
+:::
+
+::: {.column-page-inset-left style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-page-inset-left
+:::
+
+::: {.column-page-left style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-page-left
+:::
+
+::: {.column-screen-inset-left style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-screen-inset-left
+:::
+
+::: {.column-screen-left style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-screen-left
+:::
+
+::: {.column-margin style="background-color: lightgray; margin-bottom:0.5em;"}
+.column-margin
+:::</code></pre>
+<div class="column-body" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-body</p>
+</div>
+<div class="column-body-outset" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-body-outset</p>
+</div>
+<div class="column-page-inset" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-page-inset</p>
+</div>
+<div class="column-page" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-page</p>
+</div>
+<div class="column-screen-inset" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-screen-inset</p>
+</div>
+<div class="column-screen" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-screen</p>
+</div>
+<div class="column-body-outset-right" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-body-outset-right</p>
+</div>
+<div class="column-page-inset-right" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-page-inset-right</p>
+</div>
+<div class="column-page-right" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-page-right</p>
+</div>
+<div class="column-screen-inset-right" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-screen-inset-right</p>
+</div>
+<div class="column-screen-right" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-screen-right</p>
+</div>
+<div class="column-body-outset-left" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-body-outset-left</p>
+</div>
+<div class="column-page-inset-left" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-page-inset-left</p>
+</div>
+<div class="column-page-left" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-page-left</p>
+</div>
+<div class="column-screen-inset-left" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-screen-inset-left</p>
+</div>
+<div class="column-screen-left" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-screen-left</p>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="" style="background-color: lightgray; margin-bottom:0.5em;">
+<p>.column-margin</p>
+</div></div></section>
+<section id="panel-layout" class="level3" data-number="10.7">
+<h3 data-number="10.7" class="anchored" data-anchor-id="panel-layout"><span class="header-section-number">10.7</span> Panel layout</h3>
+<pre><code>::: {.panel-tabset}
+#### Sub topic 1
+
+This is some material for topic 1.
+
+#### Sub topic 2
+
+This is some material for topic 2.
+
+:::</code></pre>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Sub topic 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Sub topic 2</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>This is some material for topic 1.</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>This is some material for topic 2.</p>
+</div>
+</div>
+</div>
+<p>More layout settings are described <a href="https://quarto.org/docs/authoring/article-layout.html">here</a> and <a href="https://quarto.org/docs/output-formats/page-layout.html">here</a>.</p>
+</section>
+</section>
+<section id="general-tips" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="general-tips"><span class="header-section-number">11</span> General tips</h2>
+<ul>
+<li>Use level 2 heading as the highest level</li>
+</ul>
+<pre><code>## Section A</code></pre>
+<ul>
+<li>Add custom css under YAML if needed <code>css: "my-theme.css"</code></li>
+<li>Check out the <a href="https://quarto.org/">Quarto</a> website</li>
+</ul>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>That reference refers to this footnote.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">2024 <a href="https://nbis.se">NBIS</a> | <a href="https://choosealicense.com/licenses/gpl-3.0/">GPL-3 License</a></div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">Published with <a href="https://quarto.org/">Quarto</a> v1.3.450</div>
+  </div>
+</footer>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","loop":true,"selector":".lightbox","closeEffect":"zoom"});</script>
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
