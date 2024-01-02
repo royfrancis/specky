@@ -1,4 +1,4 @@
-# specky <span><a href="https://github.com/royfrancis/specky"><img src="assets/logo.png" style="height:40px;vertical-align:middle;"></a></span> 
+# specky
 
 [![ci_badge](https://github.com/royfrancis/specky/workflows/deploy/badge.svg)](https://github.com/royfrancis/specky/actions?workflow=deploy)    [![lifecycle_badge](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 
