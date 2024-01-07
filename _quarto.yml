@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  image: "assets/logos/nbis-scilifelab.png"
+  image: "assets/images/featured.jpg"
   favicon: "assets/favicon.png"
   navbar:
     logo: "assets/logos/nbis-scilifelab.png"
@@ -59,7 +59,7 @@ format:
     include-before-body: "assets/include_body_before.html"
     include_after_body: "assets/include_body_after.html"
     theme: ["default","assets/css/slides.scss"]
-    df-print: kable
+    df-print: paged
     width: 1280
     height: 720
     transition: "fade"
@@ -81,7 +81,7 @@ format:
       data-background-image: "assets/images/cover.jpg"
       data-background-size: "cover"
       data-background-opacity: "1"
-    subtitle: "Abstrave quarto theme"
+    subtitle: "Specky quarto theme"
     header-logo-left: ../../assets/logos/nbis.png
     header-logo-left-height: 25px
     header-logo-left-url: https://royfrancis.github.io/specky/home_contents.html

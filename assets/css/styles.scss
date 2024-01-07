@@ -7,8 +7,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono&family=Nunito:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap');
 
 $primary: #95b540;
-$secondary: #E9F2D1;
-$link-color: #96b43f;
+$secondary: #BDD775;
+$tertiary: #E9F2D1;
+$link-color: $primary;
 $body-color: #1c2833;
 $code-color: #496985;
 $code-block-bg: WhiteSmoke;
@@ -24,12 +25,11 @@ $h4-font-size: 1.266rem;
 $h5-font-size: 1.125rem;
 $h6-font-size: 1rem;
 $code-block-border-color: none;
-$code-font-size: 0.90rem;
 $code-bg: $code-block-bg; /* inline code */
 /*$code-color: ; */
 
 /* site */
-$navbar-bg: $secondary;
+$navbar-bg: $tertiary;
 $footer-bg: white;
 $footer-fg: DimGray;
 
@@ -42,14 +42,6 @@ $footer-fg: DimGray;
 .small { font-size: 0.8em;}
 .smaller { font-size: 0.64em;}
 .smallest { font-size: 0.512em;}
-
-.badge, .badge-primary {
-  background-color: $primary;
-}
-
-.badge-secondary {
-  background-color: $secondary;
-}
 
 /* site ---------------------------------------------------------------------- */
 
@@ -78,9 +70,26 @@ $footer-fg: DimGray;
   object-fit: cover;
 }
 
-.shadow{
-  box-shadow: 2px 2px 10px lightgray;
+/* buttons and badges */
+
+.badge,
+.badge-primary {
+  background-color: $primary;
 }
+
+.badge-secondary {
+  background-color: $secondary;
+}
+
+.btn {
+  background-color: $secondary;
+}
+
+.btn:hover {
+  background-color: $tertiary;
+}
+
+/* alert */
 
 .alert {
   border-radius: 0;
@@ -93,11 +102,22 @@ $footer-fg: DimGray;
 /* code */
 
 pre {
+  // font-size: 1.05rem !important;
+  line-height: 1.4;
   background-color: $code-block-bg;
   border-radius: 0.25rem;
 }
 
+pre:not(.sourceCode), pre:not([class]) {
+  padding: 0.4em;
+}
+
+div.code-with-filename-file pre {
+  padding: 0;
+}
+
 code {
+  // font-size: 0.85em !important;
   color: $code-color;
 }
 
@@ -112,8 +132,8 @@ code {
   border: solid silver 1px !important;
 }
 
-div.callout-note.callout-style-default .callout-title {
-  background-color: $secondary;
+div.callout-note.callout-style-default > .callout-header {
+  background-color: $tertiary;
 }
 
 div.callout-note .callout-icon::before {
