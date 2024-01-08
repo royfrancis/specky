@@ -14,7 +14,7 @@ $body-color: #1c2833;
 $code-color: #496985;
 $code-block-bg: WhiteSmoke;
 $font-family-sans-serif: 'Nunito', 'Source Sans Pro', 'Helvetica', 'sans-serif' ;
-$font-family-monospace: 'Fira Mono','Ubuntu Mono', 'Lucida Console', 'Courier', 'monospace';
+$font-family-monospace: 'Fira Mono', 'Ubuntu Mono', 'Liberation Mono', 'Lucida Console', 'Courier', 'monospace';
 $font-size-root: 18px;
 $code-font-size: 14px;
 /* major second scale */
@@ -81,11 +81,11 @@ $footer-fg: DimGray;
   background-color: $secondary;
 }
 
-.btn {
+.btn.primary {
   background-color: $secondary;
 }
 
-.btn:hover {
+.btn.primary:hover {
   background-color: $tertiary;
 }
 
