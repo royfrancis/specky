@@ -32,7 +32,7 @@
     "href": "slides/index.html",
     "title": "Slides",
     "section": "",
-    "text": "Presentation\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Presentation\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Presentation\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Presentation\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "reports/more/index.html",
@@ -60,7 +60,7 @@
     "href": "reports/index.html",
     "title": "Reports",
     "section": "",
-    "text": "ObservableJS and Mermaid\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Basics\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nReport\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Quarto\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "ObservableJS and Mermaid\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Basics\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReport\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Quarto\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "reports/demo/index.html",
@@ -158,14 +158,14 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 08-01-2024 at 09:22:18."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 15-01-2024 at 16:40:57."
   },
   {
     "objectID": "index.html#specky-course-template",
     "href": "index.html#specky-course-template",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 08-01-2024 at 09:22:18."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 15-01-2024 at 16:40:57."
   },
   {
     "objectID": "home_schedule.html",
@@ -179,14 +179,14 @@
     "href": "reports/demo-with-r/index.html",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-08.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-08\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-15.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-15\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#code-execution",
     "href": "reports/demo-with-r/index.html#code-execution",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-08.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-08\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-15.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-15\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#chunk-attributes",
@@ -417,14 +417,14 @@
     "href": "slides/demo/index.html#code-formatting",
     "title": "Quarto Presentation",
     "section": "Code formatting",
-    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2024-01-08.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
+    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2024-01-15.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
   },
   {
     "objectID": "slides/demo/index.html#code-formatting-1",
     "href": "slides/demo/index.html#code-formatting-1",
     "title": "Quarto Presentation",
     "section": "Code formatting",
-    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2024-01-08\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
+    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2024-01-15\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
   },
   {
     "objectID": "slides/demo/index.html#code-highlighting",
@@ -627,7 +627,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto Presentation",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.jpg to change cover slide picture\nReplace assets/end.jpg to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.2.0-1018-azure\" \n                                              version \n\"#18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023\" \n                                             nodename \n                                       \"fv-az881-933\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.jpg to change cover slide picture\nReplace assets/end.jpg to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.2.0-1018-azure\" \n                                              version \n\"#18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023\" \n                                             nodename \n                                      \"fv-az1014-724\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",
