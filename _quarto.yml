@@ -21,8 +21,8 @@ website:
         href: "home_precourse.html"
   page-footer:
     border: false
-    left: "<?lua.year?> [NBIS](https://nbis.se) | [GPL-3 License](https://choosealicense.com/licenses/gpl-3.0/)"
-    right: "Published with [Quarto](https://quarto.org/) v<?quarto.version?>"
+    left: "{{< meta current_year >}} [NBIS](https://nbis.se) | [GPL-3 License](https://choosealicense.com/licenses/gpl-3.0/)"
+    right: "Published with [Quarto](https://quarto.org/) v{{< meta quarto_version >}}"
   site-url: "https://royfrancis.github.io/specky/"
 
 format:

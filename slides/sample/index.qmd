@@ -22,5 +22,5 @@ More content
 ##  {background-image="../../assets/images/home.jpg"}
 ### Thank you! Questions?
 
-[<?lua.year?> • [Specky](https://github.com/royfrancis/specky)]{.smaller}
+[{{< meta current_year >}} • [Specky](https://github.com/royfrancis/specky)]{.smaller}
 

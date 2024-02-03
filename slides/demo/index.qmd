@@ -1175,6 +1175,6 @@ Sys.info()
 R.version[c("platform","os","major","minor")]
 ```
 
-[<?lua.year?> • [Specky](https://github.com/royfrancis/specky)]{.smaller}
+[{{< meta current_year >}} • [Specky](https://github.com/royfrancis/specky)]{.smaller}
 
 
