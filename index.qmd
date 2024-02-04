@@ -19,7 +19,7 @@ execute:
 ::: {.home-grid-child-left}
 
 ## [**Specky: Course Template**]{.large}
-### A quarto theme for courses
+### A quarto course template
 
 - [Report](reports/sample/index.html)
 - [Presentation](slides/sample/index.html)
