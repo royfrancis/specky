@@ -1,66 +1,10 @@
 [
   {
-    "objectID": "home_contents.html",
-    "href": "home_contents.html",
-    "title": "Contents",
+    "objectID": "home_schedule.html",
+    "href": "home_schedule.html",
+    "title": "Schedule",
     "section": "",
-    "text": "HTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
-  },
-  {
-    "objectID": "home_contents.html#reports",
-    "href": "home_contents.html#reports",
-    "title": "Contents",
-    "section": "",
-    "text": "HTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
-  },
-  {
-    "objectID": "home_contents.html#slides",
-    "href": "home_contents.html#slides",
-    "title": "Contents",
-    "section": "Slides",
-    "text": "Slides\nPresentation using the Quarto revealjs format.\nListing page for all slides.\n\nMinimal demo \nQuarto with R"
-  },
-  {
-    "objectID": "home_syllabus.html",
-    "href": "home_syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "SyllabusLearning outcomesEntry requirements\n\n\nThe syllabus for this workshop are as follows.\n\nWorking on the unix/linux command line\n\nCommand line navigation and related commands: cd, mkdir, rm, rmdir\nCommonly used linux tools: cp, mv, tar, less, more, head, tail, nano, grep, top, man\nWildcards\nOwnership and permissions\nSymbolic links\nPiping commands\n\nWorking on remote computing cluster\n\nLogging on to UPPMAX\nBooking resources\nJob templates, submission and queues\nModules\n\n\n\n\nAfter this workshop you should be able to:\n\nDescribe the basic principles of next generation sequencing.\nUse the Linux command line interface to manage simple file processing operations, and organise directory structures.\nConnect to and work on a remote compute cluster.\nApply programs in Linux for analysis of NGS data.\n\n\n\n\nThis is a national course open to PhD students, postdocs, group leaders and core facility staff.\nA background in genetics, cell biology, biomedicine, biochemistry, bioinformatics or comparable is desirable."
-  },
-  {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Presentation\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Presentation\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "reports/more/index.html",
-    "href": "reports/more/index.html",
-    "title": "ObservableJS and Mermaid",
-    "section": "",
-    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\nFigure 1: Scatterplot A."
-  },
-  {
-    "objectID": "reports/more/index.html#observablejs",
-    "href": "reports/more/index.html#observablejs",
-    "title": "ObservableJS and Mermaid",
-    "section": "",
-    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\nFigure 1: Scatterplot A."
-  },
-  {
-    "objectID": "reports/more/index.html#mermaidjs",
-    "href": "reports/more/index.html#mermaidjs",
-    "title": "ObservableJS and Mermaid",
-    "section": "2 MermaidJS",
-    "text": "2 MermaidJS\nQuarto natively supports diagrams using mermaid. Using mermaid in quarto is documented here.\n\n2.1 Flow diagram\nSpecify mermaid as the language.\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n2.2 Gant charts\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d\n\n\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d"
-  },
-  {
-    "objectID": "reports/index.html",
-    "href": "reports/index.html",
-    "title": "Reports",
-    "section": "",
-    "text": "ObservableJS and Mermaid\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Basics\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReport\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Quarto\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Topic\nInstructor\nLinks\n\n\n\n\n12-Jan-2024 (Fri)\n\n\n\n\nMinimal demo\nRoy Francis\nSlides, Report\n\n\nUsing custom theme\nRoy Francis\nReport\n\n\nQuarto basics\nRoy Francis\nReport\n\n\nQuarto and R\nRoy Francis\nSlides, Report\n\n\nOJS and mermaid\nRoy Francis\nReport"
   },
   {
     "objectID": "reports/demo/index.html",
@@ -74,7 +18,7 @@
     "href": "reports/demo/index.html#text-formatting",
     "title": "Quarto Basics",
     "section": "1 Text formatting",
-    "text": "1 Text formatting\n\n1.1 Headings\n## Level 2 heading  \n### Level 3 heading  \n#### Level 4 heading  \n##### Level 5 heading  \n###### Level 6 heading\n\n\n1.2 Character sizes\nCustom character sizes. This is an enchanced feature.\n\n\n\nMarkdown\nRendered\n\n\n\n\n[Largest text]{.largest}\nLargest text\n\n\n[Larger text]{.larger}\nLarger text\n\n\n[Large text]{.large}\nLarge text\n\n\nNormal text\nNormal text\n\n\n[Small text]{.small}\nSmall text\n\n\n[Smaller text]{.smaller}\nSmaller text\n\n\n[Smallest text]{.smallest}\nSmallest text\n\n\n\n\n\n1.3 Character styles\n\n\n\nMarkdown\nRendered\n\n\n\n\n__Bold text__\nBold text\n\n\n_Italic text_\nItalic text\n\n\n~~Strikethrough~~\nStrikethrough\n\n\nH~2~O\nH2O\n\n\nx^2\nx^2\n\n\n--\n–\n\n\n---\n—\n\n\n[link](r-project.org)\nlink\n\n\n{{&lt; kbd Shift-Ctrl-P &gt;}}\nShift-Ctrl-P\n\n\n\n\n\n1.4 Blockquote\n&gt; This is a block quote. This\n&gt; paragraph has two lines.\n&gt;\n&gt; 1. This is a list inside a block quote.\n&gt; 2. Second item.\n\nThis is a block quote. This paragraph has two lines.\n\nThis is a list inside a block quote.\nSecond item.\n\n\n\n\n1.5 Line block\nLine block preserves spaces and new lines.\n| This\n|     block\n|          preserves\n|                   formatting\nThis\n    block\n         preserves\n                  formatting\n\n\n1.6 Rule\nA horizontal line can be created using three or more * or -.\n***\n\n\n\n1.7 Footnote\nAn example of footnote reference 1\n\n\n1.8 Aside\n[This content lives in the right margin]{.aside}\nThis content lives in the right margin\n\n\n1.9 Badge\nBadges are defined as such:\n[badge]{.badge .badge-primary} badge\n[badge]{.badge .badge-secondary} badge"
+    "text": "1 Text formatting\n\n1.1 Headings\n## Level 2 heading  \n### Level 3 heading  \n#### Level 4 heading  \n##### Level 5 heading  \n###### Level 6 heading\n\n\n1.2 Character sizes\nCustom character sizes. This is an enchanced feature.\n\n\n\nMarkdown\nRendered\n\n\n\n\n[Largest text]{.largest}\nLargest text\n\n\n[Larger text]{.larger}\nLarger text\n\n\n[Large text]{.large}\nLarge text\n\n\nNormal text\nNormal text\n\n\n[Small text]{.small}\nSmall text\n\n\n[Smaller text]{.smaller}\nSmaller text\n\n\n[Smallest text]{.smallest}\nSmallest text\n\n\n\n\n\n1.3 Character styles\n\n\n\nMarkdown\nRendered\n\n\n\n\n__Bold text__\nBold text\n\n\n_Italic text_\nItalic text\n\n\n~~Strikethrough~~\nStrikethrough\n\n\nH~2~O\nH2O\n\n\nx^2\nx^2\n\n\n--\n–\n\n\n---\n—\n\n\n[link](r-project.org)\nlink\n\n\n{{&lt; kbd Shift-Ctrl-P &gt;}}\nShift-Ctrl-PShift-Ctrl-P\n\n\n\n\n\n1.4 Blockquote\n&gt; This is a block quote. This\n&gt; paragraph has two lines.\n&gt;\n&gt; 1. This is a list inside a block quote.\n&gt; 2. Second item.\n\nThis is a block quote. This paragraph has two lines.\n\nThis is a list inside a block quote.\nSecond item.\n\n\n\n\n1.5 Line block\nLine block preserves spaces and new lines.\n| This\n|     block\n|          preserves\n|                   formatting\nThis\n    block\n         preserves\n                  formatting\n\n\n1.6 Rule\nA horizontal line can be created using three or more * or -.\n***\n\n\n\n1.7 Footnote\nAn example of footnote reference 1\n\n\n1.8 Aside\n[This content lives in the right margin]{.aside}\nThis content lives in the right margin\n\n\n1.9 Badge\nBadges are defined as such:\n[badge]{.badge .badge-primary} badge\n[badge]{.badge .badge-secondary} badge"
   },
   {
     "objectID": "reports/demo/index.html#code-formatting",
@@ -95,7 +39,7 @@
     "href": "reports/demo/index.html#images",
     "title": "Quarto Basics",
     "section": "4 Images",
-    "text": "4 Images\nImages can be inserted using plain markdown or HTML directly. Plain markdown can be embellished with custom quarto adjustments to modify aspects of the image. Clicking the image opens the image in a lightbox. This is made possible using the lightbox extension.\n\n4.1 Using Markdown\nUsing regular markdown.\n![](assets/image.jpg)\n\n\n\n\n\nThe dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.\n![This is a caption](assets/image.jpg){width=30%}  \n\n\n\nThis is a caption\n\n\nThis image above is now 30% of it’s original width.\n\n4.1.1 Figure layout\n::: {#fig-mylabel layout-ncol=2}\n![Caption for figure 1](assets/image.jpg){width=\"40%\"}\n\n![Caption for figure 2](assets/image.jpg){width=\"40%\"}\n\nThese figures are interesting.\n:::\n\n\n\n\n\n\nCaption for figure 1\n\n\n\n\n\nCaption for figure 2\n\n\n\nFigure 1: These figures are interesting.\n\n\nMore figure options and layouts are described here. Cross referencing described here.\n\n\n\n4.2 Using HTML\nThis image below is 30% size.\n&lt;img src=\"assets/image.jpg\" style=\"width:30%;\"/&gt;\n\nFor more information on figures, see here. Images generated through code is not covered here."
+    "text": "4 Images\nImages can be inserted using plain markdown or HTML directly. Plain markdown can be embellished with custom quarto adjustments to modify aspects of the image. Clicking the image opens the image in a lightbox.\n\n4.1 Using Markdown\nUsing regular markdown.\n![](assets/image.jpg)\n\nThe dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.\n![This is a caption](assets/image.jpg){width=30%}  \n\n\n\nThis is a caption\n\n\nThis image above is now 30% of it’s original width.\n\n4.1.1 Figure layout\n::: {#fig-mylabel layout-ncol=2}\n![Caption for figure 1](assets/image.jpg){width=\"40%\"}\n\n![Caption for figure 2](assets/image.jpg){width=\"40%\"}\n\nThese figures are interesting.\n:::\n\n\n\n\n\n\n\n\nCaption for figure 1\n\n\n\n\n\n\n\nCaption for figure 2\n\n\n\n\n\n\nFigure 1: These figures are interesting.\n\n\n\nMore figure options and layouts are described here. Cross referencing described here.\n\n\n\n4.2 Using HTML\nThis image below is 30% size.\n&lt;img src=\"assets/image.jpg\" style=\"width:30%;\"/&gt;\n\nFor more information on figures, see here. Images generated through code is not covered here."
   },
   {
     "objectID": "reports/demo/index.html#math-expressions",
@@ -109,7 +53,7 @@
     "href": "reports/demo/index.html#tables",
     "title": "Quarto Basics",
     "section": "6 Tables",
-    "text": "6 Tables\nFor simple cases, tables can be manually created in markdown.\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\nTable caption and numbering can be added as such:\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n: These are exciting results. {#tbl-mylabel}\n\n\n\n\nTable 1: These are exciting results.\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\n\nTables can also be generated through code which is not covered here.\n\n6.1 Margin table\nA table placed in the margin.\n::: {.column-margin}\n\n| speed | dist |\n|-------|------|\n| 4     | 2    |\n| 4     | 10   |\n| 7     | 4    |\n\n:::\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\nMore information about tables."
+    "text": "6 Tables\nFor simple cases, tables can be manually created in markdown.\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\nTable caption and numbering can be added as such:\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n: These are exciting results. {#tbl-mylabel}\n\n\n\n\n\nTable 1: These are exciting results.\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\n\n\n\nTables can also be generated through code which is not covered here.\n\n6.1 Margin table\nA table placed in the margin.\n::: {.column-margin}\n\n| speed | dist |\n|-------|------|\n| 4     | 2    |\n| 4     | 10   |\n| 7     | 4    |\n\n:::\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\nMore information about tables."
   },
   {
     "objectID": "reports/demo/index.html#icons",
@@ -152,90 +96,6 @@
     "title": "Quarto Basics",
     "section": "Footnotes",
     "text": "Footnotes\n\n\nThat reference refers to this footnote.↩︎"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 15-01-2024 at 16:40:57."
-  },
-  {
-    "objectID": "index.html#specky-course-template",
-    "href": "index.html#specky-course-template",
-    "title": "",
-    "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 15-01-2024 at 16:40:57."
-  },
-  {
-    "objectID": "home_schedule.html",
-    "href": "home_schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Topic\nAuthor\nLinks\n\n\n\n\n12-Jan-2024 (Fri)\n\n\n\n\nMinimal demo\nRoy Francis\nSlides, Report\n\n\nUsing custom theme\nRoy Francis\nReport\n\n\nQuarto basics\nRoy Francis\nReport\n\n\nQuarto and R\nRoy Francis\nSlides, Report\n\n\nOJS and mermaid\nRoy Francis\nReport"
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html",
-    "href": "reports/demo-with-r/index.html",
-    "title": "Quarto with R",
-    "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-15.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-15\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#code-execution",
-    "href": "reports/demo-with-r/index.html#code-execution",
-    "title": "Quarto with R",
-    "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-01-15.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-01-15\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#chunk-attributes",
-    "href": "reports/demo-with-r/index.html#chunk-attributes",
-    "title": "Quarto with R",
-    "section": "2 Chunk attributes",
-    "text": "2 Chunk attributes\nProperties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: #| eval: false.\nIn this example, the R source code and results are hidden but the code is evaluated.\n```{r}\n#| eval: true\n#| echo: false\n#| results: hide\nSys.Date()\n```\nA code chunk can be given a code filename using the chunk attribute filename.\n```{r}\n#| filename: R code\nSys.Date()\n```\n\n\n\nR code\n\nSys.Date()\n\n\nEnable line numbers using code-line-numbers: true.\n```{r}\n#| code-line-numbers: true\nSys.Date()\nsessionInfo()\n```\n\nSys.Date()\nsessionInfo()\n\nAn advanced example showing bash code generated from R.\n```{r}\n#| attr-output: \"filename='bash'\"\n#| class-output: bash\n#| echo: false\nd &lt;- \"custom\"\ncat(paste(\"mkdir​\", d))\n```\n\n\n\n\nbash\n\nmkdir​ custom\n\n\n\nCode chunk attributes are documented here."
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#tables",
-    "href": "reports/demo-with-r/index.html#tables",
-    "title": "Quarto with R",
-    "section": "3 Tables",
-    "text": "3 Tables\n\n3.1 Manual\nFor simple cases, tables can be manually created in markdown.\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\n\n\n3.2 kable\nSimple table using kable from R package knitr. This is the default output for quarto.\n\nlibrary(knitr)\nhead(iris)\n\n\n\n  \n\n\n\n\n3.2.1 Layout\n```{r}\n#| column: body-outset\n#| label: tbl-dual-table\n#| tbl-cap: \"Example\"\n#| tbl-subcap: \n#|   - \"Cars\"\n#|   - \"Pressure\"\n#| layout-ncol: 2\n\nkable(head(cars))\nkable(head(pressure))\n```\n\n\nTable 1: Example\n\n\n\n\n(a) Cars\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n7\n22\n\n\n8\n16\n\n\n9\n10\n\n\n\n\n\n\n\n\n\n\n\n\n(b) Pressure\n\n\ntemperature\npressure\n\n\n\n\n0\n0.0002\n\n\n20\n0.0012\n\n\n40\n0.0060\n\n\n60\n0.0300\n\n\n80\n0.0900\n\n\n100\n0.2700\n\n\n\n\n\n\n\n\n\n\n\n\n3.2.2 Cross referencing\nImages and tables can be automatically numbered by using label attribute. Image label must start with fig- and tables with tbl-. Tables and images can also be cross-referenced when using the label attribute. For example, the table above can be referenced like @tbl-dual-table which renders as Table 1.\n\n\n3.2.3 Margin table\n```{r}\n#| fig-caption: This table is in the margin.\n#| column: margin\n\nhead(cars)\n```\n\n\n\n\n\n  \n\n\n\n\n\n3.3 gt\nTables using the gt package. A structured approach to creating tables using grammar of tables with extensive customization options.\n\nlibrary(gt)\n\niris %&gt;%\n    group_by(Species) %&gt;%\n    slice(1:4) %&gt;%\n    gt() %&gt;%\n    cols_label(\n      Sepal.Length = \"Sepal Length\", Sepal.Width = \"Sepal Width\",\n      Petal.Length = \"Petal Length\", Petal.Width = \"Petal Width\"\n    ) %&gt;%\n    tab_source_note(\n        source_note = md(\"Source: Iris data. Anderson, 1936; Fisher, 1936)\")\n    )\n\n\n\n\n\n  \n    \n    \n      Sepal Length\n      Sepal Width\n      Petal Length\n      Petal Width\n    \n  \n  \n    \n      setosa\n    \n    5.1\n3.5\n1.4\n0.2\n    4.9\n3.0\n1.4\n0.2\n    4.7\n3.2\n1.3\n0.2\n    4.6\n3.1\n1.5\n0.2\n    \n      versicolor\n    \n    7.0\n3.2\n4.7\n1.4\n    6.4\n3.2\n4.5\n1.5\n    6.9\n3.1\n4.9\n1.5\n    5.5\n2.3\n4.0\n1.3\n    \n      virginica\n    \n    6.3\n3.3\n6.0\n2.5\n    5.8\n2.7\n5.1\n1.9\n    7.1\n3.0\n5.9\n2.1\n    6.3\n2.9\n5.6\n1.8\n  \n  \n    \n      Source: Iris data. Anderson, 1936; Fisher, 1936)\n    \n  \n  \n\n\n\n\n\n\n3.4 htmlTable\nMarkdown tables can be enhanced using the R package htmlTable.\n\nlibrary(htmlTable)\n\niris1 &lt;- iris[c(1:4,51:53,105:108),]\nhtmlTable(iris1, rgroup=unique(iris1$Species), n.rgroup=rle(as.character(iris1$Species))$lengths)\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\nsetosa\n\n\n  1\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n  2\n4.9\n3\n1.4\n0.2\nsetosa\n\n\n  3\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n  4\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\nversicolor\n\n\n  51\n7\n3.2\n4.7\n1.4\nversicolor\n\n\n  52\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n  53\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\nvirginica\n\n\n  105\n6.5\n3\n5.8\n2.2\nvirginica\n\n\n  106\n7.6\n3\n6.6\n2.1\nvirginica\n\n\n  107\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n  108\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n\n\n\n\n\n3.5 kableExtra\nMore advanced table using kableExtra and formattable.\n\nlibrary(kableExtra)\n\niris[c(1:4,51:53,105:108),] %&gt;%\n  mutate(Sepal.Length=color_bar(\"lightsteelblue\")(Sepal.Length)) %&gt;%\n  mutate(Sepal.Width=color_tile(\"white\",\"orange\")(Sepal.Width)) %&gt;%\n  mutate(Species=cell_spec(Species,\"html\",color=\"white\",bold=T,\n    background=c(\"#8dd3c7\",\"#fb8072\",\"#bebada\")[factor(.$Species)])) %&gt;%\n  kable(\"html\",escape=F) %&gt;%\n  kable_styling(bootstrap_options=c(\"striped\",\"hover\",\"responsive\"),\n                full_width=F,position=\"left\") %&gt;%\n  column_spec(5,width=\"3cm\")\n\n\n\nTable using kableextra. \n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n1\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n2\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n3\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n51\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n52\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n53\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n105\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n106\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n107\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n108\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n\n\n\n\n\n\n\n\n3.6 DT\nInteractive table using R package DT.\n\nlibrary(DT)\n\niris %&gt;%\n  slice(1:15) %&gt;%\n  datatable(options=list(pageLength=7))\n\n\n\n\n\n\n\n\n3.7 reactable\nAdvanced interactive tables with reactable.\n\nlibrary(reactable)\n\nreactable(iris[sample(1:150,10),],\n  columns = list(\n    Sepal.Length = colDef(name = \"Sepal Length\"),\n    Sepal.Width = colDef(name = \"Sepal Width\"),\n    Petal.Width = colDef(name = \"Petal Width\"),\n    Petal.Width = colDef(name = \"Petal Width\")\n  ),\n  striped = TRUE,\n  highlight = TRUE,\n  filterable = TRUE\n)\n\n\n\n\n\n\nreactable creation can be simplified as well as enhanced by using reactablefmtr."
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#static-images-using-r",
-    "href": "reports/demo-with-r/index.html#static-images-using-r",
-    "title": "Quarto with R",
-    "section": "4 Static images using R",
-    "text": "4 Static images using R\nQuarto chunks can be used to control image display size using the argument out.width.\nThis image below is displayed at a size of 300 pixels.\n```{r}\n#| out-width: 300px\nknitr::include_graphics(\"assets/image.jpg\")\n```\n\n\n\n\n\n\n\n\n\nThis image below is displayed at a size of 75 pixels and a caption added.\n```{r}\n#| out-width: 75px\n#| fig-cap: This is a caption\nknitr::include_graphics(\"assets/image.jpg\")\n```\n\n\n\n\n\nThis is a caption\n\n\n\n\nFor more information on figures, see here. For plots generated through R, see section further below."
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#static-plots",
-    "href": "reports/demo-with-r/index.html#static-plots",
-    "title": "Quarto with R",
-    "section": "5 Static plots",
-    "text": "5 Static plots\n\n5.1 Base plot\n\nPlots using base R are widely used and may be good enough for most situations.\nBut they lack a consistent coding framework.\n\n\n{\n  plot(x=iris$Sepal.Length,y=iris$Sepal.Width,\n      col=c(\"coral\",\"steelblue\",\"forestgreen\")[iris$Species],\n      xlab=\"Sepal Length\",ylab=\"Sepal Width\",pch=19)\n\n  legend(x=7,y=4.47,legend=c(\"setosa\",\"versicolor\",\"virginica\"),\n        col=c(\"coral\",\"steelblue\",\"forestgreen\"),pch=19)\n}\n\n\n\n\nFigure 1: Static plot using base plot.\n\n\n\n\n\n5.1.1 Multiple plots\n```{r}\n#| column: screen-inset-shaded\n#| layout-nrow: 1\n#| fig-cap:\n#|   - \"Scatterplot of speed vs distance\"\n#|   - \"Pairwise scatterplot of all variables\"\n#|   - \"Scatterplot of temperature vs pressure\"\n\nplot(cars)\nplot(iris)\nplot(pressure)\n```\n\n\n\n\n\nScatterplot of speed vs distance\n\n\n\n\n\nPairwise scatterplot of all variables\n\n\n\n\n\nScatterplot of temperature vs pressure\n\n\n\n\n\n\n5.1.2 Margin plot\n```{{r}}\n#| column: margin\n\nplot(cars)\n```\n\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n5.2 ggplot2\nR package ggplot2 is one of the most versatile and complete plotting solutions.\n\nlibrary(ggplot2)\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_report()\n\n\n\n\nStatic plot using ggplot2."
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#interactive-plots",
-    "href": "reports/demo-with-r/index.html#interactive-plots",
-    "title": "Quarto with R",
-    "section": "6 Interactive plots",
-    "text": "6 Interactive plots\n\n6.1 highcharter\nR package highcharter is a wrapper around javascript library highcharts.\n\nlibrary(highcharter)\n\nh &lt;- iris %&gt;%\n  hchart(.,\"scatter\",hcaes(x=\"Sepal.Length\",y=\"Sepal.Width\",group=\"Species\")) %&gt;%\n  hc_xAxis(title=list(text=\"Sepal Length\"),crosshair=TRUE) %&gt;%\n  hc_yAxis(title=list(text=\"Sepal Width\"),crosshair=TRUE) %&gt;%\n  hc_chart(zoomType=\"xy\",inverted=FALSE) %&gt;%\n  hc_legend(verticalAlign=\"top\",align=\"right\") %&gt;%\n  hc_size(height=400)\n\nhtmltools::tagList(list(h))\n\n\n\n\nInteractive scatterplot using highcharter.\n\n\n\n\n6.2 plotly\nR package plotly provides R binding around javascript plotting library plotly.\n\nlibrary(plotly)\n\np &lt;- iris %&gt;%\n  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %&gt;%\n  add_markers()\np\n\n\n\nInteractive scatterplot using plotly.\n\n\n\n\n6.3 ggplotly\nplotly also has a function called ggplotly which converts a static ggplot2 object into an interactive plot.\n\nlibrary(plotly)\n\np &lt;- iris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point()+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_bw(base_size=12)\n\nggplotly(p,width=500,height=400)\n\n\n\nInteractive scatterplot using ggplotly.\n\n\n\n\n6.4 ggiraph\nggiraph is also an R package that can be used to convert a static ggplot2 object into an interactive plot.\n\nlibrary(ggiraph)\n\np &lt;- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+\n      geom_point_interactive(aes(tooltip=paste0(\"&lt;b&gt;Petal Length:&lt;/b&gt; \",Petal.Length,\"\\n&lt;b&gt;Sepal Length: &lt;/b&gt;\",Sepal.Length,\"\\n&lt;b&gt;Species: &lt;/b&gt;\",Species)),size=2)+\n  theme_bw()\n\ntooltip_css &lt;- \"background-color:#e7eef3;font-family:Roboto;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;\"\n\nggiraph(code=print(p),hover_css=\"cursor:pointer;stroke:black;fill-opacity:0.3\",zoom_max=5,tooltip_extra_css=tooltip_css,tooltip_opacity=0.9)\n\n\n\nInteractive scatterplot using ggiraph.\n\n\n\n\n6.5 dygraphs\nR package dygraphs provides R bindings for javascript library dygraphs for time series data.\n\nlibrary(dygraphs)\n\nlungDeaths &lt;- cbind(ldeaths, mdeaths, fdeaths)\ndygraph(lungDeaths,main=\"Deaths from Lung Disease (UK)\") %&gt;%\n  dyOptions(colors=c(\"#66C2A5\",\"#FC8D62\",\"#8DA0CB\"))\n\n\n\nInteractive time series plot using dygraph.\n\n\n\n\n6.6 Network graph\nR package networkD3 allows the use of interactive network graphs from the D3.js javascript library.\n\nlibrary(networkD3)\n\ndata(MisLinks,MisNodes)\nforceNetwork(Links=MisLinks,Nodes=MisNodes,Source=\"source\",\n             Target=\"target\",Value=\"value\",NodeID=\"name\",\n             Group=\"group\",opacity=0.4)\n\n\n\nInteractive network plot.\n\n\n\n\n6.7 leaflet\nR package leaflet provides R bindings for javascript mapping library; leafletjs.\n\nlibrary(leaflet)\n\nleaflet(height=500,width=700) %&gt;%\n  addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n  #addProviderTiles(providers$Esri.NatGeoWorldMap) %&gt;%\n  addMarkers(lat=57.639327,lng=18.288534,popup=\"RaukR\") %&gt;%\n  setView(lat=57.639327,lng=18.288534,zoom=15)\n\n\n\nInteractive map using leaflet.\n\n\n\n\n6.8 crosstalk\nR package crosstalk allows crosstalk enabled plotting libraries to be linked. Through the shared ‘key’ variable, data points can be manipulated simultaneously on two independent plots.\n\nlibrary(crosstalk)\n\nshared_quakes &lt;- SharedData$new(quakes[sample(nrow(quakes), 100),])\nlf &lt;- leaflet(shared_quakes,height=300) %&gt;%\n        addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n        addMarkers()\npy &lt;- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %&gt;%\n        add_markers()\n\nhtmltools::div(lf,py)\n\n\n\n\n\n\n\nLinking independent plots using crosstalk."
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#observablejs",
-    "href": "reports/demo-with-r/index.html#observablejs",
-    "title": "Quarto with R",
-    "section": "7 ObservableJS",
-    "text": "7 ObservableJS\nQuarto supports ObservableJS for interactive visualisations in the browser.\nPass data from R to OJS\n\nirism &lt;- iris\ncolnames(irism) &lt;- gsub(\"[.]\",\"_\",tolower(colnames(irism)))\nojs_define(ojsd = irism)\n\n\nojsdata = transpose(ojsd)\n\n\n\n\n\n\nDisplay as a table\n\nviewof filtered_table = Inputs.table(ojsdata)\n\n\n\n\n\n\nDefine inputs\n\nviewof x = Inputs.select(Object.keys(ojsdata[0]), {value: \"sepal_length\", multiple: false, label: \"X axis\"})\n\n\n\n\n\n\n\nviewof y = Inputs.select(Object.keys(ojsdata[0]), {value: \"sepal_width\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\nDisplay plot\n\nPlot.plot({\n  marks: [\n    Plot.dot(ojsdata, {\n      x: x,\n      y: y,\n      fill: \"species\",\n      title: (d) =&gt;\n        `${d.species} \\n Petal length: ${d.petal_length} \\n Sepal length: ${d.sepal_length}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\nObservableJS in quarto documentation."
-  },
-  {
-    "objectID": "reports/demo-with-r/index.html#icons",
-    "href": "reports/demo-with-r/index.html#icons",
-    "title": "Quarto with R",
-    "section": "8 Icons",
-    "text": "8 Icons\nIcons can be placed programatically through R using the R package fontawesome.\n`r fontawesome::fa('lightbulb')`\n\nOptional arguments are height and fill.\n`r fontawesome::fa('lightbulb',height='30px',fill='steelblue')`\n\nFor full list of icons check out FontAwesome."
   },
   {
     "objectID": "reports/usage/index.html",
@@ -287,25 +147,95 @@
     "text": "6 Export\nA quarto document can be rendered from the terminal as follows:\n\n\n\nbash\n\nquarto render report.qmd\n\n\nRendering from the R console using the quarto R package.\n\n\n\nR\n\nquarto::quarto_render(\"report.qmd\")\n\n\nTo render from RStudio, click the Render button. Rendered output is moved into the docs directory. This is set in _quarto.yml as output-dir:"
   },
   {
-    "objectID": "reports/sample/index.html",
-    "href": "reports/sample/index.html",
-    "title": "Report",
+    "objectID": "reports/more/index.html",
+    "href": "reports/more/index.html",
+    "title": "ObservableJS and Mermaid",
     "section": "",
-    "text": "Content"
+    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\n\n\nFigure 1: Scatterplot A."
   },
   {
-    "objectID": "reports/sample/index.html#heading-1",
-    "href": "reports/sample/index.html#heading-1",
-    "title": "Report",
+    "objectID": "reports/more/index.html#observablejs",
+    "href": "reports/more/index.html#observablejs",
+    "title": "ObservableJS and Mermaid",
     "section": "",
-    "text": "Content"
+    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\n\n\nFigure 1: Scatterplot A."
   },
   {
-    "objectID": "reports/sample/index.html#heading-2",
-    "href": "reports/sample/index.html#heading-2",
-    "title": "Report",
-    "section": "2 Heading 2",
-    "text": "2 Heading 2\nMore Contents"
+    "objectID": "reports/more/index.html#mermaidjs",
+    "href": "reports/more/index.html#mermaidjs",
+    "title": "ObservableJS and Mermaid",
+    "section": "2 MermaidJS",
+    "text": "2 MermaidJS\nQuarto natively supports diagrams using mermaid. Using mermaid in quarto is documented here.\n\n2.1 Flow diagram\nSpecify mermaid as the language.\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n\n2.2 Gant charts\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d\n\n\n\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d"
+  },
+  {
+    "objectID": "home_precourse.html",
+    "href": "home_precourse.html",
+    "title": "Precourse",
+    "section": "",
+    "text": "Remote computing cluster will be use for data analyses. A SUPR/NAISS account is needed to use these resources.\n\n\n\n\n\n\nTip\n\n\n\nThis is where you might run into trouble if you don’t have a SWAMID connected account. You will not be able to accept the user agreement online without it, so you will have to send in your acceptance in paper form together with a copy of your passport. This process can take a week or more, so please make sure you can accept the user agreement in good time.\n\n\nYou need to request login accounts to NSC and UPPMAX. These are the accounts you use to log in to the actual computers, so they are not the same as your SUPR account. Login to SUPR and go to the Accounts page. Under the Possible Resource Account Requests heading click on Request Account on Tetralith @ NSC and Request Account on Rackham @ UPPMAX button and confirm it on the next page. If either of them are missing from this page, it could be because you already have a login account created (only 1 account per person allowed), or that you have not yet gotten your project memberships approved.\n\n\n\n\n\n\nNote\n\n\n\nYou will get one username & password for the account on UPPMAX, and one username and password for the account on NSC. Please keep track of both, we will tell you when to use which account during the workshop."
+  },
+  {
+    "objectID": "home_precourse.html#cluster",
+    "href": "home_precourse.html#cluster",
+    "title": "Precourse",
+    "section": "",
+    "text": "Remote computing cluster will be use for data analyses. A SUPR/NAISS account is needed to use these resources.\n\n\n\n\n\n\nTip\n\n\n\nThis is where you might run into trouble if you don’t have a SWAMID connected account. You will not be able to accept the user agreement online without it, so you will have to send in your acceptance in paper form together with a copy of your passport. This process can take a week or more, so please make sure you can accept the user agreement in good time.\n\n\nYou need to request login accounts to NSC and UPPMAX. These are the accounts you use to log in to the actual computers, so they are not the same as your SUPR account. Login to SUPR and go to the Accounts page. Under the Possible Resource Account Requests heading click on Request Account on Tetralith @ NSC and Request Account on Rackham @ UPPMAX button and confirm it on the next page. If either of them are missing from this page, it could be because you already have a login account created (only 1 account per person allowed), or that you have not yet gotten your project memberships approved.\n\n\n\n\n\n\nNote\n\n\n\nYou will get one username & password for the account on UPPMAX, and one username and password for the account on NSC. Please keep track of both, we will tell you when to use which account during the workshop."
+  },
+  {
+    "objectID": "home_precourse.html#install-tools",
+    "href": "home_precourse.html#install-tools",
+    "title": "Precourse",
+    "section": "2 Install tools",
+    "text": "2 Install tools\n\n2.1 ThinLinc\nThinLinc allows graphical connection to UPPMAX. It can be used directly from the browser but it is recommended to download and install the client for better copy/paste operation.\n\n\n2.2 XQuartz\nMac users will need to download and install XQuartz for X11 forwarding. ie; to forward remotely opened windows to local machine.\n\n\n2.3 MobaXterm (Optional)\nIf you are on a Windows system, and you want to open graphical applications from the terminal, we recommend MobaXterm. It is recommended that you INSTALL the program and not use the portable version. MobaXterm also has an integrated SFTP file browser.\n\n\n2.4 Filezilla (Optional)\nWhen you need to transfer data between the remote cluster and your computer, you can use the tools SCP or SFTP through the terminal. Windows users can use the SFTP browser available with MobaXterm. If you prefer a GUI to upload and download files from the remote cluster, we recommend installing FileZilla."
+  },
+  {
+    "objectID": "slides/sample/index.html#heading-1",
+    "href": "slides/sample/index.html#heading-1",
+    "title": "Presentation",
+    "section": "Heading 1",
+    "text": "Heading 1\nContent"
+  },
+  {
+    "objectID": "slides/sample/index.html#heading-2",
+    "href": "slides/sample/index.html#heading-2",
+    "title": "Presentation",
+    "section": "Heading 2",
+    "text": "Heading 2\nMore content"
+  },
+  {
+    "objectID": "slides/sample/index.html#section",
+    "href": "slides/sample/index.html#section",
+    "title": "Presentation",
+    "section": "",
+    "text": "Thank you! Questions?\n2024 • Specky"
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Presentation\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Presentation\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 04-02-2024 at 00:41:03 ."
+  },
+  {
+    "objectID": "index.html#specky-course-template",
+    "href": "index.html#specky-course-template",
+    "title": "",
+    "section": "",
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 04-02-2024 at 00:41:03 ."
+  },
+  {
+    "objectID": "home_syllabus.html",
+    "href": "home_syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "SyllabusLearning outcomesEntry requirements\n\n\nThe syllabus for this workshop are as follows.\n\nWorking on the unix/linux command line\n\nCommand line navigation and related commands: cd, mkdir, rm, rmdir\nCommonly used linux tools: cp, mv, tar, less, more, head, tail, nano, grep, top, man\nWildcards\nOwnership and permissions\nSymbolic links\nPiping commands\n\nWorking on remote computing cluster\n\nLogging on to UPPMAX\nBooking resources\nJob templates, submission and queues\nModules\n\n\n\n\nAfter this workshop you should be able to:\n\nDescribe the basic principles of next generation sequencing.\nUse the Linux command line interface to manage simple file processing operations, and organise directory structures.\nConnect to and work on a remote compute cluster.\nApply programs in Linux for analysis of NGS data.\n\n\n\n\nThis is a national course open to PhD students, postdocs, group leaders and core facility staff.\nA background in genetics, cell biology, biomedicine, biochemistry, bioinformatics or comparable is desirable."
   },
   {
     "objectID": "slides/demo/index.html#introduction",
@@ -326,7 +256,7 @@
     "href": "slides/demo/index.html#slides",
     "title": "Quarto Presentation",
     "section": "Slides",
-    "text": "Slides\nSlide separators\nSlides are separated by ##. Incremental content on is separated by . . . like below.\nHide or not count a slide:\n## Slide Title {visibility=\"hidden\"}\n## Slide Title {visibility=\"uncounted\"}\n. . .\nSlide notes\nAny content inside class .notes on a slide are notes. This is only visible in presenter mode (by pressing s).\n. . .\nKeyboard shortcuts\n\nPress ? for help.\n\n\nHere are some slide notes. Press s again to exit presenter mode."
+    "text": "Slides\nSlide separators\nSlides are separated by ##. Incremental content on is separated by . . . like below.\nHide or not count a slide:\n## Slide Title {visibility=\"hidden\"}\n## Slide Title {visibility=\"uncounted\"}\n. . .\nSlide notes\nAny content inside class .notes on a slide are notes. This is only visible in presenter mode (by pressing s).\n. . .\nKeyboard shortcuts\n\nPress ?? for help.\n\n\nHere are some slide notes. Press s again to exit presenter mode."
   },
   {
     "objectID": "slides/demo/index.html#layout",
@@ -417,14 +347,14 @@
     "href": "slides/demo/index.html#code-formatting",
     "title": "Quarto Presentation",
     "section": "Code formatting",
-    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2024-01-15.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
+    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2024-02-04.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
   },
   {
     "objectID": "slides/demo/index.html#code-formatting-1",
     "href": "slides/demo/index.html#code-formatting-1",
     "title": "Quarto Presentation",
     "section": "Code formatting",
-    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2024-01-15\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
+    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2024-02-04\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
   },
   {
     "objectID": "slides/demo/index.html#code-highlighting",
@@ -445,7 +375,7 @@
     "href": "slides/demo/index.html#images-markdown-layout",
     "title": "Quarto Presentation",
     "section": "Images • Markdown • Layout",
-    "text": "Images • Markdown • Layout\nFigure layout\n::: {layout-ncol=3}\n![Caption for figure 1](assets/image.jpg){#fig-layout-1}\n\n![Caption for figure 2](assets/image.jpg){#fig-layout-2}\n\n![Caption for figure 3](assets/image.jpg){#fig-layout-3}\n:::\n\n\n\n\n\n\nFigure 1: Caption for figure 1\n\n\n\n\n\n\n\nFigure 2: Caption for figure 2\n\n\n\n\n\n\n\nFigure 3: Caption for figure 3"
+    "text": "Images • Markdown • Layout\nFigure layout\n::: {layout-ncol=3}\n![Caption for figure 1](assets/image.jpg){#fig-layout-1}\n\n![Caption for figure 2](assets/image.jpg){#fig-layout-2}\n\n![Caption for figure 3](assets/image.jpg){#fig-layout-3}\n:::\n\n\n\n\n\n\n\n\n\nFigure 1: Caption for figure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Caption for figure 2\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Caption for figure 3"
   },
   {
     "objectID": "slides/demo/index.html#images-markdown-layout-1",
@@ -494,7 +424,7 @@
     "href": "slides/demo/index.html#tables-gt",
     "title": "Quarto Presentation",
     "section": "Tables • gt",
-    "text": "Tables • gt\nTables using the gt package. Grammar of tables with extensive customization options.\n\n\n\nlibrary(gt)\n\niris %&gt;%\n    group_by(Species) %&gt;%\n    slice(1:2) %&gt;%\n    gt() %&gt;%\n    cols_label(\n      Sepal.Length = \"Sepal Length\", Sepal.Width = \"Sepal Width\",\n      Petal.Length = \"Petal Length\", Petal.Width = \"Petal Width\"\n    ) %&gt;%\n    tab_source_note(\n        source_note = md(\"Source: Iris data. Anderson, 1936; Fisher, 1936)\")\n    )\n\n\n\n\n\n\n\n\n  \n    \n    \n      Sepal Length\n      Sepal Width\n      Petal Length\n      Petal Width\n    \n  \n  \n    \n      setosa\n    \n    5.1\n3.5\n1.4\n0.2\n    4.9\n3.0\n1.4\n0.2\n    \n      versicolor\n    \n    7.0\n3.2\n4.7\n1.4\n    6.4\n3.2\n4.5\n1.5\n    \n      virginica\n    \n    6.3\n3.3\n6.0\n2.5\n    5.8\n2.7\n5.1\n1.9\n  \n  \n    \n      Source: Iris data. Anderson, 1936; Fisher, 1936)"
+    "text": "Tables • gt\nTables using the gt package. Grammar of tables with extensive customization options.\n\n\n\nlibrary(gt)\n\niris %&gt;%\n    group_by(Species) %&gt;%\n    slice(1:2) %&gt;%\n    gt() %&gt;%\n    cols_label(\n      Sepal.Length = \"Sepal Length\", Sepal.Width = \"Sepal Width\",\n      Petal.Length = \"Petal Length\", Petal.Width = \"Petal Width\"\n    ) %&gt;%\n    tab_source_note(\n        source_note = md(\"Source: Iris data. Anderson, 1936; Fisher, 1936)\")\n    )\n\n\n\n\n\n\n\n\n\n\nSepal Length\nSepal Width\nPetal Length\nPetal Width\n\n\n\n\nsetosa\n\n\n5.1\n3.5\n1.4\n0.2\n\n\n4.9\n3.0\n1.4\n0.2\n\n\nversicolor\n\n\n7.0\n3.2\n4.7\n1.4\n\n\n6.4\n3.2\n4.5\n1.5\n\n\nvirginica\n\n\n6.3\n3.3\n6.0\n2.5\n\n\n5.8\n2.7\n5.1\n1.9\n\n\n\nSource: Iris data. Anderson, 1936; Fisher, 1936)"
   },
   {
     "objectID": "slides/demo/index.html#tables-kableextra",
@@ -606,7 +536,7 @@
     "href": "slides/demo/index.html#diagrams",
     "title": "Quarto Presentation",
     "section": "Diagrams",
-    "text": "Diagrams\n\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\nDiagram documentation."
+    "text": "Diagrams\n\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n\nDiagram documentation."
   },
   {
     "objectID": "slides/demo/index.html#colourful",
@@ -627,7 +557,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto Presentation",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.jpg to change cover slide picture\nReplace assets/end.jpg to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.2.0-1018-azure\" \n                                              version \n\"#18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023\" \n                                             nodename \n                                      \"fv-az1014-724\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.jpg to change cover slide picture\nReplace assets/end.jpg to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.2.0-1019-azure\" \n                                              version \n\"#19~22.04.1-Ubuntu SMP Wed Jan 10 22:57:03 UTC 2024\" \n                                             nodename \n                                      \"fv-az1055-890\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",
@@ -637,45 +567,115 @@
     "text": "Thank you! Questions?\n\n\n         _                  \nplatform x86_64-pc-linux-gnu\nos       linux-gnu          \nmajor    4                  \nminor    3.2                \n\n\n2024 • Specky"
   },
   {
-    "objectID": "slides/sample/index.html#heading-1",
-    "href": "slides/sample/index.html#heading-1",
-    "title": "Presentation",
-    "section": "Heading 1",
-    "text": "Heading 1\nContent"
-  },
-  {
-    "objectID": "slides/sample/index.html#heading-2",
-    "href": "slides/sample/index.html#heading-2",
-    "title": "Presentation",
-    "section": "Heading 2",
-    "text": "Heading 2\nMore content"
-  },
-  {
-    "objectID": "slides/sample/index.html#section",
-    "href": "slides/sample/index.html#section",
-    "title": "Presentation",
+    "objectID": "home_contents.html",
+    "href": "home_contents.html",
+    "title": "Contents",
     "section": "",
-    "text": "Thank you! Questions?\n2024 • Specky"
+    "text": "HTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
   },
   {
-    "objectID": "home_precourse.html",
-    "href": "home_precourse.html",
-    "title": "Precourse",
+    "objectID": "home_contents.html#reports",
+    "href": "home_contents.html#reports",
+    "title": "Contents",
     "section": "",
-    "text": "Remote computing cluster will be use for data analyses. A SUPR/NAISS account is needed to use these resources.\n\n\n\n\n\n\nTip\n\n\n\nThis is where you might run into trouble if you don’t have a SWAMID connected account. You will not be able to accept the user agreement online without it, so you will have to send in your acceptance in paper form together with a copy of your passport. This process can take a week or more, so please make sure you can accept the user agreement in good time.\n\n\nYou need to request login accounts to NSC and UPPMAX. These are the accounts you use to log in to the actual computers, so they are not the same as your SUPR account. Login to SUPR and go to the Accounts page. Under the Possible Resource Account Requests heading click on Request Account on Tetralith @ NSC and Request Account on Rackham @ UPPMAX button and confirm it on the next page. If either of them are missing from this page, it could be because you already have a login account created (only 1 account per person allowed), or that you have not yet gotten your project memberships approved.\n\n\n\n\n\n\nNote\n\n\n\nYou will get one username & password for the account on UPPMAX, and one username and password for the account on NSC. Please keep track of both, we will tell you when to use which account during the workshop."
+    "text": "HTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
   },
   {
-    "objectID": "home_precourse.html#cluster",
-    "href": "home_precourse.html#cluster",
-    "title": "Precourse",
+    "objectID": "home_contents.html#slides",
+    "href": "home_contents.html#slides",
+    "title": "Contents",
+    "section": "Slides",
+    "text": "Slides\nPresentation using the Quarto revealjs format.\nListing page for all slides.\n\nMinimal demo \nQuarto with R"
+  },
+  {
+    "objectID": "reports/index.html",
+    "href": "reports/index.html",
+    "title": "Reports",
     "section": "",
-    "text": "Remote computing cluster will be use for data analyses. A SUPR/NAISS account is needed to use these resources.\n\n\n\n\n\n\nTip\n\n\n\nThis is where you might run into trouble if you don’t have a SWAMID connected account. You will not be able to accept the user agreement online without it, so you will have to send in your acceptance in paper form together with a copy of your passport. This process can take a week or more, so please make sure you can accept the user agreement in good time.\n\n\nYou need to request login accounts to NSC and UPPMAX. These are the accounts you use to log in to the actual computers, so they are not the same as your SUPR account. Login to SUPR and go to the Accounts page. Under the Possible Resource Account Requests heading click on Request Account on Tetralith @ NSC and Request Account on Rackham @ UPPMAX button and confirm it on the next page. If either of them are missing from this page, it could be because you already have a login account created (only 1 account per person allowed), or that you have not yet gotten your project memberships approved.\n\n\n\n\n\n\nNote\n\n\n\nYou will get one username & password for the account on UPPMAX, and one username and password for the account on NSC. Please keep track of both, we will tell you when to use which account during the workshop."
+    "text": "ObservableJS and Mermaid\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Basics\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\nReport\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Quarto\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "home_precourse.html#install-tools",
-    "href": "home_precourse.html#install-tools",
-    "title": "Precourse",
-    "section": "2 Install tools",
-    "text": "2 Install tools\n\n2.1 ThinLinc\nThinLinc allows graphical connection to UPPMAX. It can be used directly from the browser but it is recommended to download and install the client for better copy/paste operation.\n\n\n2.2 XQuartz\nMac users will need to download and install XQuartz for X11 forwarding. ie; to forward remotely opened windows to local machine.\n\n\n2.3 MobaXterm (Optional)\nIf you are on a Windows system, and you want to open graphical applications from the terminal, we recommend MobaXterm. It is recommended that you INSTALL the program and not use the portable version. MobaXterm also has an integrated SFTP file browser.\n\n\n2.4 Filezilla (Optional)\nWhen you need to transfer data between the remote cluster and your computer, you can use the tools SCP or SFTP through the terminal. Windows users can use the SFTP browser available with MobaXterm. If you prefer a GUI to upload and download files from the remote cluster, we recommend installing FileZilla."
+    "objectID": "reports/demo-with-r/index.html",
+    "href": "reports/demo-with-r/index.html",
+    "title": "Quarto with R",
+    "section": "",
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-02-04.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-02-04\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#code-execution",
+    "href": "reports/demo-with-r/index.html#code-execution",
+    "title": "Quarto with R",
+    "section": "",
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-02-04.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-02-04\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#chunk-attributes",
+    "href": "reports/demo-with-r/index.html#chunk-attributes",
+    "title": "Quarto with R",
+    "section": "2 Chunk attributes",
+    "text": "2 Chunk attributes\nProperties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: #| eval: false.\nIn this example, the R source code and results are hidden but the code is evaluated.\n```{r}\n#| eval: true\n#| echo: false\n#| results: hide\nSys.Date()\n```\nA code chunk can be given a code filename using the chunk attribute filename.\n```{r}\n#| filename: R code\nSys.Date()\n```\n\n\n\nR code\n\nSys.Date()\n\n\nEnable line numbers using code-line-numbers: true.\n```{r}\n#| code-line-numbers: true\nSys.Date()\nsessionInfo()\n```\n\nSys.Date()\nsessionInfo()\n\nAn advanced example showing bash code generated from R.\n```{r}\n#| attr-output: \"filename='bash'\"\n#| class-output: bash\n#| echo: false\nd &lt;- \"custom\"\ncat(paste(\"mkdir​\", d))\n```\n\n\n\n\nbash\n\nmkdir​ custom\n\n\n\nCode chunk attributes are documented here."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#tables",
+    "href": "reports/demo-with-r/index.html#tables",
+    "title": "Quarto with R",
+    "section": "3 Tables",
+    "text": "3 Tables\n\n3.1 Manual\nFor simple cases, tables can be manually created in markdown.\n\n\n|speed|dist|\n|-----|----|\n|4    |   2|\n|4    |  10|\n|7    |   4|\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n\n\n\n\n\n3.2 kable\nSimple table using kable from R package knitr.\n\nlibrary(knitr)\nkable(head(iris))\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n5.0\n3.6\n1.4\n0.2\nsetosa\n\n\n5.4\n3.9\n1.7\n0.4\nsetosa\n\n\n\n\n\n\n3.2.1 Layout\n```{r}\n#| column: body-outset\n#| label: tbl-dual-table\n#| tbl-cap: \"Example\"\n#| tbl-subcap: \n#|   - \"Cars\"\n#|   - \"Pressure\"\n#| layout-ncol: 2\n\nkable(head(cars))\nkable(head(pressure))\n```\n\n\n\nTable 1: Example\n\n\n\n\n\n\n\n(a) Cars\n\n\n\n\n\nspeed\ndist\n\n\n\n\n4\n2\n\n\n4\n10\n\n\n7\n4\n\n\n7\n22\n\n\n8\n16\n\n\n9\n10\n\n\n\n\n\n\n\n\n\n\n\n(b) Pressure\n\n\n\n\n\ntemperature\npressure\n\n\n\n\n0\n0.0002\n\n\n20\n0.0012\n\n\n40\n0.0060\n\n\n60\n0.0300\n\n\n80\n0.0900\n\n\n100\n0.2700\n\n\n\n\n\n\n\n\n\n\n\n\n\n3.2.2 Cross referencing\nImages and tables can be automatically numbered by using label attribute. Image label must start with fig- and tables with tbl-. Tables and images can also be cross-referenced when using the label attribute. For example, the table above can be referenced like @tbl-dual-table which renders as Table 1.\n\n\n3.2.3 Margin table\n```{r}\n#| fig-caption: This table is in the margin.\n#| column: margin\n\nhead(cars)\n```\n\n\n\n\n  \n\n\n\n\n\n3.3 paged\nInteractive table from R package rmarkdown.\n\nlibrary(rmarkdown)\nrmarkdown::paged_table(head(iris))\n\n\n  \n\n\n\nThis is the default for this template.\n\nhead(head(iris))\n\n\n  \n\n\n\n\n\n3.4 gt\nTables using the gt package. A structured approach to creating tables using grammar of tables with extensive customization options.\n\nlibrary(gt)\n\niris %&gt;%\n    group_by(Species) %&gt;%\n    slice(1:4) %&gt;%\n    gt() %&gt;%\n    cols_label(\n      Sepal.Length = \"Sepal Length\", Sepal.Width = \"Sepal Width\",\n      Petal.Length = \"Petal Length\", Petal.Width = \"Petal Width\"\n    ) %&gt;%\n    tab_source_note(\n        source_note = md(\"Source: Iris data. Anderson, 1936; Fisher, 1936)\")\n    )\n\n\n\n\n\n\n\nSepal Length\nSepal Width\nPetal Length\nPetal Width\n\n\n\n\nsetosa\n\n\n5.1\n3.5\n1.4\n0.2\n\n\n4.9\n3.0\n1.4\n0.2\n\n\n4.7\n3.2\n1.3\n0.2\n\n\n4.6\n3.1\n1.5\n0.2\n\n\nversicolor\n\n\n7.0\n3.2\n4.7\n1.4\n\n\n6.4\n3.2\n4.5\n1.5\n\n\n6.9\n3.1\n4.9\n1.5\n\n\n5.5\n2.3\n4.0\n1.3\n\n\nvirginica\n\n\n6.3\n3.3\n6.0\n2.5\n\n\n5.8\n2.7\n5.1\n1.9\n\n\n7.1\n3.0\n5.9\n2.1\n\n\n6.3\n2.9\n5.6\n1.8\n\n\n\nSource: Iris data. Anderson, 1936; Fisher, 1936)\n\n\n\n\n\n\n\n\n\n\n3.5 htmlTable\nMarkdown tables can be enhanced using the R package htmlTable.\n\nlibrary(htmlTable)\n\niris1 &lt;- iris[c(1:4,51:53,105:108),]\nhtmlTable(iris1, rgroup=unique(iris1$Species), n.rgroup=rle(as.character(iris1$Species))$lengths)\n\n\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\nsetosa\n\n\n  1\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n  2\n4.9\n3\n1.4\n0.2\nsetosa\n\n\n  3\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n  4\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\nversicolor\n\n\n  51\n7\n3.2\n4.7\n1.4\nversicolor\n\n\n  52\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n  53\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\nvirginica\n\n\n  105\n6.5\n3\n5.8\n2.2\nvirginica\n\n\n  106\n7.6\n3\n6.6\n2.1\nvirginica\n\n\n  107\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n  108\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n\n\n\n\n\n3.6 kableExtra\nMore advanced table using kableExtra and formattable.\n\nlibrary(kableExtra)\n\niris[c(1:4,51:53,105:108),] %&gt;%\n  mutate(Sepal.Length=color_bar(\"lightsteelblue\")(Sepal.Length)) %&gt;%\n  mutate(Sepal.Width=color_tile(\"white\",\"orange\")(Sepal.Width)) %&gt;%\n  mutate(Species=cell_spec(Species,\"html\",color=\"white\",bold=T,\n    background=c(\"#8dd3c7\",\"#fb8072\",\"#bebada\")[factor(.$Species)])) %&gt;%\n  kable(\"html\",escape=F) %&gt;%\n  kable_styling(bootstrap_options=c(\"striped\",\"hover\",\"responsive\"),\n                full_width=F,position=\"left\") %&gt;%\n  column_spec(5,width=\"3cm\")\n\n\n\nTable using kableextra.\n\n\n\nSepal.Length\nSepal.Width\nPetal.Length\nPetal.Width\nSpecies\n\n\n\n\n1\n5.1\n3.5\n1.4\n0.2\nsetosa\n\n\n2\n4.9\n3.0\n1.4\n0.2\nsetosa\n\n\n3\n4.7\n3.2\n1.3\n0.2\nsetosa\n\n\n4\n4.6\n3.1\n1.5\n0.2\nsetosa\n\n\n51\n7.0\n3.2\n4.7\n1.4\nversicolor\n\n\n52\n6.4\n3.2\n4.5\n1.5\nversicolor\n\n\n53\n6.9\n3.1\n4.9\n1.5\nversicolor\n\n\n105\n6.5\n3.0\n5.8\n2.2\nvirginica\n\n\n106\n7.6\n3.0\n6.6\n2.1\nvirginica\n\n\n107\n4.9\n2.5\n4.5\n1.7\nvirginica\n\n\n108\n7.3\n2.9\n6.3\n1.8\nvirginica\n\n\n\n\n\n\n\n\n\n\n3.7 DT\nInteractive table using R package DT.\n\nlibrary(DT)\n\niris %&gt;%\n  slice(1:15) %&gt;%\n  datatable(options=list(pageLength=7))\n\n\n\n\n\n\n\n3.8 reactable\nAdvanced interactive tables with reactable.\n\nlibrary(reactable)\n\nreactable(iris[sample(1:150,10),],\n  columns = list(\n    Sepal.Length = colDef(name = \"Sepal Length\"),\n    Sepal.Width = colDef(name = \"Sepal Width\"),\n    Petal.Width = colDef(name = \"Petal Width\"),\n    Petal.Width = colDef(name = \"Petal Width\")\n  ),\n  striped = TRUE,\n  highlight = TRUE,\n  filterable = TRUE\n)\n\n\n\n\n\nreactable creation can be simplified as well as enhanced by using reactablefmtr."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#static-images-using-r",
+    "href": "reports/demo-with-r/index.html#static-images-using-r",
+    "title": "Quarto with R",
+    "section": "4 Static images using R",
+    "text": "4 Static images using R\nQuarto chunks can be used to control image display size using the argument out.width.\nThis image below is displayed at a size of 300 pixels.\n```{r}\n#| out-width: 300px\nknitr::include_graphics(\"assets/image.jpg\")\n```\n\n\n\n\n\n\n\n\n\nThis image below is displayed at a size of 75 pixels and a caption added.\n```{r}\n#| out-width: 75px\n#| fig-cap: This is a caption\nknitr::include_graphics(\"assets/image.jpg\")\n```\n\n\n\n\n\nThis is a caption\n\n\n\n\nFor more information on figures, see here. For plots generated through R, see section further below."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#static-plots",
+    "href": "reports/demo-with-r/index.html#static-plots",
+    "title": "Quarto with R",
+    "section": "5 Static plots",
+    "text": "5 Static plots\n\n5.1 Base plot\n\nPlots using base R are widely used and may be good enough for most situations.\nBut they lack a consistent coding framework.\n\n\n{\n  plot(x=iris$Sepal.Length,y=iris$Sepal.Width,\n      col=c(\"coral\",\"steelblue\",\"forestgreen\")[iris$Species],\n      xlab=\"Sepal Length\",ylab=\"Sepal Width\",pch=19)\n\n  legend(x=7,y=4.47,legend=c(\"setosa\",\"versicolor\",\"virginica\"),\n        col=c(\"coral\",\"steelblue\",\"forestgreen\"),pch=19)\n}\n\n\n\n\n\n\n\nFigure 1: Static plot using base plot.\n\n\n\n\n\n\n5.1.1 Multiple plots\n```{r}\n#| column: screen-inset-shaded\n#| layout-nrow: 1\n#| fig-cap:\n#|   - \"Scatterplot of speed vs distance\"\n#|   - \"Pairwise scatterplot of all variables\"\n#|   - \"Scatterplot of temperature vs pressure\"\n\nplot(cars)\nplot(iris)\nplot(pressure)\n```\n\n\n\n\n\n\n\n\n\nScatterplot of speed vs distance\n\n\n\n\n\n\n\nPairwise scatterplot of all variables\n\n\n\n\n\n\n\nScatterplot of temperature vs pressure\n\n\n\n\n\n\n\n5.1.2 Margin plot\n```{{r}}\n#| column: margin\n\nplot(cars)\n```\n\nplot(cars)\n\n\n\n\n\n\n\n\n\n\n\n5.2 ggplot2\nR package ggplot2 is one of the most versatile and complete plotting solutions.\n\nlibrary(ggplot2)\n\niris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point(size=2)+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_report()\n\n\n\n\nStatic plot using ggplot2."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#interactive-plots",
+    "href": "reports/demo-with-r/index.html#interactive-plots",
+    "title": "Quarto with R",
+    "section": "6 Interactive plots",
+    "text": "6 Interactive plots\n\n6.1 highcharter\nR package highcharter is a wrapper around javascript library highcharts.\n\nlibrary(highcharter)\n\nh &lt;- iris %&gt;%\n  hchart(.,\"scatter\",hcaes(x=\"Sepal.Length\",y=\"Sepal.Width\",group=\"Species\")) %&gt;%\n  hc_xAxis(title=list(text=\"Sepal Length\"),crosshair=TRUE) %&gt;%\n  hc_yAxis(title=list(text=\"Sepal Width\"),crosshair=TRUE) %&gt;%\n  hc_chart(zoomType=\"xy\",inverted=FALSE) %&gt;%\n  hc_legend(verticalAlign=\"top\",align=\"right\") %&gt;%\n  hc_size(height=400)\n\nhtmltools::tagList(list(h))\n\n\n\nInteractive scatterplot using highcharter.\n\n\n\n\n6.2 plotly\nR package plotly provides R binding around javascript plotting library plotly.\n\nlibrary(plotly)\n\np &lt;- iris %&gt;%\n  plot_ly(x=~Sepal.Length,y=~Sepal.Width,color=~Species,width=500,height=400) %&gt;%\n  add_markers()\np\n\n\n\nInteractive scatterplot using plotly.\n\n\n\n\n6.3 ggplotly\nplotly also has a function called ggplotly which converts a static ggplot2 object into an interactive plot.\n\nlibrary(plotly)\n\np &lt;- iris %&gt;%\n  ggplot(aes(x=Sepal.Length,y=Sepal.Width,col=Species))+\n  geom_point()+\n  labs(x=\"Sepal Length\",y=\"Sepal Width\")+\n  theme_bw(base_size=12)\n\nggplotly(p,width=500,height=400)\n\n\n\nInteractive scatterplot using ggplotly.\n\n\n\n\n6.4 ggiraph\nggiraph is also an R package that can be used to convert a static ggplot2 object into an interactive plot.\n\nlibrary(ggiraph)\n\np &lt;- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+\n      geom_point_interactive(aes(tooltip=paste0(\"&lt;b&gt;Petal Length:&lt;/b&gt; \",Petal.Length,\"\\n&lt;b&gt;Sepal Length: &lt;/b&gt;\",Sepal.Length,\"\\n&lt;b&gt;Species: &lt;/b&gt;\",Species)),size=2)+\n  theme_bw()\n\ntooltip_css &lt;- \"background-color:#e7eef3;font-family:Roboto;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;\"\n\nggiraph(code=print(p),hover_css=\"cursor:pointer;stroke:black;fill-opacity:0.3\",zoom_max=5,tooltip_extra_css=tooltip_css,tooltip_opacity=0.9)\n\n\n\nInteractive scatterplot using ggiraph.\n\n\n\n\n6.5 dygraphs\nR package dygraphs provides R bindings for javascript library dygraphs for time series data.\n\nlibrary(dygraphs)\n\nlungDeaths &lt;- cbind(ldeaths, mdeaths, fdeaths)\ndygraph(lungDeaths,main=\"Deaths from Lung Disease (UK)\") %&gt;%\n  dyOptions(colors=c(\"#66C2A5\",\"#FC8D62\",\"#8DA0CB\"))\n\n\n\nInteractive time series plot using dygraph.\n\n\n\n\n6.6 Network graph\nR package networkD3 allows the use of interactive network graphs from the D3.js javascript library.\n\nlibrary(networkD3)\n\ndata(MisLinks,MisNodes)\nforceNetwork(Links=MisLinks,Nodes=MisNodes,Source=\"source\",\n             Target=\"target\",Value=\"value\",NodeID=\"name\",\n             Group=\"group\",opacity=0.4)\n\n\n\nInteractive network plot.\n\n\n\n\n6.7 leaflet\nR package leaflet provides R bindings for javascript mapping library; leafletjs.\n\nlibrary(leaflet)\n\nleaflet(height=500,width=700) %&gt;%\n  addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n  #addProviderTiles(providers$Esri.NatGeoWorldMap) %&gt;%\n  addMarkers(lat=57.639327,lng=18.288534,popup=\"RaukR\") %&gt;%\n  setView(lat=57.639327,lng=18.288534,zoom=15)\n\n\n\nInteractive map using leaflet.\n\n\n\n\n6.8 crosstalk\nR package crosstalk allows crosstalk enabled plotting libraries to be linked. Through the shared ‘key’ variable, data points can be manipulated simultaneously on two independent plots.\n\nlibrary(crosstalk)\n\nshared_quakes &lt;- SharedData$new(quakes[sample(nrow(quakes), 100),])\nlf &lt;- leaflet(shared_quakes,height=300) %&gt;%\n        addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') %&gt;%\n        addMarkers()\npy &lt;- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) %&gt;%\n        add_markers()\n\nhtmltools::div(lf,py)\n\n\n\n\n\n\n\nLinking independent plots using crosstalk."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#observablejs",
+    "href": "reports/demo-with-r/index.html#observablejs",
+    "title": "Quarto with R",
+    "section": "7 ObservableJS",
+    "text": "7 ObservableJS\nQuarto supports ObservableJS for interactive visualisations in the browser.\nPass data from R to OJS\n\nirism &lt;- iris\ncolnames(irism) &lt;- gsub(\"[.]\",\"_\",tolower(colnames(irism)))\nojs_define(ojsd = irism)\n\n\nojsdata = transpose(ojsd)\n\n\n\n\n\n\nDisplay as a table\n\nviewof filtered_table = Inputs.table(ojsdata)\n\n\n\n\n\n\nDefine inputs\n\nviewof x = Inputs.select(Object.keys(ojsdata[0]), {value: \"sepal_length\", multiple: false, label: \"X axis\"})\n\n\n\n\n\n\n\nviewof y = Inputs.select(Object.keys(ojsdata[0]), {value: \"sepal_width\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\nDisplay plot\n\nPlot.plot({\n  marks: [\n    Plot.dot(ojsdata, {\n      x: x,\n      y: y,\n      fill: \"species\",\n      title: (d) =&gt;\n        `${d.species} \\n Petal length: ${d.petal_length} \\n Sepal length: ${d.sepal_length}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\nObservableJS in quarto documentation."
+  },
+  {
+    "objectID": "reports/demo-with-r/index.html#icons",
+    "href": "reports/demo-with-r/index.html#icons",
+    "title": "Quarto with R",
+    "section": "8 Icons",
+    "text": "8 Icons\nIcons can be placed programatically through R using the R package fontawesome.\n`r fontawesome::fa('lightbulb')`\n\nOptional arguments are height and fill.\n`r fontawesome::fa('lightbulb',height='30px',fill='steelblue')`\n\nFor full list of icons check out FontAwesome."
+  },
+  {
+    "objectID": "reports/sample/index.html",
+    "href": "reports/sample/index.html",
+    "title": "Report",
+    "section": "",
+    "text": "Content"
+  },
+  {
+    "objectID": "reports/sample/index.html#heading-1",
+    "href": "reports/sample/index.html#heading-1",
+    "title": "Report",
+    "section": "",
+    "text": "Content"
+  },
+  {
+    "objectID": "reports/sample/index.html#heading-2",
+    "href": "reports/sample/index.html#heading-2",
+    "title": "Report",
+    "section": "2 Heading 2",
+    "text": "2 Heading 2\nMore Contents"
   }
 ]
