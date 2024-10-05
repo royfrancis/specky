@@ -529,7 +529,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto Presentation",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.8.0-1014-azure\" \n                                              version \n\"#16~22.04.1-Ubuntu SMP Thu Aug 15 21:31:41 UTC 2024\" \n                                             nodename \n                                       \"fv-az525-688\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.8.0-1014-azure\" \n                                              version \n\"#16~22.04.1-Ubuntu SMP Thu Aug 15 21:31:41 UTC 2024\" \n                                             nodename \n                                       \"fv-az530-702\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",
@@ -543,14 +543,14 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 05-10-2024 at 13:36:09 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 05-10-2024 at 17:14:29 ."
   },
   {
     "objectID": "index.html#specky-course-template",
     "href": "index.html#specky-course-template",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 05-10-2024 at 13:36:09 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 05-10-2024 at 17:14:29 ."
   },
   {
     "objectID": "slides/index.html",
