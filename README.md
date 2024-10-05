@@ -2,7 +2,7 @@
 
 [![ci_badge](https://github.com/royfrancis/specky/workflows/deploy/badge.svg)](https://github.com/royfrancis/specky/actions?workflow=deploy)    [![lifecycle_badge](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 
-Quarto website template
+Quarto website template for courses
 
 ![Report home](preview-home.webp)
 
@@ -23,20 +23,14 @@ For a demo site and usage, see [here](https://royfrancis.github.io/specky).
 quarto use template royfrancis/specky
 ```
 
-- Launch preview in the browser
-
-```
-quarto preview
-```
-
-- Render all html files into `docs` directory
+- Render all html files into `docs` directory to make sure everything works as expected
 
 ```
 quarto render
 ```
 
-
 - Use `##` as the highest level heading.
+- Limited documentation is available on the [demo site](https://royfrancis.github.io/specky/home_contents.html) for customization
 
 ## Acknowledgements
 
