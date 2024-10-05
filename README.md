@@ -4,11 +4,11 @@
 
 Quarto website template
 
-![Report home](preview-home.jpg)
+![Report home](preview-home.webp)
 
-![Report preview](preview-report.jpg)
+![Report preview](preview-report.webp)
 
-![Slide preview](preview-slide.jpg)
+![Slide preview](preview-slide.webp)
 
 For a demo site and usage, see [here](https://royfrancis.github.io/specky).
 

@@ -2,6 +2,7 @@
 title: "Quarto with R"
 author: "Roy Francis"
 description: "This document showcases the use of R."
+image: "/assets/images/featured.webp"
 format: html
 ---
 
@@ -344,14 +345,14 @@ This image below is displayed at a size of 300 pixels.
 ````         
 ```{{r}}
 #| out-width: 300px
-knitr::include_graphics("assets/image.jpg")
+knitr::include_graphics("assets/image.webp")
 ```
 ````
 
 ```{r}
 #| echo: false
 #| out-width: "300px"
-knitr::include_graphics("assets/image.jpg")
+knitr::include_graphics("assets/image.webp")
 ```
 
 This image below is displayed at a size of 75 pixels and a caption added.
@@ -360,7 +361,7 @@ This image below is displayed at a size of 75 pixels and a caption added.
 ```{{r}}
 #| out-width: 75px
 #| fig-cap: This is a caption
-knitr::include_graphics("assets/image.jpg")
+knitr::include_graphics("assets/image.webp")
 ```
 ````
 
@@ -368,7 +369,7 @@ knitr::include_graphics("assets/image.jpg")
 #| echo: false
 #| out-width: "75px"
 #| fig-cap: This is a caption
-knitr::include_graphics("assets/image.jpg")
+knitr::include_graphics("assets/image.webp")
 ```
 
 For more information on figures, see [here](https://quarto.org/docs/authoring/figures.html). For plots generated through R, see section further below.

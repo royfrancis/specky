@@ -5,8 +5,6 @@
 /.luarc.json
 /.quarto/
 .DS_Store
-todo.txt
 **/*_cache/
 **/__pycache__
-slides/**/*_files
-labs/**/*_files
+todo.txt

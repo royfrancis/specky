@@ -2,6 +2,7 @@
 title: "Quarto Basics"
 author: "Roy Francis"
 description: "This document showcases some of the in-built capabilities of quarto. It also shows the custom theme, style and usage."
+image: "/assets/images/featured.webp"
 format: html
 ---
 
@@ -217,18 +218,18 @@ Images can be inserted using plain markdown or HTML directly. Plain markdown can
 Using regular markdown.
 
 ```         
-![](assets/image.jpg)
+![](assets/image.webp)
 ```
 
-![](assets/image.jpg)
+![](assets/image.webp)
 
 The dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.
 
 ```         
-![This is a caption](assets/image.jpg){width=30%}  
+![This is a caption](assets/image.webp){width=30%}  
 ```
 
-![This is a caption](assets/image.jpg){width="30%"}
+![This is a caption](assets/image.webp){width="30%"}
 
 This image above is now 30% of it's original width.
 
@@ -236,18 +237,18 @@ This image above is now 30% of it's original width.
 
 ```         
 ::: {#fig-mylabel layout-ncol=2}
-![Caption for figure 1](assets/image.jpg){width="40%"}
+![Caption for figure 1](assets/image.webp){width="40%"}
 
-![Caption for figure 2](assets/image.jpg){width="40%"}
+![Caption for figure 2](assets/image.webp){width="40%"}
 
 These figures are interesting.
 :::
 ```
 
 ::: {#fig-mylabel layout-ncol="2"}
-![Caption for figure 1](assets/image.jpg){width="40%"}
+![Caption for figure 1](assets/image.webp){width="40%"}
 
-![Caption for figure 2](assets/image.jpg){width="40%"}
+![Caption for figure 2](assets/image.webp){width="40%"}
 
 These figures are interesting.
 :::
@@ -257,9 +258,9 @@ More figure options and layouts are described [here](https://quarto.org/docs/aut
 ### Using HTML
 
 This image below is 30% size.\
-`<img src="assets/image.jpg" style="width:30%;"/>`
+`<img src="assets/image.webp" style="width:30%;"/>`
 
-<img src="assets/image.jpg" style="width:30%;"/>
+<img src="assets/image.webp" style="width:30%;"/>
 
 For more information on figures, see [here](https://quarto.org/docs/authoring/figures.html). Images generated through code is not covered here.
 

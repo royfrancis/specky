@@ -1,5 +1,5 @@
 ---
-pagetitle: "Abstrave"
+pagetitle: "Specky: Course Template"
 subtitle: ""
 toc: false
 date: ""
@@ -35,7 +35,7 @@ Updated: {{< meta current_date >}}  at {{< meta current_time >}} .
 :::
 :::{.home-grid-child-right}
 
-![](assets/images/hero.png){.nolightbox}
+![](assets/images/hero.webp){.nolightbox}
 
 :::
 :::

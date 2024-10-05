@@ -3,11 +3,7 @@ title: Presentation
 author: "John Doe"
 subtitle: "This is a subtitle"
 description: "This is a description"
-title-slide-attributes:
-    data-background-image: "assets/cover.jpg"
-    data-background-size: "cover"
-    data-background-opacity: "1"
-hero: "assets/slide-hero.png"
+image: "/assets/images/featured.webp"
 format: revealjs
 ---
 
@@ -19,7 +15,7 @@ Content
 
 More content
 
-##  {background-image="../../assets/images/home.jpg"}
+##  {background-image="../../assets/images/home.webp"}
 ### Thank you! Questions?
 
 [{{< meta current_year >}} • [Specky](https://github.com/royfrancis/specky)]{.smaller}
