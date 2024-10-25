@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://royfrancis.github.io/specky/home_schedule.html</loc>
-    <lastmod>2024-10-05T17:12:51.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/home_precourse.html</loc>
-    <lastmod>2024-10-05T17:12:51.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/home_syllabus.html</loc>
-    <lastmod>2024-10-05T17:12:51.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/reports/demo/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.397Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/reports/more/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.407Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/reports/demo-with-r/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.397Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/slides/demo/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.408Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.395Z</lastmod>
-  </url>
-  <url>
-    <loc>https://royfrancis.github.io/specky/slides/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.408Z</lastmod>
+    <loc>https://royfrancis.github.io/specky/home_contents.html</loc>
+    <lastmod>2024-10-25T12:17:24.070Z</lastmod>
   </url>
   <url>
     <loc>https://royfrancis.github.io/specky/slides/sample/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.415Z</lastmod>
+    <lastmod>2024-10-25T12:17:24.094Z</lastmod>
   </url>
   <url>
-    <loc>https://royfrancis.github.io/specky/reports/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.397Z</lastmod>
+    <loc>https://royfrancis.github.io/specky/reports/more/index.html</loc>
+    <lastmod>2024-10-25T12:17:24.086Z</lastmod>
   </url>
   <url>
     <loc>https://royfrancis.github.io/specky/reports/usage/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.407Z</lastmod>
+    <lastmod>2024-10-25T12:17:24.086Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/reports/demo-with-r/index.html</loc>
+    <lastmod>2024-10-25T12:17:24.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/home_precourse.html</loc>
+    <lastmod>2024-10-25T12:17:24.070Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/index.html</loc>
+    <lastmod>2024-10-25T12:17:24.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/home_syllabus.html</loc>
+    <lastmod>2024-10-25T12:17:24.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/home_schedule.html</loc>
+    <lastmod>2024-10-25T12:17:24.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/reports/demo/index.html</loc>
+    <lastmod>2024-10-25T12:17:24.074Z</lastmod>
   </url>
   <url>
     <loc>https://royfrancis.github.io/specky/reports/sample/index.html</loc>
-    <lastmod>2024-10-05T17:12:51.407Z</lastmod>
+    <lastmod>2024-10-25T12:17:24.086Z</lastmod>
   </url>
   <url>
-    <loc>https://royfrancis.github.io/specky/home_contents.html</loc>
-    <lastmod>2024-10-05T17:12:51.395Z</lastmod>
+    <loc>https://royfrancis.github.io/specky/reports/index.html</loc>
+    <lastmod>2024-10-25T12:17:24.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/slides/demo/index.html</loc>
+    <lastmod>2024-10-25T12:17:24.086Z</lastmod>
+  </url>
+  <url>
+    <loc>https://royfrancis.github.io/specky/slides/index.html</loc>
+    <lastmod>2024-10-25T12:17:24.086Z</lastmod>
   </url>
 </urlset>
