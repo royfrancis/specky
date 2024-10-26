@@ -46,6 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -188,7 +191,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">25-Oct-2024</p>
+        <p class="date">26-Oct-2024</p>
       </div>
     </div>
     
@@ -508,12 +511,12 @@ date()
 <h3 data-number="4.1" class="anchored" data-anchor-id="using-markdown"><span class="header-section-number">4.1</span> Using Markdown</h3>
 <p>Using regular markdown.</p>
 <pre><code>![](assets/image.webp)</code></pre>
-<p><img src="assets/image.webp" class="img-fluid"></p>
+<p><a href="assets/image.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="assets/image.webp" class="img-fluid"></a></p>
 <p>The dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.</p>
 <pre><code>![This is a caption](assets/image.webp){width=30%}  </code></pre>
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="assets/image.webp" class="img-fluid figure-img" style="width:30.0%"></p>
+<p><a href="assets/image.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="This is a caption"><img src="assets/image.webp" class="img-fluid figure-img" style="width:30.0%" alt="This is a caption"></a></p>
 <figcaption>This is a caption</figcaption>
 </figure>
 </div>
@@ -534,7 +537,7 @@ These figures are interesting.
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="assets/image.webp" class="img-fluid figure-img" style="width:40.0%"></p>
+<p><a href="assets/image.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Caption for figure 1"><img src="assets/image.webp" class="img-fluid figure-img" style="width:40.0%"></a></p>
 <figcaption>Caption for figure 1</figcaption>
 </figure>
 </div>
@@ -542,7 +545,7 @@ These figures are interesting.
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><img src="assets/image.webp" class="img-fluid figure-img" style="width:40.0%"></p>
+<p><a href="assets/image.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Caption for figure 2"><img src="assets/image.webp" class="img-fluid figure-img" style="width:40.0%"></a></p>
 <figcaption>Caption for figure 2</figcaption>
 </figure>
 </div>
@@ -1628,6 +1631,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","loop":false});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
