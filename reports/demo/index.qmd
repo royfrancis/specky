@@ -42,7 +42,7 @@ Custom character sizes. This is an enchanced feature.
 |`_Italic text_`|_Italic text_|
 |`~~Strikethrough~~`|~~Strikethrough~~|
 |`H~2~O`|H~2~O|
-|`x^2`|x^2|
+|`x^2^`|x^2^|
 |`--`|--|
 |`---`|---|
 |`[link](r-project.org)`|[link](r-project.org)|
