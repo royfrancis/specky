@@ -116,14 +116,14 @@
     "href": "reports/demo-with-r/index.html",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-10-26.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-10-26\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-10-30.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-10-30\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#code-execution",
     "href": "reports/demo-with-r/index.html#code-execution",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-10-26.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-10-26\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2024-10-30.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2024-10-30\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#chunk-attributes",
@@ -200,14 +200,14 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 26-10-2024 at 13:17:02 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 30-10-2024 at 10:02:26 ."
   },
   {
     "objectID": "index.html#specky-course-template",
     "href": "index.html#specky-course-template",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 26-10-2024 at 13:17:02 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 30-10-2024 at 10:02:26 ."
   },
   {
     "objectID": "home_syllabus.html",
@@ -235,7 +235,7 @@
     "href": "reports/demo/index.html#text-formatting",
     "title": "Quarto Basics",
     "section": "1 Text formatting",
-    "text": "1 Text formatting\n\n1.1 Headings\n## Level 2 heading  \n### Level 3 heading  \n#### Level 4 heading  \n##### Level 5 heading  \n###### Level 6 heading\n\n\n1.2 Character sizes\nCustom character sizes. This is an enchanced feature.\n\n\n\nMarkdown\nRendered\n\n\n\n\n[Largest text]{.largest}\nLargest text\n\n\n[Larger text]{.larger}\nLarger text\n\n\n[Large text]{.large}\nLarge text\n\n\nNormal text\nNormal text\n\n\n[Small text]{.small}\nSmall text\n\n\n[Smaller text]{.smaller}\nSmaller text\n\n\n[Smallest text]{.smallest}\nSmallest text\n\n\n\n\n\n1.3 Character styles\n\n\n\nMarkdown\nRendered\n\n\n\n\n__Bold text__\nBold text\n\n\n_Italic text_\nItalic text\n\n\n~~Strikethrough~~\nStrikethrough\n\n\nH~2~O\nH2O\n\n\nx^2\nx^2\n\n\n--\n–\n\n\n---\n—\n\n\n[link](r-project.org)\nlink\n\n\n{{&lt; kbd Shift-Ctrl-P &gt;}}\nShift-Ctrl-PShift-Ctrl-P\n\n\n\n\n\n1.4 Blockquote\n&gt; This is a block quote. This\n&gt; paragraph has two lines.\n&gt;\n&gt; 1. This is a list inside a block quote.\n&gt; 2. Second item.\n\nThis is a block quote. This paragraph has two lines.\n\nThis is a list inside a block quote.\nSecond item.\n\n\n\n\n1.5 Line block\nLine block preserves spaces and new lines.\n| This\n|     block\n|          preserves\n|                   formatting\nThis\n    block\n         preserves\n                  formatting\n\n\n1.6 Rule\nA horizontal line can be created using three or more * or -.\n***\n\n\n\n1.7 Footnote\nAn example of footnote reference 1\n\n\n1.8 Aside\n[This content lives in the right margin]{.aside}\nThis content lives in the right margin\n\n\n1.9 Badge\nBadges are defined as such:\n[badge]{.badge .badge-primary} badge\n[badge]{.badge .badge-secondary} badge"
+    "text": "1 Text formatting\n\n1.1 Headings\n## Level 2 heading  \n### Level 3 heading  \n#### Level 4 heading  \n##### Level 5 heading  \n###### Level 6 heading\n\n\n1.2 Character sizes\nCustom character sizes. This is an enchanced feature.\n\n\n\nMarkdown\nRendered\n\n\n\n\n[Largest text]{.largest}\nLargest text\n\n\n[Larger text]{.larger}\nLarger text\n\n\n[Large text]{.large}\nLarge text\n\n\nNormal text\nNormal text\n\n\n[Small text]{.small}\nSmall text\n\n\n[Smaller text]{.smaller}\nSmaller text\n\n\n[Smallest text]{.smallest}\nSmallest text\n\n\n\n\n\n1.3 Character styles\n\n\n\nMarkdown\nRendered\n\n\n\n\n__Bold text__\nBold text\n\n\n_Italic text_\nItalic text\n\n\n~~Strikethrough~~\nStrikethrough\n\n\nH~2~O\nH2O\n\n\nx^2^\nx2\n\n\n--\n–\n\n\n---\n—\n\n\n[link](r-project.org)\nlink\n\n\n{{&lt; kbd Shift-Ctrl-P &gt;}}\nShift-Ctrl-PShift-Ctrl-P\n\n\n\n\n\n1.4 Blockquote\n&gt; This is a block quote. This\n&gt; paragraph has two lines.\n&gt;\n&gt; 1. This is a list inside a block quote.\n&gt; 2. Second item.\n\nThis is a block quote. This paragraph has two lines.\n\nThis is a list inside a block quote.\nSecond item.\n\n\n\n\n1.5 Line block\nLine block preserves spaces and new lines.\n| This\n|     block\n|          preserves\n|                   formatting\nThis\n    block\n         preserves\n                  formatting\n\n\n1.6 Rule\nA horizontal line can be created using three or more * or -.\n***\n\n\n\n1.7 Footnote\nAn example of footnote reference 1\n\n\n1.8 Aside\n[This content lives in the right margin]{.aside}\nThis content lives in the right margin\n\n\n1.9 Badge\nBadges are defined as such:\n[badge]{.badge .badge-primary} badge\n[badge]{.badge .badge-secondary} badge"
   },
   {
     "objectID": "reports/demo/index.html#code-formatting",
@@ -452,14 +452,14 @@
     "href": "slides/demo/index.html#code-formatting",
     "title": "Quarto Presentation",
     "section": "Code formatting",
-    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2024-10-26.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
+    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2024-10-30.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
   },
   {
     "objectID": "slides/demo/index.html#code-formatting-1",
     "href": "slides/demo/index.html#code-formatting-1",
     "title": "Quarto Presentation",
     "section": "Code formatting",
-    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2024-10-26\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
+    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2024-10-30\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
   },
   {
     "objectID": "slides/demo/index.html#code-highlighting",
@@ -662,7 +662,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto Presentation",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.5.0-1025-azure\" \n                                              version \n\"#26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024\" \n                                             nodename \n                                      \"fv-az1144-789\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.5.0-1025-azure\" \n                                              version \n\"#26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024\" \n                                             nodename \n                                       \"fv-az698-954\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",
