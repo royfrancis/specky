@@ -561,6 +561,8 @@ This content is behind an accordion.
 
 ## Alerts
 
+This is not a quarto feature, but rather from bootstrap.
+
 ```         
 ::: {.alert .alert-primary}
 **Note:** This is an alert!
@@ -905,6 +907,45 @@ This is some material for topic 2.
 
 More layout settings are described [here](https://quarto.org/docs/authoring/article-layout.html) and [here](https://quarto.org/docs/output-formats/page-layout.html).
 
+## Shortcodes
+
+Shortcodes are sort of like quarto functions. 
+
+Two important shortcodes are `meta` and `var`. `meta` allows to read metadata from the yaml block in the current page or from `_quarto.yml`. Here are a few examples:
+
+`{{{< meta title >}}}` {{< meta title >}}
+
+`![]({{{< meta image >}}}){width="200px"}` 
+
+![]({{< meta image >}}){width="200px"}
+
+`{{{< meta custom-metadata >}}}` {{< meta custom-metadata >}}
+
+:::{.callout-note}
+Mostly only user-specified metadata in `_quarto.yml` can be accessed using `meta` shortcode.
+:::
+
+Similarly, `var` allows to read variables from `_variables.yml` if it has been defined. The `include` shortcode allows to add a child qmd document into a specific position in a qmd file. The `kbd` shortcode allows keyboard notations:
+
+`Press {{{< kbd Shift-Ctrl-P >}}}` Press {{< kbd Shift-Ctrl-P >}}
+
+The `video` shortcode allows to embed a video.
+
+`{{{< video https://www.youtube.com/watch?v=_f3latmOhew >}}}`
+
+{{< video https://www.youtube.com/watch?v=_f3latmOhew >}}
+
+Some of the custom shortcodes added with Specky template are:
+
+`{{{ < meta quarto_version > }}}` {{ < meta quarto_version > }}  
+
+`{{{ < meta current_date > }}}` {{ < meta current_date > }}
+
+`{{{ < meta current year > }}}` {{ < meta current year > }}
+
+`{{{ < meta current time > }}}` {{ < meta current time > }}
+
+Shortcodes are documented [here](https://quarto.org/docs/authoring/shortcodes.html).
 
 ## General tips
 

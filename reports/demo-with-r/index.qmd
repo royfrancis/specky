@@ -90,6 +90,34 @@ Sys.Date()
 ```
 ````
 
+Source code blocks can be folded.
+
+````         
+```{{r}}
+#| code-fold: true
+Sys.Date()
+```
+````
+
+```{r}
+#| code-fold: true
+Sys.Date()
+```
+
+There is not proper implementation to fold code output. Here is a hacky solution that uses a custom lua filter.
+
+````         
+```{{r}}
+#| attr.output: '.details summary="Output"'
+Sys.Date()
+```
+````
+
+```{r}
+#| attr.output: '.details summary="Output"'
+Sys.Date()
+```
+
 A code chunk can be given a code filename using the chunk attribute `filename`.
 
 ````
@@ -122,7 +150,7 @@ Sys.Date()
 sessionInfo()
 ```
 
-An advanced example showing bash code generated from R.
+An example showing bash code generated from R.
 
 ````
 ```{{r}}
@@ -130,7 +158,7 @@ An advanced example showing bash code generated from R.
 #| class-output: bash
 #| echo: false
 d <- "custom"
-cat(paste("mkdir​", d))
+cat(paste("mkdir", d))
 ```
 ````
 
@@ -139,7 +167,7 @@ cat(paste("mkdir​", d))
 #| class-output: bash
 #| echo: false
 d <- "custom"
-cat(paste("mkdir​", d))
+cat(paste("mkdir", d))
 ```
 
 Code chunk attributes are documented [here](https://quarto.org/docs/output-formats/html-code.html).
