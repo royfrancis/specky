@@ -915,9 +915,9 @@ Two important shortcodes are `meta` and `var`. `meta` allows to read metadata fr
 
 `{{{< meta title >}}}` {{< meta title >}}
 
-`![]({{{< meta image >}}}){width="200px"}` 
+`![]({{{< meta image >}}}){width="300px"}` 
 
-![]({{< meta image >}}){width="200px"}
+![]({{< meta image >}}){width="300px"}
 
 `{{{< meta custom-metadata >}}}` {{< meta custom-metadata >}}
 
@@ -937,13 +937,10 @@ The `video` shortcode allows to embed a video.
 
 Some of the custom shortcodes added with Specky template are:
 
-`{{{ < meta quarto_version > }}}` {{ < meta quarto_version > }}  
-
-`{{{ < meta current_date > }}}` {{ < meta current_date > }}
-
-`{{{ < meta current year > }}}` {{ < meta current year > }}
-
-`{{{ < meta current time > }}}` {{ < meta current time > }}
+`{{{< meta quarto_version >}}}` {{< meta quarto_version >}}  
+`{{{< meta current_date >}}}` {{< meta current_date >}}  
+`{{{< meta current year >}}}` {{< meta current_year >}}  
+`{{{< meta current time >}}}` {{< meta current_time >}}  
 
 Shortcodes are documented [here](https://quarto.org/docs/authoring/shortcodes.html).
 
