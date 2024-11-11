@@ -259,7 +259,8 @@ window.Quarto = {
   <li><a href="#outer-columns" id="toc-outer-columns" class="nav-link" data-scroll-target="#outer-columns"><span class="header-section-number">10.6</span> Outer columns</a></li>
   <li><a href="#panel-layout" id="toc-panel-layout" class="nav-link" data-scroll-target="#panel-layout"><span class="header-section-number">10.7</span> Panel layout</a></li>
   </ul></li>
-  <li><a href="#general-tips" id="toc-general-tips" class="nav-link" data-scroll-target="#general-tips"><span class="header-section-number">11</span> General tips</a></li>
+  <li><a href="#shortcodes" id="toc-shortcodes" class="nav-link" data-scroll-target="#shortcodes"><span class="header-section-number">11</span> Shortcodes</a></li>
+  <li><a href="#general-tips" id="toc-general-tips" class="nav-link" data-scroll-target="#general-tips"><span class="header-section-number">12</span> General tips</a></li>
   </ul>
 </nav>
     </div>
@@ -898,6 +899,7 @@ Call-out with collapse
 </section>
 <section id="alerts" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="alerts"><span class="header-section-number">9</span> Alerts</h2>
+<p>This is not a quarto feature, but rather from bootstrap.</p>
 <pre><code>::: {.alert .alert-primary}
 **Note:** This is an alert!
 :::
@@ -1178,8 +1180,41 @@ This is some material for topic 2.
 <p>More layout settings are described <a href="https://quarto.org/docs/authoring/article-layout.html">here</a> and <a href="https://quarto.org/docs/output-formats/page-layout.html">here</a>.</p>
 </section>
 </section>
-<section id="general-tips" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="general-tips"><span class="header-section-number">11</span> General tips</h2>
+<section id="shortcodes" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="shortcodes"><span class="header-section-number">11</span> Shortcodes</h2>
+<p>Shortcodes are sort of like quarto functions.</p>
+<p>Two important shortcodes are <code>meta</code> and <code>var</code>. <code>meta</code> allows to read metadata from the yaml block in the current page or from <code>_quarto.yml</code>. Here are a few examples:</p>
+<p><code>{{&lt; meta title &gt;}}</code> Quarto Basics</p>
+<p><code>![]({{&lt; meta image &gt;}}){width="200px"}</code></p>
+<p><a href="../../assets/images/featured.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="../../assets/images/featured.webp" class="img-fluid" width="200"></a></p>
+<p><code>{{&lt; meta custom-metadata &gt;}}</code> This is custom metdata</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Mostly only user-specified metadata in <code>_quarto.yml</code> can be accessed using <code>meta</code> shortcode.</p>
+</div>
+</div>
+<p>Similarly, <code>var</code> allows to read variables from <code>_variables.yml</code> if it has been defined. The <code>include</code> shortcode allows to add a child qmd document into a specific position in a qmd file. The <code>kbd</code> shortcode allows keyboard notations:</p>
+<p><code>Press {{&lt; kbd Shift-Ctrl-P &gt;}}</code> Press <kbd aria-hidden="true">Shift-Ctrl-P</kbd><span class="visually-hidden">Shift-Ctrl-P</span></p>
+<p>The <code>video</code> shortcode allows to embed a video.</p>
+<p><code>{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}</code></p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/_f3latmOhew" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+<p>Some of the custom shortcodes added with Specky template are:</p>
+<p><code>{{{ &lt; meta quarto_version &gt; }}}</code> {{ &lt; meta quarto_version &gt; }}</p>
+<p><code>{{{ &lt; meta current_date &gt; }}}</code> {{ &lt; meta current_date &gt; }}</p>
+<p><code>{{{ &lt; meta current year &gt; }}}</code> {{ &lt; meta current year &gt; }}</p>
+<p><code>{{{ &lt; meta current time &gt; }}}</code> {{ &lt; meta current time &gt; }}</p>
+<p>Shortcodes are documented <a href="https://quarto.org/docs/authoring/shortcodes.html">here</a>.</p>
+</section>
+<section id="general-tips" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="general-tips"><span class="header-section-number">12</span> General tips</h2>
 <ul>
 <li>Use level 2 heading as the highest level</li>
 </ul>
@@ -1634,7 +1669,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
