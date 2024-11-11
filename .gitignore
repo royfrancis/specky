@@ -8,3 +8,5 @@
 **/*_cache/
 **/__pycache__
 todo.txt
+_freeze
+docs
