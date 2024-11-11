@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -38,10 +38,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-1a2f9d04da23a7bade75d18bf8b2c3ce.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-4a3abb43637beb5145db1c6345ef57e1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="../../site_libs/quarto-contrib/kbd/kbd.js"></script>
 <link href="../../site_libs/quarto-contrib/kbd/kbd.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
@@ -1185,8 +1185,8 @@ This is some material for topic 2.
 <p>Shortcodes are sort of like quarto functions.</p>
 <p>Two important shortcodes are <code>meta</code> and <code>var</code>. <code>meta</code> allows to read metadata from the yaml block in the current page or from <code>_quarto.yml</code>. Here are a few examples:</p>
 <p><code>{{&lt; meta title &gt;}}</code> Quarto Basics</p>
-<p><code>![]({{&lt; meta image &gt;}}){width="200px"}</code></p>
-<p><a href="../../assets/images/featured.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="../../assets/images/featured.webp" class="img-fluid" width="200"></a></p>
+<p><code>![]({{&lt; meta image &gt;}}){width="300px"}</code></p>
+<p><a href="../../assets/images/featured.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="../../assets/images/featured.webp" class="img-fluid" width="300"></a></p>
 <p><code>{{&lt; meta custom-metadata &gt;}}</code> This is custom metdata</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1207,10 +1207,11 @@ Note
 <p><code>{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}</code></p>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/_f3latmOhew" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 <p>Some of the custom shortcodes added with Specky template are:</p>
-<p><code>{{{ &lt; meta quarto_version &gt; }}}</code> {{ &lt; meta quarto_version &gt; }}</p>
-<p><code>{{{ &lt; meta current_date &gt; }}}</code> {{ &lt; meta current_date &gt; }}</p>
-<p><code>{{{ &lt; meta current year &gt; }}}</code> {{ &lt; meta current year &gt; }}</p>
-<p><code>{{{ &lt; meta current time &gt; }}}</code> {{ &lt; meta current time &gt; }}</p>
+<p><code>{{&lt; meta quarto_version &gt;}}</code> 1.6.32
+<br>
+<code>{{&lt; meta current_date &gt;}}</code> 11-11-2024<br>
+<code>{{&lt; meta current year &gt;}}</code> 2024<br>
+<code>{{&lt; meta current time &gt;}}</code> 15:25:40</p>
 <p>Shortcodes are documented <a href="https://quarto.org/docs/authoring/shortcodes.html">here</a>.</p>
 </section>
 <section id="general-tips" class="level2" data-number="12">
@@ -1664,12 +1665,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Published with <a href="https://quarto.org/">Quarto</a> v1.5.57
+<p>Published with <a href="https://quarto.org/">Quarto</a> v1.6.32
 </p>
 </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","loop":false,"descPosition":"bottom","closeEffect":"zoom","selector":".lightbox"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {

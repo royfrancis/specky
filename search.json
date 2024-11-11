@@ -200,14 +200,14 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 15:08:29 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 15:25:38 ."
   },
   {
     "objectID": "index.html#specky-course-template",
     "href": "index.html#specky-course-template",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 15:08:29 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 15:25:38 ."
   },
   {
     "objectID": "home_syllabus.html",
@@ -305,7 +305,7 @@
     "href": "reports/demo/index.html#shortcodes",
     "title": "Quarto Basics",
     "section": "11 Shortcodes",
-    "text": "11 Shortcodes\nShortcodes are sort of like quarto functions.\nTwo important shortcodes are meta and var. meta allows to read metadata from the yaml block in the current page or from _quarto.yml. Here are a few examples:\n{{&lt; meta title &gt;}} Quarto Basics\n![]({{&lt; meta image &gt;}}){width=\"200px\"}\n\n{{&lt; meta custom-metadata &gt;}} This is custom metdata\n\n\n\n\n\n\nNote\n\n\n\nMostly only user-specified metadata in _quarto.yml can be accessed using meta shortcode.\n\n\nSimilarly, var allows to read variables from _variables.yml if it has been defined. The include shortcode allows to add a child qmd document into a specific position in a qmd file. The kbd shortcode allows keyboard notations:\nPress {{&lt; kbd Shift-Ctrl-P &gt;}} Press Shift-Ctrl-PShift-Ctrl-P\nThe video shortcode allows to embed a video.\n{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}\n\nSome of the custom shortcodes added with Specky template are:\n{{{ &lt; meta quarto_version &gt; }}} {{ &lt; meta quarto_version &gt; }}\n{{{ &lt; meta current_date &gt; }}} {{ &lt; meta current_date &gt; }}\n{{{ &lt; meta current year &gt; }}} {{ &lt; meta current year &gt; }}\n{{{ &lt; meta current time &gt; }}} {{ &lt; meta current time &gt; }}\nShortcodes are documented here."
+    "text": "11 Shortcodes\nShortcodes are sort of like quarto functions.\nTwo important shortcodes are meta and var. meta allows to read metadata from the yaml block in the current page or from _quarto.yml. Here are a few examples:\n{{&lt; meta title &gt;}} Quarto Basics\n![]({{&lt; meta image &gt;}}){width=\"300px\"}\n\n{{&lt; meta custom-metadata &gt;}} This is custom metdata\n\n\n\n\n\n\nNote\n\n\n\nMostly only user-specified metadata in _quarto.yml can be accessed using meta shortcode.\n\n\nSimilarly, var allows to read variables from _variables.yml if it has been defined. The include shortcode allows to add a child qmd document into a specific position in a qmd file. The kbd shortcode allows keyboard notations:\nPress {{&lt; kbd Shift-Ctrl-P &gt;}} Press Shift-Ctrl-PShift-Ctrl-P\nThe video shortcode allows to embed a video.\n{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}\n\nSome of the custom shortcodes added with Specky template are:\n{{&lt; meta quarto_version &gt;}} 1.6.32\n\n{{&lt; meta current_date &gt;}} 11-11-2024\n{{&lt; meta current year &gt;}} 2024\n{{&lt; meta current time &gt;}} 15:25:40\nShortcodes are documented here."
   },
   {
     "objectID": "reports/demo/index.html#general-tips",
@@ -669,7 +669,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto Presentation",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.5.0-1025-azure\" \n                                              version \n\"#26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024\" \n                                             nodename \n                                       \"fv-az573-784\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.5.0-1025-azure\" \n                                              version \n\"#26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024\" \n                                             nodename \n                                      \"fv-az1445-324\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",
