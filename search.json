@@ -60,7 +60,7 @@
     "href": "reports/more/index.html#mermaidjs",
     "title": "ObservableJS and Mermaid",
     "section": "2 MermaidJS",
-    "text": "2 MermaidJS\nQuarto natively supports diagrams using mermaid. Using mermaid in quarto is documented here.\n\n2.1 Flow diagram\nSpecify mermaid as the language.\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n\n2.2 Gant charts\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d\n\n\n\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d"
+    "text": "2 MermaidJS\nQuarto natively supports diagrams using mermaid. Using mermaid in quarto is documented here.\n\n2.1 Flow diagram\nSpecify mermaid as the language.\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n\n2.2 Gantt charts\n```{mermaid}\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d\n```\n\n\n\n\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d"
   },
   {
     "objectID": "reports/usage/index.html",
@@ -200,14 +200,14 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 14:57:40 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 15:08:29 ."
   },
   {
     "objectID": "index.html#specky-course-template",
     "href": "index.html#specky-course-template",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 14:57:40 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 11-11-2024 at 15:08:29 ."
   },
   {
     "objectID": "home_syllabus.html",
@@ -669,7 +669,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto Presentation",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.5.0-1025-azure\" \n                                              version \n\"#26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024\" \n                                             nodename \n                                      \"fv-az1433-399\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                              sysname \n                                              \"Linux\" \n                                              release \n                                   \"6.5.0-1025-azure\" \n                                              version \n\"#26~22.04.1-Ubuntu SMP Thu Jul 11 22:33:04 UTC 2024\" \n                                             nodename \n                                       \"fv-az573-784\" \n                                              machine \n                                             \"x86_64\" \n                                                login \n                                            \"unknown\" \n                                                 user \n                                             \"runner\" \n                                       effective_user \n                                             \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",

@@ -222,7 +222,7 @@ background-size: cover;
   <li><a href="#mermaidjs" id="toc-mermaidjs" class="nav-link" data-scroll-target="#mermaidjs"><span class="header-section-number">2</span> MermaidJS</a>
   <ul>
   <li><a href="#flow-diagram" id="toc-flow-diagram" class="nav-link" data-scroll-target="#flow-diagram"><span class="header-section-number">2.1</span> Flow diagram</a></li>
-  <li><a href="#gant-charts" id="toc-gant-charts" class="nav-link" data-scroll-target="#gant-charts"><span class="header-section-number">2.2</span> Gant charts</a></li>
+  <li><a href="#gantt-charts" id="toc-gantt-charts" class="nav-link" data-scroll-target="#gantt-charts"><span class="header-section-number">2.2</span> Gantt charts</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -363,18 +363,20 @@ Figure&nbsp;1: Scatterplot A.
 </div>
 </div>
 </section>
-<section id="gant-charts" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="gant-charts"><span class="header-section-number">2.2</span> Gant charts</h3>
+<section id="gantt-charts" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="gantt-charts"><span class="header-section-number">2.2</span> Gantt charts</h3>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{mermaid}</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="in">gantt</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="in">    title A Gantt Diagram</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="in">    dateFormat YYYY-MM-DD</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="in">    section Section</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="in">        A task          :a1, 2014-01-01, 30d</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="in">        Another task    :after a1, 20d</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="in">    section Another</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="in">        Task in Another :2014-01-12, 12d</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="in">        another task    :24d</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell" data-layout-align="left">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode default code-with-copy"><code class="sourceCode default"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>gantt</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    title A Gantt Diagram</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    dateFormat YYYY-MM-DD</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    section Section</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        A task          :a1, 2014-01-01, 30d</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        Another task    :after a1, 20d</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    section Another</span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>        Task in Another :2014-01-12, 12d</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>        another task    :24d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <p></p><figure class="figure"><p></p>
