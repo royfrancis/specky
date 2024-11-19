@@ -1,5 +1,5 @@
 ---
-title: "Quarto Presentation"
+title: "Quarto demo with R"
 author: "Roy Francis"
 image: "/assets/images/featured.webp"
 format: revealjs
@@ -150,6 +150,66 @@ Inner right
 
 ::::
 
+## Layout • Vertical align • Top
+
+::: {.v-top}
+::: {}
+
+```
+::: {.v-top}
+::: {}
+- Top aligned
+- content
+:::
+:::
+```
+
+- Top aligned
+- content
+
+:::
+:::
+
+## Layout • Vertical align • Center
+
+::: {.v-center}
+::: {}
+
+```
+::: {.v-center}
+::: {}
+- Center aligned
+- content
+:::
+:::
+```
+
+- Center aligned
+- content
+
+:::
+:::
+
+## Layout • Vertical align • Bottom
+
+::: {.v-bottom}
+::: {}
+
+```
+::: {.v-bottom}
+::: {}
+- Bottom aligned
+- content
+:::
+:::
+```
+
+- Bottom aligned
+- content
+
+:::
+:::
+
 ## Panel tabs
 
 ::: {.panel-tabset}
@@ -269,7 +329,7 @@ A horizontal line can be created using `---`
 
 This is subscript `H~2~O`  H~2~O
 
-This is superscript `2^10`  2^10^
+This is superscript `2^10^`  2^10^
 
 `This is a [badge]{.badge .badge-primary}`  
 This is a [badge]{.badge .badge-primary}  
@@ -752,6 +812,58 @@ knitr::include_graphics("assets/image.webp")
 knitr::include_graphics("assets/image.webp")
 ```
 
+## Stacking
+
+:::: {.columns}
+::: {.column width="50%"}
+
+Stack images and display incrementally
+
+```
+::: {.r-stack}
+::: {.fragment}
+
+![](assets/image.webp){style="transform:rotate(-5deg);border:beige 40px solid;"}
+
+:::
+::: {.fragment}
+
+![](assets/image.webp){style="transform:rotate(5deg);border:beige 40px solid;"}
+
+:::
+:::
+```
+
+:::
+
+::: {.column width="50%"}
+
+::: {.r-stack}
+::: {.fragment}
+
+![](assets/image.webp){style="transform:rotate(-5deg);border:beige 40px solid;"}
+
+:::
+::: {.fragment}
+
+![](assets/image.webp){style="transform:rotate(5deg);border:beige 40px solid;"}
+
+:::
+:::
+
+:::
+::::
+
+## Stretching
+
+Stretch images to use up remaining space.
+
+```
+![](assets/image.webp){.stretch}
+```
+
+![](assets/image.webp){.stretch}
+
 ## Math expressions
 
 Some examples of rendering equations.
@@ -1169,7 +1281,17 @@ Sys.info()
 
 ##  {background-image="../../assets/images/home.webp"}
 
-### Thank you! Questions?
+::: {.v-center .center}
+::: {}
+
+[Thank you!]{.largest}
+
+[Questions?]{.larger}
+
+:::
+:::
+
+##  {background-image="../../assets/images/home.webp"}
 
 ```{r}
 #| echo: false

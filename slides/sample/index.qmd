@@ -16,7 +16,16 @@ Content
 More content
 
 ##  {background-image="../../assets/images/home.webp"}
-### Thank you! Questions?
+
+::: {.v-center .center}
+::: {}
+
+[Thank you!]{.largest}
+
+[Questions?]{.larger}
 
 [{{< meta current_year >}} • [Specky](https://github.com/royfrancis/specky)]{.smaller}
+
+:::
+:::
 

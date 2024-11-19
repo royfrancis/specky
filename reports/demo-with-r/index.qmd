@@ -273,12 +273,6 @@ library(rmarkdown)
 rmarkdown::paged_table(head(iris))
 ```
 
-This is the default for this template.
-
-```{r}
-head(head(iris))
-```
-
 ### gt
 
 Tables using the [gt](https://gt.rstudio.com/) package. A structured approach to creating tables using grammar of tables with extensive customization options.

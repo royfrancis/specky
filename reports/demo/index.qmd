@@ -919,12 +919,6 @@ Two important shortcodes are `meta` and `var`. `meta` allows to read metadata fr
 
 ![]({{< meta image >}}){width="300px"}
 
-`{{{< meta custom-metadata >}}}` {{< meta custom-metadata >}}
-
-:::{.callout-note}
-Mostly only user-specified metadata in `_quarto.yml` can be accessed using `meta` shortcode.
-:::
-
 Similarly, `var` allows to read variables from `_variables.yml` if it has been defined. The `include` shortcode allows to add a child qmd document into a specific position in a qmd file. The `kbd` shortcode allows keyboard notations:
 
 `Press {{{< kbd Shift-Ctrl-P >}}}` Press {{< kbd Shift-Ctrl-P >}}

@@ -19,6 +19,8 @@ website:
         href: "home_syllabus.html"
       - text: "Precourse"
         href: "home_precourse.html"
+      - text: About
+        href: "home_about.html"
   page-footer:
     border: false
     left: "{{< meta current_year >}} [NBIS](https://nbis.se) | [GPL-3 License](https://choosealicense.com/licenses/gpl-3.0/)"
@@ -89,7 +91,7 @@ format:
     header-logo-right-height: 25px
     header-logo-right-url: https://royfrancis.github.io/specky/home_contents.html
     template-partials:
-      - "assets/title-slide.html"
+      - "/assets/title-slide.html"
 
 execute:
   eval: true
@@ -104,4 +106,3 @@ filters:
   - reveal-logo
   - fontawesome
 
-custom-metadata: "This is custom metdata"

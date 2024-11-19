@@ -8,5 +8,7 @@
 **/*_cache/
 **/__pycache__
 todo.txt
+slides/**/*_files
+labs/**/*_files
 _freeze
 docs
