@@ -929,7 +929,7 @@ The `video` shortcode allows to embed a video.
 
 {{< video https://www.youtube.com/watch?v=_f3latmOhew >}}
 
-Some of the custom shortcodes added with Specky template are:
+Some of the custom shortcodes added with this template are:
 
 `{{{< meta quarto_version >}}}` {{< meta quarto_version >}}  
 `{{{< meta current_date >}}}` {{< meta current_date >}}  
