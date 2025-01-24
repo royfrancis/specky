@@ -186,7 +186,7 @@
     "href": "reports/demo/index.html#shortcodes",
     "title": "Quarto Basics",
     "section": "11 Shortcodes",
-    "text": "11 Shortcodes\nShortcodes are sort of like quarto functions.\nTwo important shortcodes are meta and var. meta allows to read metadata from the yaml block in the current page or from _quarto.yml. Here are a few examples:\n{{&lt; meta title &gt;}} Quarto Basics\n![]({{&lt; meta image &gt;}}){width=\"300px\"}\n\nSimilarly, var allows to read variables from _variables.yml if it has been defined. The include shortcode allows to add a child qmd document into a specific position in a qmd file. The kbd shortcode allows keyboard notations:\nPress {{&lt; kbd Shift-Ctrl-P &gt;}} Press Shift-Ctrl-PShift-Ctrl-P\nThe video shortcode allows to embed a video.\n{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}\n\nSome of the custom shortcodes added with this template are:\n{{&lt; meta quarto_version &gt;}} 1.6.40\n\n{{&lt; meta current_date &gt;}} 23-01-2025\n{{&lt; meta current year &gt;}} 2025\n{{&lt; meta current time &gt;}} 22:48:45\nShortcodes are documented here."
+    "text": "11 Shortcodes\nShortcodes are sort of like quarto functions.\nTwo important shortcodes are meta and var. meta allows to read metadata from the yaml block in the current page or from _quarto.yml. Here are a few examples:\n{{&lt; meta title &gt;}} Quarto Basics\n![]({{&lt; meta image &gt;}}){width=\"300px\"}\n\nSimilarly, var allows to read variables from _variables.yml if it has been defined. The include shortcode allows to add a child qmd document into a specific position in a qmd file. The kbd shortcode allows keyboard notations:\nPress {{&lt; kbd Shift-Ctrl-P &gt;}} Press Shift-Ctrl-PShift-Ctrl-P\nThe video shortcode allows to embed a video.\n{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}\n\nSome of the custom shortcodes added with this template are:\n{{&lt; meta quarto_version &gt;}} 1.6.40\n\n{{&lt; meta current_date &gt;}} 24-01-2025\n{{&lt; meta current year &gt;}} 2025\n{{&lt; meta current time &gt;}} 16:15:02\nShortcodes are documented here."
   },
   {
     "objectID": "reports/demo/index.html#general-tips",
@@ -235,21 +235,21 @@
     "href": "reports/demo-with-r/index.html",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-01-23.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-01-23\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-01-24.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-01-24\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#code-execution",
     "href": "reports/demo-with-r/index.html#code-execution",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-01-23.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-01-23\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-01-24.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-01-24\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#chunk-attributes",
     "href": "reports/demo-with-r/index.html#chunk-attributes",
     "title": "Quarto with R",
     "section": "2 Chunk attributes",
-    "text": "2 Chunk attributes\nProperties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: #| eval: false.\nIn this example, the R source code and results are hidden but the code is evaluated.\n```{r}\n#| eval: true\n#| echo: false\n#| results: hide\nSys.Date()\n```\nSource code blocks can be folded.\n```{r}\n#| code-fold: true\nSys.Date()\n```\n\n\nCode\nSys.Date()\n\n\n[1] \"2025-01-23\"\n\n\nThere is not proper implementation to fold code output. Here is a hacky solution that uses a custom lua filter.\n```{r}\n#| attr.output: '.details summary=\"Output\"'\nSys.Date()\n```\n\nSys.Date()\n\nOutput\n[1] \"2025-01-23\"\n\n\n\nA code chunk can be given a code filename using the chunk attribute filename.\n```{r}\n#| filename: R code\nSys.Date()\n```\n\n\n\nR code\n\nSys.Date()\n\n\nEnable line numbers using code-line-numbers: true.\n```{r}\n#| code-line-numbers: true\nSys.Date()\nsessionInfo()\n```\n\nSys.Date()\nsessionInfo()\n\nAn example showing bash code generated from R.\n```{r}\n#| attr-output: \"filename='bash'\"\n#| class-output: bash\n#| echo: false\nd &lt;- \"custom\"\ncat(paste(\"mkdir\", d))\n```\n\n\n\n\nbash\n\nmkdir custom\n\n\n\nCode chunk attributes are documented here."
+    "text": "2 Chunk attributes\nProperties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: #| eval: false.\nIn this example, the R source code and results are hidden but the code is evaluated.\n```{r}\n#| eval: true\n#| echo: false\n#| results: hide\nSys.Date()\n```\nSource code blocks can be folded.\n```{r}\n#| code-fold: true\nSys.Date()\n```\n\n\nCode\nSys.Date()\n\n\n[1] \"2025-01-24\"\n\n\nThere is not proper implementation to fold code output. Here is a hacky solution that uses a custom lua filter.\n```{r}\n#| attr.output: '.details summary=\"Output\"'\nSys.Date()\n```\n\nSys.Date()\n\nOutput\n[1] \"2025-01-24\"\n\n\n\nA code chunk can be given a code filename using the chunk attribute filename.\n```{r}\n#| filename: R code\nSys.Date()\n```\n\n\n\nR code\n\nSys.Date()\n\n\nEnable line numbers using code-line-numbers: true.\n```{r}\n#| code-line-numbers: true\nSys.Date()\nsessionInfo()\n```\n\nSys.Date()\nsessionInfo()\n\nAn example showing bash code generated from R.\n```{r}\n#| attr-output: \"filename='bash'\"\n#| class-output: bash\n#| echo: false\nd &lt;- \"custom\"\ncat(paste(\"mkdir\", d))\n```\n\n\n\n\nbash\n\nmkdir custom\n\n\n\nCode chunk attributes are documented here."
   },
   {
     "objectID": "reports/demo-with-r/index.html#tables",
@@ -354,14 +354,14 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 23-01-2025 at 22:48:56 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 24-01-2025 at 16:15:12 ."
   },
   {
     "objectID": "index.html#specky-course-template",
     "href": "index.html#specky-course-template",
     "title": "",
     "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 23-01-2025 at 22:48:56 ."
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 24-01-2025 at 16:15:12 ."
   },
   {
     "objectID": "slides/demo/index.html#introduction",
@@ -494,14 +494,14 @@
     "href": "slides/demo/index.html#code-formatting",
     "title": "Quarto demo with R",
     "section": "Code formatting",
-    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2025-01-23.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
+    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2025-01-24.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
   },
   {
     "objectID": "slides/demo/index.html#code-formatting-1",
     "href": "slides/demo/index.html#code-formatting-1",
     "title": "Quarto demo with R",
     "section": "Code formatting",
-    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2025-01-23\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
+    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2025-01-24\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
   },
   {
     "objectID": "slides/demo/index.html#code-highlighting",
@@ -718,7 +718,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto demo with R",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                      sysname \n                                      \"Linux\" \n                                      release \n                           \"6.8.0-1020-azure\" \n                                      version \n\"#23-Ubuntu SMP Mon Dec  9 16:58:58 UTC 2024\" \n                                     nodename \n                               \"fv-az790-657\" \n                                      machine \n                                     \"x86_64\" \n                                        login \n                                    \"unknown\" \n                                         user \n                                     \"runner\" \n                               effective_user \n                                     \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                      sysname \n                                      \"Linux\" \n                                      release \n                           \"6.8.0-1020-azure\" \n                                      version \n\"#23-Ubuntu SMP Mon Dec  9 16:58:58 UTC 2024\" \n                                     nodename \n                              \"fv-az2027-431\" \n                                      machine \n                                     \"x86_64\" \n                                        login \n                                    \"unknown\" \n                                         user \n                                     \"runner\" \n                               effective_user \n                                     \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",
