@@ -3,7 +3,10 @@ project:
   output-dir: docs
 
 website:
+  open-graph: true
+  site-url: "https://royfrancis.github.io/specky/"
   image: "assets/images/seo.webp"
+  description: "A quarto website template for courses and workshops."
   favicon: "assets/favicon.png"
   navbar:
     logo: "assets/logos/nbis-scilifelab.webp"
@@ -34,8 +37,6 @@ website:
     border: false
     left: "{{< meta current_year >}} [NBIS](https://nbis.se) | [GPL-3 License](https://choosealicense.com/licenses/gpl-3.0/)"
     right: "Published with [Quarto](https://quarto.org/) v{{< meta quarto_version >}}"
-  site-url: "https://royfrancis.github.io/specky/"
-  open-graph: true
 
 format:
   html:
