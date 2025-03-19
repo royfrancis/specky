@@ -1,47 +1,5 @@
 [
   {
-    "objectID": "home_contents.html",
-    "href": "home_contents.html",
-    "title": "Contents",
-    "section": "",
-    "text": "Once you have quarto installed, run;\nquarto use template royfrancis/specky"
-  },
-  {
-    "objectID": "home_contents.html#install",
-    "href": "home_contents.html#install",
-    "title": "Contents",
-    "section": "",
-    "text": "Once you have quarto installed, run;\nquarto use template royfrancis/specky"
-  },
-  {
-    "objectID": "home_contents.html#reports",
-    "href": "home_contents.html#reports",
-    "title": "Contents",
-    "section": "Reports",
-    "text": "Reports\nHTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
-  },
-  {
-    "objectID": "home_contents.html#slides",
-    "href": "home_contents.html#slides",
-    "title": "Contents",
-    "section": "Slides",
-    "text": "Slides\nPresentation using the Quarto revealjs format.\nListing page for all slides.\n\nMinimal demo \nQuarto with R"
-  },
-  {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Slides",
-    "section": "",
-    "text": "Presentation\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto demo with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "home_schedule.html",
-    "href": "home_schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "Topic\nInstructor\nLinks\n\n\n\n\n12-Jan-2024 (Fri)\n\n\n\n\nMinimal demo\nRoy Francis\nSlides, Report\n\n\nUsing custom theme\nRoy Francis\nReport\n\n\nQuarto basics\nRoy Francis\nReport\n\n\nQuarto and R\nRoy Francis\nSlides, Report\n\n\nOJS and mermaid\nRoy Francis\nReport"
-  },
-  {
     "objectID": "home_precourse.html",
     "href": "home_precourse.html",
     "title": "Precourse",
@@ -63,6 +21,13 @@
     "text": "2 Install tools\n\n2.1 ThinLinc\nThinLinc allows graphical connection to UPPMAX. It can be used directly from the browser but it is recommended to download and install the client for better copy/paste operation.\n\n\n2.2 XQuartz\nMac users will need to download and install XQuartz for X11 forwarding. ie; to forward remotely opened windows to local machine.\n\n\n2.3 MobaXterm (Optional)\nIf you are on a Windows system, and you want to open graphical applications from the terminal, we recommend MobaXterm. It is recommended that you INSTALL the program and not use the portable version. MobaXterm also has an integrated SFTP file browser.\n\n\n2.4 Filezilla (Optional)\nWhen you need to transfer data between the remote cluster and your computer, you can use the tools SCP or SFTP through the terminal. Windows users can use the SFTP browser available with MobaXterm. If you prefer a GUI to upload and download files from the remote cluster, we recommend installing FileZilla."
   },
   {
+    "objectID": "home_syllabus.html",
+    "href": "home_syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "SyllabusLearning outcomesEntry requirements\n\n\nThe syllabus for this workshop are as follows.\n\nWorking on the unix/linux command line\n\nCommand line navigation and related commands: cd, mkdir, rm, rmdir\nCommonly used linux tools: cp, mv, tar, less, more, head, tail, nano, grep, top, man\nWildcards\nOwnership and permissions\nSymbolic links\nPiping commands\n\nWorking on remote computing cluster\n\nLogging on to UPPMAX\nBooking resources\nJob templates, submission and queues\nModules\n\n\n\n\nAfter this workshop you should be able to:\n\nDescribe the basic principles of next generation sequencing.\nUse the Linux command line interface to manage simple file processing operations, and organise directory structures.\nConnect to and work on a remote compute cluster.\nApply programs in Linux for analysis of NGS data.\n\n\n\n\nThis is a national course open to PhD students, postdocs, group leaders and core facility staff.\nA background in genetics, cell biology, biomedicine, biochemistry, bioinformatics or comparable is desirable."
+  },
+  {
     "objectID": "reports/sample/index.html",
     "href": "reports/sample/index.html",
     "title": "Report",
@@ -82,27 +47,6 @@
     "title": "Report",
     "section": "2 Heading 2",
     "text": "2 Heading 2\nMore Contents"
-  },
-  {
-    "objectID": "reports/more/index.html",
-    "href": "reports/more/index.html",
-    "title": "ObservableJS and Mermaid",
-    "section": "",
-    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\n\n\nFigure 1: Scatterplot A."
-  },
-  {
-    "objectID": "reports/more/index.html#observablejs",
-    "href": "reports/more/index.html#observablejs",
-    "title": "ObservableJS and Mermaid",
-    "section": "",
-    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\n\n\nFigure 1: Scatterplot A."
-  },
-  {
-    "objectID": "reports/more/index.html#mermaidjs",
-    "href": "reports/more/index.html#mermaidjs",
-    "title": "ObservableJS and Mermaid",
-    "section": "2 MermaidJS",
-    "text": "2 MermaidJS\nQuarto natively supports diagrams using mermaid. Using mermaid in quarto is documented here.\n\n2.1 Flow diagram\nSpecify mermaid as the language.\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n\n2.2 Gantt charts\n```{mermaid}\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d\n```\n\n\n\n\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d"
   },
   {
     "objectID": "reports/demo/index.html",
@@ -186,7 +130,7 @@
     "href": "reports/demo/index.html#shortcodes",
     "title": "Quarto Basics",
     "section": "11 Shortcodes",
-    "text": "11 Shortcodes\nShortcodes are sort of like quarto functions.\nTwo important shortcodes are meta and var. meta allows to read metadata from the yaml block in the current page or from _quarto.yml. Here are a few examples:\n{{&lt; meta title &gt;}} Quarto Basics\n![]({{&lt; meta image &gt;}}){width=\"300px\"}\n\nSimilarly, var allows to read variables from _variables.yml if it has been defined. The include shortcode allows to add a child qmd document into a specific position in a qmd file. The kbd shortcode allows keyboard notations:\nPress {{&lt; kbd Shift-Ctrl-P &gt;}} Press Shift-Ctrl-PShift-Ctrl-P\nThe video shortcode allows to embed a video.\n{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}\n\nSome of the custom shortcodes added with this template are:\n{{&lt; meta quarto_version &gt;}} 1.6.40\n\n{{&lt; meta current_date &gt;}} 24-01-2025\n{{&lt; meta current year &gt;}} 2025\n{{&lt; meta current time &gt;}} 16:15:02\nShortcodes are documented here."
+    "text": "11 Shortcodes\nShortcodes are sort of like quarto functions.\nTwo important shortcodes are meta and var. meta allows to read metadata from the yaml block in the current page or from _quarto.yml. Here are a few examples:\n{{&lt; meta title &gt;}} Quarto Basics\n![]({{&lt; meta image &gt;}}){width=\"300px\"}\n\nSimilarly, var allows to read variables from _variables.yml if it has been defined. The include shortcode allows to add a child qmd document into a specific position in a qmd file. The kbd shortcode allows keyboard notations:\nPress {{&lt; kbd Shift-Ctrl-P &gt;}} Press Shift-Ctrl-PShift-Ctrl-P\nThe video shortcode allows to embed a video.\n{{&lt; video https://www.youtube.com/watch?v=_f3latmOhew &gt;}}\n\nSome of the custom shortcodes added with this template are:\n{{&lt; meta quarto_version &gt;}} 1.6.42\n\n{{&lt; meta current_date &gt;}} 19-03-2025\n{{&lt; meta current year &gt;}} 2025\n{{&lt; meta current time &gt;}} 14:36:47\nShortcodes are documented here."
   },
   {
     "objectID": "reports/demo/index.html#general-tips",
@@ -203,53 +147,25 @@
     "text": "Footnotes\n\n\nThat reference refers to this footnote.↩︎"
   },
   {
-    "objectID": "home_about.html",
-    "href": "home_about.html",
-    "title": "About",
-    "section": "",
-    "text": "John Doe\nData Scientist, Institute Associate Professor in Bioinformatics, University\n\n\n\nJohn Doe\nData Scientist, Institute\n\n\n\nJohn Doe\nData Scientist, Institute"
-  },
-  {
-    "objectID": "home_about.html#organizers",
-    "href": "home_about.html#organizers",
-    "title": "About",
-    "section": "",
-    "text": "John Doe\nData Scientist, Institute Associate Professor in Bioinformatics, University\n\n\n\nJohn Doe\nData Scientist, Institute\n\n\n\nJohn Doe\nData Scientist, Institute"
-  },
-  {
-    "objectID": "home_about.html#contact",
-    "href": "home_about.html#contact",
-    "title": "About",
-    "section": "Contact",
-    "text": "Contact\nFor queries, write to us at contact[at]email.com."
-  },
-  {
-    "objectID": "home_syllabus.html",
-    "href": "home_syllabus.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "SyllabusLearning outcomesEntry requirements\n\n\nThe syllabus for this workshop are as follows.\n\nWorking on the unix/linux command line\n\nCommand line navigation and related commands: cd, mkdir, rm, rmdir\nCommonly used linux tools: cp, mv, tar, less, more, head, tail, nano, grep, top, man\nWildcards\nOwnership and permissions\nSymbolic links\nPiping commands\n\nWorking on remote computing cluster\n\nLogging on to UPPMAX\nBooking resources\nJob templates, submission and queues\nModules\n\n\n\n\nAfter this workshop you should be able to:\n\nDescribe the basic principles of next generation sequencing.\nUse the Linux command line interface to manage simple file processing operations, and organise directory structures.\nConnect to and work on a remote compute cluster.\nApply programs in Linux for analysis of NGS data.\n\n\n\n\nThis is a national course open to PhD students, postdocs, group leaders and core facility staff.\nA background in genetics, cell biology, biomedicine, biochemistry, bioinformatics or comparable is desirable."
-  },
-  {
     "objectID": "reports/demo-with-r/index.html",
     "href": "reports/demo-with-r/index.html",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-01-24.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-01-24\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-03-19.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-03-19\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#code-execution",
     "href": "reports/demo-with-r/index.html#code-execution",
     "title": "Quarto with R",
     "section": "",
-    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-01-24.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-01-24\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
+    "text": "Code can be defined inline where `r Sys.Date()` renders 2025-03-19.\nCode can be defined inside code blocks.\n```{r}\nSys.Date()\n```\nwhich shows the source code and output.\n\nSys.Date()\n\n[1] \"2025-03-19\"\n\n\nHere is another example of executed R code with input and output.\n\ndata(iris)\nhead(iris[,1:2])"
   },
   {
     "objectID": "reports/demo-with-r/index.html#chunk-attributes",
     "href": "reports/demo-with-r/index.html#chunk-attributes",
     "title": "Quarto with R",
     "section": "2 Chunk attributes",
-    "text": "2 Chunk attributes\nProperties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: #| eval: false.\nIn this example, the R source code and results are hidden but the code is evaluated.\n```{r}\n#| eval: true\n#| echo: false\n#| results: hide\nSys.Date()\n```\nSource code blocks can be folded.\n```{r}\n#| code-fold: true\nSys.Date()\n```\n\n\nCode\nSys.Date()\n\n\n[1] \"2025-01-24\"\n\n\nThere is not proper implementation to fold code output. Here is a hacky solution that uses a custom lua filter.\n```{r}\n#| attr.output: '.details summary=\"Output\"'\nSys.Date()\n```\n\nSys.Date()\n\nOutput\n[1] \"2025-01-24\"\n\n\n\nA code chunk can be given a code filename using the chunk attribute filename.\n```{r}\n#| filename: R code\nSys.Date()\n```\n\n\n\nR code\n\nSys.Date()\n\n\nEnable line numbers using code-line-numbers: true.\n```{r}\n#| code-line-numbers: true\nSys.Date()\nsessionInfo()\n```\n\nSys.Date()\nsessionInfo()\n\nAn example showing bash code generated from R.\n```{r}\n#| attr-output: \"filename='bash'\"\n#| class-output: bash\n#| echo: false\nd &lt;- \"custom\"\ncat(paste(\"mkdir\", d))\n```\n\n\n\n\nbash\n\nmkdir custom\n\n\n\nCode chunk attributes are documented here."
+    "text": "2 Chunk attributes\nProperties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: #| eval: false.\nIn this example, the R source code and results are hidden but the code is evaluated.\n```{r}\n#| eval: true\n#| echo: false\n#| results: hide\nSys.Date()\n```\nSource code blocks can be folded.\n```{r}\n#| code-fold: true\nSys.Date()\n```\n\n\nCode\nSys.Date()\n\n\n[1] \"2025-03-19\"\n\n\nThere is not proper implementation to fold code output. Here is a hacky solution that uses a custom lua filter.\n```{r}\n#| attr.output: '.details summary=\"Output\"'\nSys.Date()\n```\n\nSys.Date()\n\nOutput\n[1] \"2025-03-19\"\n\n\n\nA code chunk can be given a code filename using the chunk attribute filename.\n```{r}\n#| filename: R code\nSys.Date()\n```\n\n\n\nR code\n\nSys.Date()\n\n\nEnable line numbers using code-line-numbers: true.\n```{r}\n#| code-line-numbers: true\nSys.Date()\nsessionInfo()\n```\n\nSys.Date()\nsessionInfo()\n\nAn example showing bash code generated from R.\n```{r}\n#| attr-output: \"filename='bash'\"\n#| class-output: bash\n#| echo: false\nd &lt;- \"custom\"\ncat(paste(\"mkdir\", d))\n```\n\n\n\n\nbash\n\nmkdir custom\n\n\n\nCode chunk attributes are documented here."
   },
   {
     "objectID": "reports/demo-with-r/index.html#tables",
@@ -294,74 +210,32 @@
     "text": "8 Icons\nIcons can be placed programatically through R using the R package fontawesome.\n`r fontawesome::fa('lightbulb')`\n\nOptional arguments are height and fill.\n`r fontawesome::fa('lightbulb',height='30px',fill='steelblue')`\n\nFor full list of icons check out FontAwesome."
   },
   {
-    "objectID": "reports/index.html",
-    "href": "reports/index.html",
-    "title": "Reports",
+    "objectID": "home_contents.html",
+    "href": "home_contents.html",
+    "title": "Contents",
     "section": "",
-    "text": "ObservableJS and Mermaid\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Basics\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReport\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Quarto\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Once you have quarto installed, run;\nquarto use template royfrancis/specky"
   },
   {
-    "objectID": "reports/usage/index.html",
-    "href": "reports/usage/index.html",
-    "title": "Using Quarto",
+    "objectID": "home_contents.html#install",
+    "href": "home_contents.html#install",
+    "title": "Contents",
     "section": "",
-    "text": "The custom template is a Quarto website project with html reports and revealjs presentation."
+    "text": "Once you have quarto installed, run;\nquarto use template royfrancis/specky"
   },
   {
-    "objectID": "reports/usage/index.html#initialize",
-    "href": "reports/usage/index.html#initialize",
-    "title": "Using Quarto",
-    "section": "1 Initialize",
-    "text": "1 Initialize\nTo download a starter template, run in the terminal:\n\n\n\nbash\n\nquarto use template royfrancis/specky\n\n\nThis creates a website template that you can modify as needed. The directory structure is as follows:\n.\n├── 404.md\n├── assets/\n├── _extensions/\n├── home_contents.qmd\n├── home_precourse.qmd\n├── home_schedule.qmd\n├── home_syllabus.qmd\n├── index.qmd\n├── _quarto.yml\n├── reports/\n└── slides/"
+    "objectID": "home_contents.html#reports",
+    "href": "home_contents.html#reports",
+    "title": "Contents",
+    "section": "Reports",
+    "text": "Reports\nHTML report using the Quarto format html.\nListing page for all reports.\n\nUsing Quarto and custom theme \nMinimal demo \nQuarto basics \nQuarto with R \nOJS and mermaid"
   },
   {
-    "objectID": "reports/usage/index.html#settings",
-    "href": "reports/usage/index.html#settings",
-    "title": "Using Quarto",
-    "section": "2 Settings",
-    "text": "2 Settings\nStart by updating the settings. The website/project settings are contained in the _quarto.yml file. A website is a quarto project. Projects are documented [here]{https://quarto.org/docs/projects/quarto-projects.html} and websites are documented here.\n\nThe output directory is set to docs; output-dir: docs\nNavigation bar links are set under website: navbar. Add or remove as needed\nPage footer settings are set under website: page-footer. Update as needed\nChange site-url to your intended destination\nHTML report settings are under format: html:\n\nwarnings and messages from chunks are disabled\nA default subtitle has been set\n\nRevealJS slides settings are under format: revealjs\nAdd custom css under YAML if needed: css: \"styles.css\""
-  },
-  {
-    "objectID": "reports/usage/index.html#content",
-    "href": "reports/usage/index.html#content",
-    "title": "Using Quarto",
-    "section": "3 Content",
-    "text": "3 Content\nNow you can start adding content.\n The starter template should render completely using quarto alone. You can add R or Python for example as needed.\n\nThe homepage is index.qmd\nFiles starting with home are essential pages linked in the top navigation menu. Remove or modify them as needed\nAll reports are organised under reports/ as separate folders\nAll slides are organised under slides/ as separate folders\nTo create additional Quarto documents in RStudio, File &gt; New File &gt; Quarto Document"
-  },
-  {
-    "objectID": "reports/usage/index.html#usage-tips-and-conventions",
-    "href": "reports/usage/index.html#usage-tips-and-conventions",
-    "title": "Using Quarto",
-    "section": "4 Usage tips and conventions",
-    "text": "4 Usage tips and conventions\n\nMarkdown basics are covered here\nUse level 2 heading (##) as the highest level\nUse quarto style chunk options; #| eval: false rather than `{r eval=FALSE}`\nQmds starting with _ such as _content.qmd are child documents and are not rendered alone\nChild qmd files can be included by using {{&lt; include _content.qmd &gt;&gt;}}. They do not work in .ipynb notebooks. Includes is documented here.\nDynamic variables can be defined in _variables.yml and used as {{&lt; var variable_name &gt;&gt;}}. Dynamic variables are documented here.\nDynamic variables can be defined in _metadata.yml and used as {{&lt; meta variable_name &gt;&gt;}}\nEnvironment variables can be used as {{&lt; env variable_name &gt;&gt;}}\nWhen using R or Python, declare all libraries at the beginning of each document"
-  },
-  {
-    "objectID": "reports/usage/index.html#preview",
-    "href": "reports/usage/index.html#preview",
-    "title": "Using Quarto",
-    "section": "5 Preview",
-    "text": "5 Preview\nQuarto allows for live preview of changes.\n\n\n\nbash\n\nquarto preview report.qmd\n\n\n\n\n\n\n\n\nNote\n\n\n\nPreview will build all the files in the project. So, this might not be a good option if there are incomplete documents."
-  },
-  {
-    "objectID": "reports/usage/index.html#export",
-    "href": "reports/usage/index.html#export",
-    "title": "Using Quarto",
-    "section": "6 Export",
-    "text": "6 Export\nA quarto document can be rendered from the terminal as follows:\n\n\n\nbash\n\nquarto render report.qmd\n\n\nRendering from the R console using the quarto R package.\n\n\n\nR\n\nquarto::quarto_render(\"report.qmd\")\n\n\nTo render from RStudio, click the Render button. Rendered output is moved into the docs directory. This is set in _quarto.yml as output-dir:"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "",
-    "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 24-01-2025 at 16:15:12 ."
-  },
-  {
-    "objectID": "index.html#specky-course-template",
-    "href": "index.html#specky-course-template",
-    "title": "",
-    "section": "",
-    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 24-01-2025 at 16:15:12 ."
+    "objectID": "home_contents.html#slides",
+    "href": "home_contents.html#slides",
+    "title": "Contents",
+    "section": "Slides",
+    "text": "Slides\nPresentation using the Quarto revealjs format.\nListing page for all slides.\n\nMinimal demo \nQuarto with R"
   },
   {
     "objectID": "slides/demo/index.html#introduction",
@@ -494,14 +368,14 @@
     "href": "slides/demo/index.html#code-formatting",
     "title": "Quarto demo with R",
     "section": "Code formatting",
-    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2025-01-24.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
+    "text": "Code formatting\nInline code\n\nCode can be defined inline where `this` looks like this.\nR code can be executed inline `r Sys.Date()` producing 2025-03-19.\n\n== != && ++ |&gt; &lt;&gt; &lt;- &lt;= &lt;~ /= |=&gt; -&gt;&gt;"
   },
   {
     "objectID": "slides/demo/index.html#code-formatting-1",
     "href": "slides/demo/index.html#code-formatting-1",
     "title": "Quarto demo with R",
     "section": "Code formatting",
-    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2025-01-24\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
+    "text": "Code formatting\n\n\nCode chunks\nCode can also be defined inside chunks.\n```\nThis is code\n```\nThis is code\nR code is executed inside code blocks like this\n```{r}\nSys.Date()\n```\nwhich shows the code and output.\n\nSys.Date()\n\n[1] \"2025-03-19\"\n\n\n\nThe code and results can be hidden by\n```{r}\n#| echo: false\n#| results: hide\ndata(iris)\n```\n\ndata(iris)\nhead(iris[1:3,1:2])\n\n\n  \n\n\n\nThese are called chunk attributes. For more options, see here and complete list here."
   },
   {
     "objectID": "slides/demo/index.html#code-highlighting",
@@ -718,7 +592,7 @@
     "href": "slides/demo/index.html#general-tips",
     "title": "Quarto demo with R",
     "section": "General tips",
-    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                      sysname \n                                      \"Linux\" \n                                      release \n                           \"6.8.0-1020-azure\" \n                                      version \n\"#23-Ubuntu SMP Mon Dec  9 16:58:58 UTC 2024\" \n                                     nodename \n                              \"fv-az2027-431\" \n                                      machine \n                                     \"x86_64\" \n                                        login \n                                    \"unknown\" \n                                         user \n                                     \"runner\" \n                               effective_user \n                                     \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
+    "text": "General tips\n\nReplace assets/cover.webp to change cover slide picture\nReplace assets/end.webp to change end slide picture\nAdd custom css under YAML css: \"styles.css\"\nIf content overflows the slide in vertical direction, add class .scrollable\n\n\n\n\n                                      sysname \n                                      \"Linux\" \n                                      release \n                           \"6.8.0-1021-azure\" \n                                      version \n\"#25-Ubuntu SMP Wed Jan 15 20:45:09 UTC 2025\" \n                                     nodename \n                              \"fv-az1657-263\" \n                                      machine \n                                     \"x86_64\" \n                                        login \n                                    \"unknown\" \n                                         user \n                                     \"runner\" \n                               effective_user \n                                     \"runner\" \n\n\n\n\nExport HTML to PDF using PDF export mode by pressing e\nFor complete Quarto revealjs documentation, click here"
   },
   {
     "objectID": "slides/demo/index.html#section",
@@ -732,7 +606,49 @@
     "href": "slides/demo/index.html#section-1",
     "title": "Quarto demo with R",
     "section": "",
-    "text": "_                  \nplatform x86_64-pc-linux-gnu\nos       linux-gnu          \nmajor    4                  \nminor    4.2                \n\n\n2025 • Specky"
+    "text": "_                  \nplatform x86_64-pc-linux-gnu\nos       linux-gnu          \nmajor    4                  \nminor    4.3                \n\n\n2025 • Specky"
+  },
+  {
+    "objectID": "home_about.html",
+    "href": "home_about.html",
+    "title": "About",
+    "section": "",
+    "text": "John Doe\nData Scientist, Institute Associate Professor in Bioinformatics, University\n\n\n\nJohn Doe\nData Scientist, Institute\n\n\n\nJohn Doe\nData Scientist, Institute"
+  },
+  {
+    "objectID": "home_about.html#organizers",
+    "href": "home_about.html#organizers",
+    "title": "About",
+    "section": "",
+    "text": "John Doe\nData Scientist, Institute Associate Professor in Bioinformatics, University\n\n\n\nJohn Doe\nData Scientist, Institute\n\n\n\nJohn Doe\nData Scientist, Institute"
+  },
+  {
+    "objectID": "home_about.html#contact",
+    "href": "home_about.html#contact",
+    "title": "About",
+    "section": "Contact",
+    "text": "Contact\nFor queries, write to us at contact[at]email.com."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "",
+    "section": "",
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 19-03-2025 at 14:36:30 ."
+  },
+  {
+    "objectID": "index.html#specky-course-template",
+    "href": "index.html#specky-course-template",
+    "title": "",
+    "section": "",
+    "text": "Report\nPresentation\n\nFor usage instructions and demo examples, see Contents\n\n\nUpdated: 19-03-2025 at 14:36:30 ."
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Slides",
+    "section": "",
+    "text": "Presentation\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto demo with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides/sample/index.html#heading-1",
@@ -754,5 +670,89 @@
     "title": "Presentation",
     "section": "",
     "text": "Thank you!\nQuestions?\n2025 • Specky"
+  },
+  {
+    "objectID": "reports/index.html",
+    "href": "reports/index.html",
+    "title": "Reports",
+    "section": "",
+    "text": "ObservableJS and Mermaid\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto Basics\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nQuarto with R\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReport\n\n\n\nJohn Doe\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Quarto\n\n\n\nRoy Francis\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "reports/usage/index.html",
+    "href": "reports/usage/index.html",
+    "title": "Using Quarto",
+    "section": "",
+    "text": "The custom template is a Quarto website project with html reports and revealjs presentation."
+  },
+  {
+    "objectID": "reports/usage/index.html#initialize",
+    "href": "reports/usage/index.html#initialize",
+    "title": "Using Quarto",
+    "section": "1 Initialize",
+    "text": "1 Initialize\nTo download a starter template, run in the terminal:\n\n\n\nbash\n\nquarto use template royfrancis/specky\n\n\nThis creates a website template that you can modify as needed. The directory structure is as follows:\n.\n├── 404.md\n├── assets/\n├── _extensions/\n├── home_contents.qmd\n├── home_precourse.qmd\n├── home_schedule.qmd\n├── home_syllabus.qmd\n├── index.qmd\n├── _quarto.yml\n├── reports/\n└── slides/"
+  },
+  {
+    "objectID": "reports/usage/index.html#settings",
+    "href": "reports/usage/index.html#settings",
+    "title": "Using Quarto",
+    "section": "2 Settings",
+    "text": "2 Settings\nStart by updating the settings. The website/project settings are contained in the _quarto.yml file. A website is a quarto project. Projects are documented [here]{https://quarto.org/docs/projects/quarto-projects.html} and websites are documented here.\n\nThe output directory is set to docs; output-dir: docs\nNavigation bar links are set under website: navbar. Add or remove as needed\nPage footer settings are set under website: page-footer. Update as needed\nChange site-url to your intended destination\nHTML report settings are under format: html:\n\nwarnings and messages from chunks are disabled\nA default subtitle has been set\n\nRevealJS slides settings are under format: revealjs\nAdd custom css under YAML if needed: css: \"styles.css\""
+  },
+  {
+    "objectID": "reports/usage/index.html#content",
+    "href": "reports/usage/index.html#content",
+    "title": "Using Quarto",
+    "section": "3 Content",
+    "text": "3 Content\nNow you can start adding content.\n The starter template should render completely using quarto alone. You can add R or Python for example as needed.\n\nThe homepage is index.qmd\nFiles starting with home are essential pages linked in the top navigation menu. Remove or modify them as needed\nAll reports are organised under reports/ as separate folders\nAll slides are organised under slides/ as separate folders\nTo create additional Quarto documents in RStudio, File &gt; New File &gt; Quarto Document"
+  },
+  {
+    "objectID": "reports/usage/index.html#usage-tips-and-conventions",
+    "href": "reports/usage/index.html#usage-tips-and-conventions",
+    "title": "Using Quarto",
+    "section": "4 Usage tips and conventions",
+    "text": "4 Usage tips and conventions\n\nMarkdown basics are covered here\nUse level 2 heading (##) as the highest level\nUse quarto style chunk options; #| eval: false rather than `{r eval=FALSE}`\nQmds starting with _ such as _content.qmd are child documents and are not rendered alone\nChild qmd files can be included by using {{&lt; include _content.qmd &gt;&gt;}}. They do not work in .ipynb notebooks. Includes is documented here.\nDynamic variables can be defined in _variables.yml and used as {{&lt; var variable_name &gt;&gt;}}. Dynamic variables are documented here.\nDynamic variables can be defined in _metadata.yml and used as {{&lt; meta variable_name &gt;&gt;}}\nEnvironment variables can be used as {{&lt; env variable_name &gt;&gt;}}\nWhen using R or Python, declare all libraries at the beginning of each document"
+  },
+  {
+    "objectID": "reports/usage/index.html#preview",
+    "href": "reports/usage/index.html#preview",
+    "title": "Using Quarto",
+    "section": "5 Preview",
+    "text": "5 Preview\nQuarto allows for live preview of changes.\n\n\n\nbash\n\nquarto preview report.qmd\n\n\n\n\n\n\n\n\nNote\n\n\n\nPreview will build all the files in the project. So, this might not be a good option if there are incomplete documents."
+  },
+  {
+    "objectID": "reports/usage/index.html#export",
+    "href": "reports/usage/index.html#export",
+    "title": "Using Quarto",
+    "section": "6 Export",
+    "text": "6 Export\nA quarto document can be rendered from the terminal as follows:\n\n\n\nbash\n\nquarto render report.qmd\n\n\nRendering from the R console using the quarto R package.\n\n\n\nR\n\nquarto::quarto_render(\"report.qmd\")\n\n\nTo render from RStudio, click the Render button. Rendered output is moved into the docs directory. This is set in _quarto.yml as output-dir:"
+  },
+  {
+    "objectID": "reports/more/index.html",
+    "href": "reports/more/index.html",
+    "title": "ObservableJS and Mermaid",
+    "section": "",
+    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\n\n\nFigure 1: Scatterplot A."
+  },
+  {
+    "objectID": "reports/more/index.html#observablejs",
+    "href": "reports/more/index.html#observablejs",
+    "title": "ObservableJS and Mermaid",
+    "section": "",
+    "text": "Quarto natively supports ObservableJS for interactive visualisations and analysis in the browser. OJS in quarto is documented here.\n\n\nSpecify ojs as the language. Read in a CSV file as a JSON object.\n```{ojs}\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n```\n\ndata = FileAttachment(\"assets/diamonds.csv\").csv({ typed: true})\ndata\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDisplay JSON object as a table.\n\nviewof raw_table = Inputs.table(data)\n\n\n\n\n\n\n\n\n\nPick the variable for point color.\n\nviewof col = Inputs.select([\"carat\",\"cut\",\"color\",\"clarity\",\"depth\",\"table\",\"price\"],{value: \"cut\", multiple: false, label: \"Color\"})\nviewof x = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"carat\", multiple: false, label: \"X axis\"})\nviewof y = Inputs.select([\"carat\",\"depth\",\"table\",\"price\"], {value: \"depth\", multiple: false, label: \"Y axis\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  color: {legend: true},\n  marks: [\n    Plot.dot(data, {\n      x: x,\n      y: y,\n      stroke: col,\n      title: (d) =&gt; `${d.cut}`\n    })\n  ],\n  grid: true\n})\n\n\n\n\n\n\n\n\nFigure 1: Scatterplot A."
+  },
+  {
+    "objectID": "reports/more/index.html#mermaidjs",
+    "href": "reports/more/index.html#mermaidjs",
+    "title": "ObservableJS and Mermaid",
+    "section": "2 MermaidJS",
+    "text": "2 MermaidJS\nQuarto natively supports diagrams using mermaid. Using mermaid in quarto is documented here.\n\n2.1 Flow diagram\nSpecify mermaid as the language.\n```{mermaid}\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n```\n\n\n\n\n\nflowchart LR\n  A[Hard edge] --&gt; B(Round edge)\n  B --&gt; C{Decision}\n  C --&gt; D[Result one]\n  C --&gt; E[Result two]\n\n\n\n\n\n\n\n\n2.2 Gantt charts\n```{mermaid}\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d\n```\n\n\n\n\n\ngantt\n    title A Gantt Diagram\n    dateFormat YYYY-MM-DD\n    section Section\n        A task          :a1, 2014-01-01, 30d\n        Another task    :after a1, 20d\n    section Another\n        Task in Another :2014-01-12, 12d\n        another task    :24d"
+  },
+  {
+    "objectID": "home_schedule.html",
+    "href": "home_schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Topic\nInstructor\nLinks\n\n\n\n\n12-Jan-2024 (Fri)\n\n\n\n\nMinimal demo\nRoy Francis\nSlides, Report\n\n\nUsing custom theme\nRoy Francis\nReport\n\n\nQuarto basics\nRoy Francis\nReport\n\n\nQuarto and R\nRoy Francis\nSlides, Report\n\n\nOJS and mermaid\nRoy Francis\nReport"
   }
 ]
