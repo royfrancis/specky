@@ -20,7 +20,7 @@ execute:
 ::: {.home-grid-parent}
 ::: {.home-grid-child-left}
 
-## [**Specky: Course Template**]{.large}
+## [Specky: Course Template]{.large}
 ### A quarto course template
 
 - [Report](reports/sample/index.html)

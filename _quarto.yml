@@ -40,7 +40,7 @@ website:
 
 format:
   html:
-    quarto-required: ">=1.4.0"
+    quarto-required: ">=1.4.5"
     include-in-header: "assets/include_head.html"
     include-before-body: "assets/include_body_before.html"
     include_after_body: "assets/include_body_after.html"
@@ -63,9 +63,10 @@ format:
     callout-icon: true
     date:  last-modified
     date-format: "DD-MMM-YYYY"
+    image: "assets/images/featured.webp"
     lightbox: auto
   revealjs:
-    quarto-required: ">=1.4.0"
+    quarto-required: ">=1.4.5"
     include-in-header: "assets/include_head.html"
     include-before-body: "assets/include_body_before.html"
     include_after_body: "assets/include_body_after.html"
@@ -86,6 +87,7 @@ format:
     fig-align: left
     chalkboard: true
     callout-icon: true
+    image: "/assets/images/featured.webp"
     hero: "/assets/images/slide-hero.webp"
     title-slide-attributes:
       data-background-image: "/assets/images/cover.webp"
