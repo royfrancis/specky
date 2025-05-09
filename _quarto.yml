@@ -108,7 +108,7 @@ execute:
   echo: true
   warning: false
   message: false
-  freeze: auto
+  freeze: false
 
 filters:
   - assets/custom.lua
