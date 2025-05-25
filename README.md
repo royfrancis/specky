@@ -1,6 +1,6 @@
 # specky
 
-[![ci_badge](https://github.com/royfrancis/specky/workflows/deploy/badge.svg)](https://github.com/royfrancis/specky/actions?workflow=deploy)    [![lifecycle_badge](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![ci_badge](https://github.com/royfrancis/specky/workflows/deploy/badge.svg)](https://github.com/royfrancis/specky/actions?workflow=deploy)  [![linkcheck_badge](https://github.com/royfrancis/specky/workflows/linkcheck/badge.svg)](https://github.com/royfrancis/specky/actions?workflow=linkcheck)  [![lifecycle_badge](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 
 Quarto website template for courses
 
