@@ -114,6 +114,10 @@ table, .Reactable {
   color: whitesmoke;
 }
 
+.observablehq .btn {
+  @extend .btn-sm;
+}
+
 .btn a {
   color: whitesmoke;
   text-decoration: none;
