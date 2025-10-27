@@ -32,6 +32,15 @@ quarto render
 - Use `##` as the highest level heading.
 - Limited documentation is available on the [demo site](https://royfrancis.github.io/specky/home_contents.html) for customization
 
+## Showcase
+
+Here are a few examples of this template in action:
+
+- [Introduction to Bioinformatics using NGS data](https://nbisweden.github.io/workshop-ngsintro/2511/)
+- [Single-cell RNA-seq analysis](https://nbisweden.github.io/workshop-scRNAseq/)
+- [Tools for reproducible research](https://nbisweden.github.io/workshop-reproducible-research/)
+- [Advanced data visualization](https://nbisweden.github.io/workshop-data-visualization-r/2505/)
+
 ## Acknowledgements
 
 - Built using [Quarto](https://quarto.org/)
