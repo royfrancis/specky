@@ -113,14 +113,21 @@ table, .Reactable {
   color: whitesmoke;
 }
 
-.observablehq .btn {
-  @extend .btn-sm;
-}
-
 .btn a {
   color: whitesmoke;
   text-decoration: none;
 }
+
+/* observablehq */
+
+.observablehq .btn {
+  @extend .btn-sm;
+}
+
+.observablehq select {
+  @extend .form-select;
+}
+
 
 /* alert */
 
