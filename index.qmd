@@ -1,5 +1,5 @@
 ---
-pagetitle: "Specky: Course Template"
+pagetitle: "NBIS Workshop"
 subtitle: ""
 toc: false
 date: ""

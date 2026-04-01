@@ -4,6 +4,7 @@ author: "John Doe"
 subtitle: "This is a subtitle"
 description: "This is a description"
 image: "/assets/images/featured.webp"
+hero: "assets/hero.webp"
 format: revealjs
 ---
 
