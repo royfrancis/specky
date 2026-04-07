@@ -23,6 +23,7 @@ format:
     anchor-sections: false
 filters:
   - leaflet
+  - team
 ---
 
 ## Venue
