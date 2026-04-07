@@ -57,6 +57,8 @@ h1,h2,h3,h4,h5,h6 {
   color: $secondary;
 }
 
+/* navbar  and footer */
+
 .navbar-nav {
   font-size: 0.85em;
   letter-spacing: 0.1em;
@@ -66,19 +68,28 @@ h1,h2,h3,h4,h5,h6 {
   max-height: 20px;
 }
 
-table, .Reactable {
-  font-size: 0.85em;
-}
-
-.contents-table table {
-  line-height: 1;
-}
+/* listing */
 
 .listing-image img {
   height: 40px;
   width: 60px;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+/* table */
+
+table th,
+table td {
+  vertical-align: middle;
+}
+
+table, .Reactable {
+  font-size: 0.85em;
+}
+
+.contents-table table {
+  line-height: 1;
 }
 
 /* buttons and badges */
