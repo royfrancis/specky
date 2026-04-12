@@ -18,8 +18,6 @@ accordion:
     - header: 5. What if I experience discrimination/harassment during the course?
       body: We follow the NBIS Training Code of Conduct. If you experience or witness harassment, discrimination, or any other inappropriate behaviour, please inform the organizers or any staff member immediately so we can act. You can review the full policy [here](home_coc.qmd).
 format: html
-filters:
-  - accordion
 ---
 
 {{< accordion faq >}}
