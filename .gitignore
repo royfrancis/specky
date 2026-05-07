@@ -15,3 +15,4 @@ _freeze
 docs
 **/*.quarto_ipynb
 _extensions
+todo.txt
