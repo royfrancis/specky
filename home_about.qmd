@@ -25,12 +25,15 @@ format:
 
 ## Venue
 
-{{< leaflet ucl >}}
+<!-- update map markers in _metadata.yml -->
+{{< leaflet stockholm >}}
 
-{{< include assets/locations/_ucl.md >}}
+<!-- additional practical information -->
+{{< include assets/locations/_stockholm.md >}}
 
 ## Organizers
 
+<!-- organizers info up in the yaml matter -->
 {{< team organizers >}}
 
 ## Contact
