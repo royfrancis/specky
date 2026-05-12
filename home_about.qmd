@@ -29,7 +29,7 @@ format:
 {{< leaflet uppsala >}}
 
 <!-- additional practical information -->
-{{< include assets/locations/_uppsala.md >}}
+{{< include assets/locations/_uppsala.qmd >}}
 
 ## Organizers
 
