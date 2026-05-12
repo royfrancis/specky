@@ -26,10 +26,10 @@ format:
 ## Venue
 
 <!-- update map markers in _metadata.yml -->
-{{< leaflet stockholm >}}
+{{< leaflet uppsala >}}
 
 <!-- additional practical information -->
-{{< include assets/locations/_stockholm.md >}}
+{{< include assets/locations/_uppsala.md >}}
 
 ## Organizers
 

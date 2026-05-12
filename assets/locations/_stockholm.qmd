@@ -1,9 +1,15 @@
+::: {.callout-note}
+
+## Address
+
 {{< fa location-dot >}} Room Air & Fire  
 Ground floor  
 [Science for Life Laboratory Stockholm](https://www.scilifelab.se/about-us/campus-solna/)  
 Tomtebodavägen 23A  
 17165 Solna  
 Sweden  
+
+:::
 
 This course round is given on-site in Sweden at [SciLifeLab Stockholm](https://www.scilifelab.se/about-us/campus-solna/). Travel directions are as follows:
 

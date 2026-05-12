@@ -1,6 +1,12 @@
+::: {.callout-note}
+
+## Address
+
 {{< fa location-dot >}} LiU Campus Universitetssjukhuset  
 58225 Linköping  
 Sweden  
+
+:::
 
 Monday-Tuesday: [Room Papaver, Hus 511/001](https://link.mazemap.com/00mnumNU)  
 Wednesday-Thursday: [Room Dolomit, Hus 440](https://link.mazemap.com/up3GnjPm)  

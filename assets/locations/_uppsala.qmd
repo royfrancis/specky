@@ -1,3 +1,7 @@
+::: {.callout-note}
+
+## Address
+
 [{{< fa location-dot >}} Room C6:323a (Linnérummet)](https://link.mazemap.com/bQ2JnzOW)  
 Entrance C11  
 Biomedicinskt centrum  
@@ -5,6 +9,8 @@ Uppsala University / ScilifeLab
 Husargatan 3  
 75237 Uppsala  
 Sweden  
+
+:::
 
 Few selected hotels are listed below ranked by distance from the venue.
 
