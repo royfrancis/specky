@@ -5,7 +5,7 @@ date: ""
 sidebar: false
 team:
   organizers:
-    - name: "John Doe"
+    - name: "Jane Doe"
       image: "assets/images/profile/profile.webp"
       description: |
         Data Scientist, Institute  
@@ -38,5 +38,6 @@ format:
 
 ## Contact
 
-For queries, write to us at **contact[at]email.com**.  
+This event is organized by [NBIS](https://nbis.se/). NBIS is a platform at the Science for Life Laboratory ([SciLifeLab](https://www.scilifelab.se/)) and the Swedish node of [Elixir](https://elixir-europe.org/).
 
+For queries, write to us at **contact[at]email.com**.  
