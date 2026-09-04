@@ -47,10 +47,11 @@ quarto render
 
 Here are a few examples of this template in action:
 
-- [Introduction to Bioinformatics using NGS data](https://nbisweden.github.io/workshop-ngsintro/2511/)
+- [Introduction to Bioinformatics using NGS data](https://nbisweden.github.io/workshop-ngsintro/)
 - [Single-cell RNA-seq analysis](https://nbisweden.github.io/workshop-scRNAseq/)
 - [Tools for reproducible research](https://nbisweden.github.io/workshop-reproducible-research/)
-- [Advanced data visualization](https://nbisweden.github.io/workshop-data-visualization-r/2505/)
+- [Advanced data visualization](https://nbisweden.github.io/workshop-data-visualization-r/)
+- [Epigenomics Data Analysis: From Bulk to Single Cell](https://nbisweden.github.io/workshop-epigenomics)
 
 ## Acknowledgements
 
