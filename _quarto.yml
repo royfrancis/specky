@@ -156,13 +156,13 @@ format:
     # show icons in callout blocks
     callout-icon: true
     # use this image as the default image, used in listing
-    image: "/assets/images/featured.webp"
+    image: "assets/images/featured.webp"
     # use this image as the presentation hero image on title slide
-    hero: "/assets/images/slide-hero.webp"
+    hero: "assets/images/slide-hero.webp"
     # set attributes for the title slide
     title-slide-attributes:
       # use this image as the title slide background
-      data-background-image: "/assets/images/cover.webp"
+      data-background-image: "assets/images/cover.webp"
       # scale the background image to cover the slide
       data-background-size: "cover"
       # render the background image fully opaque
@@ -170,18 +170,18 @@ format:
     # set the default presentation subtitle
     subtitle: "NBIS Workshop"
     # display this logo on the left side of the header
-    header-logo-left: /assets/logos/nbis.webp
+    header-logo-left: assets/logos/nbis.webp
     # set the left header logo height
     header-logo-left-height: 25px
     # link the left header logo to this URL
     header-logo-left-url: https://royfrancis.github.io/specky/home_contents.html
-    header-logo-right: /assets/logos/scilifelab.webp
+    header-logo-right: assets/logos/scilifelab.webp
     header-logo-right-height: 25px
     header-logo-right-url: https://royfrancis.github.io/specky/home_contents.html
     # load these custom Reveal.js template partials
     template-partials:
       # use this partial to customize the title slide
-      - "/assets/title-slide.html"
+      - "assets/title-slide.html"
     # configure the presentation pointer plugin
     pointer:
       # set the pointer color
