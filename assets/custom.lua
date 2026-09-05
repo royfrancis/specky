@@ -3,7 +3,8 @@ function Meta(meta)
   meta['current_year'] = os.date("%Y")
   meta['current_date'] = os.date("%d-%m-%Y")
   meta['current_time'] = os.date("%H:%M:%S")
-  meta['output-dir'] = quarto.project.output_directory
+  meta['output-dir-path'] = quarto.project.output_directory
+  meta['output-dir'] = quarto.project.output_directory:match("([^/\\]+)[/\\]*$")
 
   local project_directory = quarto.project.directory or "."
   local quarto_config = io.open(project_directory .. "/_quarto.yml", "r")
@@ -44,9 +45,7 @@ function Meta(meta)
     quarto_config:close()
   end
 
-  meta.project = blocks.project
-  meta.website = blocks.website
-  meta.format = blocks.format
+  meta.custom = blocks
 
   return meta
 end
