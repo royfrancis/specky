@@ -16,8 +16,8 @@ HTML report using the Quarto format `html`. View all reports on the [listing pag
 |---|---|
 |Using Quarto and custom theme|[{{< fa file-lines >}} Report](reports/usage/index.html)|
 |Minimal demo|[{{< fa file-lines >}} Report](reports/sample/index.html)|
-|Quarto basics|[{{< fa file-lines >}} Report](reports/demo/index.html)|
-|Quarto with R|[{{< fa file-lines >}} Report](reports/demo-with-r/index.html)|
+|Quarto demo|[{{< fa file-lines >}} Report](reports/demo/index.html)|
+|Quarto demo with R|[{{< fa file-lines >}} Report](reports/demo-with-r/index.html)|
 |OJS and mermaid|[{{< fa file-lines >}} Report](reports/more/index.html)|
 
 ## Slides
@@ -27,4 +27,5 @@ Presentation using the Quarto `revealjs` format. View all slides on the [listing
 |Topic|Link|
 |---|---|
 |Minimal demo|[{{< fa file-powerpoint >}} Slides](slides/sample/index.html)|
-|Quarto with R|[{{< fa file-powerpoint >}} Slides](slides/demo/index.html)|
+|Quarto demo|[{{< fa file-powerpoint >}} Slides](slides/demo/index.html)|
+|Quarto demo with R|[{{< fa file-powerpoint >}} Slides](slides/demo-with-r/index.html)|
