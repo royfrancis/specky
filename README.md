@@ -33,6 +33,7 @@ quarto add --no-prompt mcanouil/quarto-collapse-output@1.4.0
 quarto add --no-prompt royfrancis/quarto-accordion
 quarto add --no-prompt royfrancis/quarto-leaflet
 quarto add --no-prompt royfrancis/quarto-team
+quarto add --no-prompt royfrancis/quarto-toastui
 ```
 
 - Render all html files into `docs` directory to make sure everything works as expected
