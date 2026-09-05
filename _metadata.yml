@@ -15,8 +15,8 @@ leaflet:
       - tooltip: Centralstation
         icon: "fa-solid fa-train"
         icon-color: "#8E8CD8"
-        lat: 55.705311
-        lon: 13.187432
+        lat: 55.70669
+        lon: 13.18695
         popup: "Centralstation<br> Bangatan 1<br> 222 21 Lund"
   umea:
     zoom: 12
@@ -26,7 +26,7 @@ leaflet:
         icon-color: "#E74856"
         lat: 63.820019
         lon: 20.307814
-        popup: "Room UB341<br> Universitetsbibioteket plan 3<br> Umeå University<br> 901 87 Umeå"
+        popup: "Room UB341<br> Universitetsbiblioteket plan 3<br> Umeå University<br> 901 87 Umeå"
       - tooltip: "Centralstation"
         icon: "fa-solid fa-train"
         icon-color: "#8E8CD8"
@@ -149,9 +149,9 @@ leaflet:
         lat: 59.34998995628685
         lon: 18.02542771374187
         popup: "Karolinska Institutet Biomedicum<br> 171 65 Solna"
-      - tooltip: "Karolinkskavägen Bus stop"
+      - tooltip: "Karolinskavägen Bus stop"
         icon: "fa-solid fa-bus"
         icon-color: "#8E8CD8"
         lat: 59.35098473792899
         lon: 18.02378243706668
-        popup: "Karolinkskavägen<br> 171 64 Solna<br> Sweden"
+        popup: "Karolinskavägen<br> 171 64 Solna"

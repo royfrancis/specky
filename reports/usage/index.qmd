@@ -114,9 +114,8 @@ Start by updating the settings. The website/project settings are contained in th
   - Table of contents is enabled (`toc: true`)
   - Sections are automatically numbered (`number-sections: true`)
   - Code wraps down rather than scroll when wider than page width (`code-overflow: wrap`)
-  - When sharing the html, all assets need to be shared as well (`standalone: false`)
   - A default subtitle has been set
-  - Current date is added to pages (`date: last-modified`)
+  - Last modified date is added to pages (`date: last-modified`)
   - A custom image for each report can be set when viewing as listing (`image:`)
   - Images can be clicked to open in a lightbox (`lightbox: auto`)
 - RevealJS slides settings are under **format: revealjs**

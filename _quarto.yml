@@ -21,7 +21,7 @@ website:
   navbar:
     # display this logo in the navigation bar
     logo: "assets/logos/nbis-scilifelab.webp"
-    logo-alt: "logo"
+    logo-alt: "nbis scilifelab logo"
     # place these navigation items on the right side
     right:
       - text: "Home"
@@ -93,8 +93,6 @@ format:
     code-overflow: wrap
     # print data frames using the kable format
     df-print: kable
-    # do not embed all dependencies into the HTML document
-    standalone: false
     # align figures to the left
     fig-align: left
     # use this image as the title block banner

@@ -57,7 +57,7 @@ Here are a few examples of this template in action:
 
 - Built using [Quarto](https://quarto.org/)
 - Uses the [fontawesome extension](https://github.com/quarto-ext/fontawesome) for icons
-- Uses the [collapse-output extension](mcanouil/quarto-collapse-output@1.4.0) for code output folding
+- Uses the [collapse-output extension](https://github.com/mcanouil/quarto-collapse-output) for code output folding
 
 ---
 
