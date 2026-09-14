@@ -267,16 +267,20 @@ This line is quoted.
 
 ```markdown
 [Largest text]{.largest}
+[Larger text]{.larger}
 [Large text]{.large}
 Normal text
 [Small text]{.small}
+[Smaller text]{.smaller}
 [Smallest text]{.smallest}
 ```
 
 [Largest text]{.largest}\
+[Larger text]{.larger}\
 [Large text]{.large}\
 Normal text\
 [Small text]{.small}\
+[Smaller text]{.smaller}\
 [Smallest text]{.smallest}
 
 `This is a [link](https://example.com/)` This is a [link](https://example.com/)
@@ -788,6 +792,10 @@ Simple markdown table
 
 ## Images • HTML
 
+**Using Raw HTML**
+
+This image is 30% size.
+
 `<img src="assets/image.webp" style="width:30%;"/>`
 
 <img src="assets/image.webp" style="width:30%;"/>
@@ -796,6 +804,8 @@ Simple markdown table
 
 :::: {.columns}
 ::: {.column width="50%"}
+
+Stack images and display incrementally
 
 ```markdown
 ::: {.r-stack}
@@ -951,3 +961,4 @@ title-slide-attributes:
 [{{< meta current_year >}} • [Specky](https://github.com/royfrancis/specky)]{.smaller}
 
 :::
+

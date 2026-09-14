@@ -206,7 +206,7 @@ execute:
 
 # load additional document metadata from these files
 metadata-files:
-  - "_metadata.yml"
+  - _metadata.yml
 
 # apply these document filters across the whole project
 filters:
@@ -221,3 +221,4 @@ filters:
 revealjs-plugins:
   # enable the pointer plugin
   - pointer
+
