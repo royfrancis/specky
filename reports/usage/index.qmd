@@ -42,7 +42,7 @@ quarto add --no-prompt royfrancis/quarto-team
 quarto add --no-prompt royfrancis/quarto-toastui
 ```
 
-This creates a website template that you can modify as needed. The directory structure is as follows:
+This creates a website template that you can modify as needed. The directory structure is as follows after installing extensions:
 
 ```
 .
@@ -156,7 +156,7 @@ Now you can start adding content.
 - Files starting with **home** are essential pages linked in the top navigation menu. Remove or modify them as needed
 - **home_schedule.qmd** contains toastui schedule component which loads data from schedule.csv
 - **home_contents.qmd** contains a markdown table with links to reports and slides
-- **home_about.qmd** contains profiles of organizers and practical information like venue and map
+- **home_about.qmd** contains profiles of organizers and practical information like venue, map and organizers
 - **home_faq.qmd** contains an accordion example with frequently asked questions
 - **home_syllabus.qmd** shows tab panels
 - **home_coc.qmd** contains the NBIS code of conduct
@@ -170,8 +170,8 @@ Now you can start adding content.
 - Use level 2 heading (`##`) as the highest level
 - Use quarto style chunk options; `#| eval: false` rather than `` `{r eval=FALSE}` ``
 - Qmds starting with `_` such as `_content.qmd` are child documents and are not rendered alone
-- Child qmd files can be included by using `{{{< include _content.qmd >>}}}`. They do not work in .ipynb notebooks. Includes is documented [here](https://quarto.org/docs/authoring/includes.html).
-- Dynamic variables can be defined in `_variables.yml` and used as `{{{< var variable >>}}}`. Dynamic variables are documented [here](https://quarto.org/docs/authoring/variables.html).
-- Custom metadata can be defined in `_metadata.yml` and used as `{{{< meta metadata >>}}}`
+- Child qmd files can be included by using `{{{< include _content.qmd >}}}`. They do not work in .ipynb notebooks. Includes is documented [here](https://quarto.org/docs/authoring/includes.html).
+- Dynamic variables can be defined in `_variables.yml` and used as `{{{< var variable >}}}`. Dynamic variables are documented [here](https://quarto.org/docs/authoring/variables.html).
+- Custom metadata can be defined in `_metadata.yml` and used as `{{{< meta metadata >}}}`
 - When using R or Python, declare all libraries at the beginning of each document
 - Add a session info chunk at the end of qmd documents if code chunks are used. This is good practice to ensure reproducibility and help with debugging if needed. For R, use `sessionInfo()` or `sessioninfo::session_info()`. For Python, use `import session_info; session_info.show()`

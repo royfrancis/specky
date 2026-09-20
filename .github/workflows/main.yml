@@ -41,6 +41,7 @@ jobs:
             any::reactable
             any::ggplot2
             any::highcharter
+            any::htmltools
             any::plotly
             any::ggiraph
             any::dygraphs
@@ -49,6 +50,7 @@ jobs:
             any::crosstalk
             any::fontawesome
             any::knitr
+            any::rmarkdown
 
       - name: Setup quarto
         uses: quarto-dev/quarto-actions/setup@v2
