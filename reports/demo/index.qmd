@@ -1,7 +1,7 @@
 ---
 title: "Quarto"
 author: "Roy Francis"
-description: "This document showcases some of the in-built capabilities of quarto. It also shows the custom theme, style and usage."
+description: "This document showcases some of Quarto's built-in capabilities and demonstrates the custom theme, styles, and usage."
 image: "/assets/images/featured.webp"
 format: html
 accordion:
@@ -26,7 +26,7 @@ leaflet:
         popup: "21 Gower Street<br> London WC1E 6HG<br> United Kingdom"
 ---
 
-This is a [quarto](https://quarto.org/) document
+This is a [Quarto](https://quarto.org/) document.
 
 ## Text formatting
 
@@ -42,7 +42,7 @@ This is a [quarto](https://quarto.org/) document
 
 ### Character sizes
 
-Custom character sizes. This is an enhanced feature.
+Custom text sizes are provided by this template.
 
 |Markdown|Rendered|
 |---|---|
@@ -85,7 +85,7 @@ Custom character sizes. This is an enhanced feature.
 
 ### Line block
 
-Line block preserves spaces and new lines.
+A line block preserves spaces and line breaks.
 
 ```
 | This
@@ -109,7 +109,7 @@ A horizontal line can be created using three or more `*` or `-`.
 
 ### Footnote
 
-An example of footnote reference [^1]
+An example of a footnote reference.[^1]
 
 [^1]: That reference refers to this footnote.
 
@@ -136,10 +136,10 @@ Button sizes
 
 Links inside buttons
 
-`[[link](url)]{.btn}`  [[link](url)]{.btn}  
-`[[link](url)]{.btn .btn-primary}`  [[link](url)]{.btn .btn-primary}  
-`[[link](url)]{.btn .btn-secondary}`  [[link](url)]{.btn .btn-secondary}  
-`[[link](url)]{.btn .btn-tertiary}`  [[link](url)]{.btn .btn-tertiary}  
+`[[link](https://example.com/)]{.btn}`  [[link](https://example.com/)]{.btn}  
+`[[link](https://example.com/)]{.btn .btn-primary}`  [[link](https://example.com/)]{.btn .btn-primary}  
+`[[link](https://example.com/)]{.btn .btn-secondary}`  [[link](https://example.com/)]{.btn .btn-secondary}  
+`[[link](https://example.com/)]{.btn .btn-tertiary}`  [[link](https://example.com/)]{.btn .btn-tertiary}  
 
 ### Badge
 
@@ -152,15 +152,15 @@ Here is how badges are defined:
 
 Links inside badges.
 
-`[[link](url)]{.badge .badge-primary}`  [[link](url)]{.badge .badge-primary}  
-`[[link](url)]{.badge .badge-secondary}`  [[link](url)]{.badge .badge-secondary}  
-`[[link](url)]{.badge .badge-tertiary}`  [[link](url)]{.badge .badge-tertiary}  
+`[[link](https://example.com/)]{.badge .badge-primary}`  [[link](https://example.com/)]{.badge .badge-primary}  
+`[[link](https://example.com/)]{.badge .badge-secondary}`  [[link](https://example.com/)]{.badge .badge-secondary}  
+`[[link](https://example.com/)]{.badge .badge-tertiary}`  [[link](https://example.com/)]{.badge .badge-tertiary}  
 
 ## Code formatting
 
-Verbatim code is text formatted using monospaced font intended as code. Verbatim code can be defined inline where `` `date()` `` looks like `date()`.
+Verbatim code is text formatted in a monospaced font and intended to be read as code. Inline verbatim code is enclosed in backticks, so `` `date()` `` renders as `date()`.
 
-Code can also be defined inside code blocks.
+Verbatim code can also be placed in fenced code blocks.
 
 ````
 ```
@@ -172,7 +172,7 @@ date()
 date()
 ```
 
-Source code, ie; code that is highlighted or executed in a quarto document is not covered here.
+Source code, that is, code that is syntax-highlighted or executed in a Quarto document, is not covered here in this document.
 
 ## Lists
 
@@ -226,7 +226,7 @@ Ordered lists are created using numbers.
 :::
 :::
 
-### Multiple Lists
+### Multiple lists
 
 ::: {.grid}
 ::: {.g-col-6}
@@ -261,7 +261,7 @@ Ordered lists are created using numbers.
 
 ## Bootstrap
 
-[Bootstrap](https://getbootstrap.com/docs/5.0/utilities/text/) has many many bult-in classes of it's own. Here are some examples:
+[Bootstrap](https://getbootstrap.com/docs/5.0/utilities/text/) provides many built-in utility classes. Here are some examples:
 
 `[lOwerCase]{.text-lowercase}`  [lOwerCase]{.text-lowercase}  
 `[lOwerCase]{.text-uppercase}`  [lOwerCase]{.text-uppercase}  
@@ -278,11 +278,11 @@ Ordered lists are created using numbers.
 
 ## Images
 
-Images can be inserted using plain markdown or HTML directly. Plain markdown can be embellished with custom quarto adjustments to modify aspects of the image. Clicking the image opens the image in a lightbox. This is made possible using the [lightbox](https://github.com/quarto-ext/lightbox) extension.
+Images can be inserted using Markdown or HTML. In Markdown, Quarto attributes can control image properties. With the project's `lightbox: auto` setting, clicking an image opens it in a lightbox.
 
 ### Using Markdown
 
-Using regular markdown.
+Using regular Markdown.
 
 ```
 ![](assets/image.webp)
@@ -290,7 +290,7 @@ Using regular markdown.
 
 ![](assets/image.webp)
 
-The dimensions are based on image and/or fill up the entire available space. You can control the dimension as shown below.
+By default, an image uses its actual size, constrained by the available width. You can change its displayed dimensions as shown below.
 
 ```
 ![This is a caption](assets/image.webp){width=30%}
@@ -298,7 +298,7 @@ The dimensions are based on image and/or fill up the entire available space. You
 
 ![This is a caption](assets/image.webp){width="30%"}
 
-This image above is now 30% of it's original width.
+This image is now 30% of the available width.
 
 #### Figure layout
 
@@ -320,9 +320,9 @@ These figures are interesting.
 These figures are interesting.
 :::
 
-More figure options and layouts are described [here](https://quarto.org/docs/authoring/figures.html). Cross referencing described [here](https://quarto.org/docs/authoring/cross-references.html).
+More figure options and layouts are described [here](https://quarto.org/docs/authoring/figures.html). Cross-referencing is described [here](https://quarto.org/docs/authoring/cross-references.html).
 
-Here are some [bootstrap](https://getbootstrap.com/docs/5.0/utilities/shadows/) styles:
+Here are some [Bootstrap](https://getbootstrap.com/docs/5.0/utilities/shadows/) styles:
 
 `![](assets/image.webp){width="20%" class="shadow-sm rounded"}`
 
@@ -338,12 +338,12 @@ Here are some [bootstrap](https://getbootstrap.com/docs/5.0/utilities/shadows/) 
 
 ### Using HTML
 
-This image below is 30% size.\
-`<img src="assets/image.webp" style="width:30%;"/>`
+The image below is displayed at 30% width.\
+`<img src="assets/image.webp" alt="Wooden dock overlooking a lake" style="width:30%;"/>`
 
-<img src="assets/image.webp" style="width:30%;"/>
+<img src="assets/image.webp" alt="Wooden dock overlooking a lake" style="width:30%;"/>
 
-For more information on figures, see [here](https://quarto.org/docs/authoring/figures.html). Images generated through code is not covered here.
+For more information on figures, see [here](https://quarto.org/docs/authoring/figures.html). Images generated through code are not covered here.
 
 ## Math expressions
 
@@ -428,13 +428,13 @@ $\left( \sum_{i=1}^{n}{i} \right)^2 = \left( \frac{n(n+1)}{2}\right)^2 = \frac{n
 ::: {.g-col-6}
 
 ```
-$\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
+$$\begin{aligned} X &\sim \mathrm{N}(0,1), \quad Y \sim \chi^2_{n-p}, \quad X \perp Y\\ R &\equiv \frac{X}{\sqrt{Y/(n-p)}} \sim t_{n-p} \end{aligned}$$
 ```
 
 :::
 ::: {.g-col-6}
 
-$\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \equiv & X/Y \sim t_{n-p} \end{eqnarray}$
+$$\begin{aligned} X &\sim \mathrm{N}(0,1), \quad Y \sim \chi^2_{n-p}, \quad X \perp Y\\ R &\equiv \frac{X}{\sqrt{Y/(n-p)}} \sim t_{n-p} \end{aligned}$$
 
 :::
 :::
@@ -443,13 +443,13 @@ $\begin{eqnarray} X & \sim & \mathrm{N}(0,1)\\ Y & \sim & \chi^2_{n-p}\\ R & \eq
 ::: {.g-col-6}
 
 ```
-$\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ & \leq & \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$
+$$\begin{aligned} \mu &= \mathbb{E}[X], \quad k > 0,\\ P(|X-\mu| > k) &= P(|X-\mu|^2 > k^2)\\ &\leq \frac{\mathbb{E}[|X-\mu|^2]}{k^2}\\ &= \frac{\mathrm{Var}(X)}{k^2} \end{aligned}$$
 ```
 
 :::
 ::: {.g-col-6}
 
-$\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\mathbb{E}\left[|X-\mu|^2\right]}{k^2}\\ & \leq & \frac{\mathrm{Var}[X]}{k^2} \end{eqnarray}$
+$$\begin{aligned} \mu &= \mathbb{E}[X], \quad k > 0,\\ P(|X-\mu| > k) &= P(|X-\mu|^2 > k^2)\\ &\leq \frac{\mathbb{E}[|X-\mu|^2]}{k^2}\\ &= \frac{\mathrm{Var}(X)}{k^2} \end{aligned}$$
 
 :::
 :::
@@ -457,7 +457,7 @@ $\begin{eqnarray} P(|X-\mu| > k) & = & P(|X-\mu|^2 > k^2)\\ & \leq & \frac{\math
 ## Tables
 
 
-For simple cases, tables can be manually created in markdown.
+For simple cases, tables can be manually created in Markdown.
 
 ::: {.grid}
 ::: {.g-col-7}
@@ -482,7 +482,7 @@ For simple cases, tables can be manually created in markdown.
 :::
 :::
 
-Table caption and numbering can be added as such:
+Table captions and numbering can be added as follows:
 
 ::: {.grid}
 ::: {.g-col-7}
@@ -511,7 +511,7 @@ Table caption and numbering can be added as such:
 :::
 :::
 
-Tables can also be generated through code which is not covered here.
+Tables can also be generated through code, which is not covered here.
 
 ### Margin table
 
@@ -539,17 +539,17 @@ A table placed in the margin.
 
 :::
 
-More information about [tables](https://quarto.org/docs/authoring/tables.html).
+See the [tables documentation](https://quarto.org/docs/authoring/tables.html) for more information.
 
-#### Cross referencing
+### Cross-referencing
 
-Images and tables can be automatically numbered by using `label` attribute. Image label must start with `fig-` and tables with `tbl-`. Tables and images can also be cross-referenced when using the `label` attribute. For example, the table above can be referenced like `@tbl-mylabel` which renders as @tbl-mylabel.
+Figures and tables can be numbered by adding an identifier beginning with `fig-` or `tbl-`, such as `{#tbl-mylabel}`. Reference it with `@tbl-mylabel`, which renders as @tbl-mylabel.
 
 ## Icons
 
-### Bootstrap icons
+### Bootstrap Icons
 
-[Bootstrap icons](https://icons.getbootstrap.com) are directly available since quarto uses bootstrap for styling. Optionally, one could also use the quarto extension [bsicons](https://github.com/shafayetShafee/bsicons) for more control.
+[Bootstrap Icons](https://icons.getbootstrap.com) are available in Quarto HTML documents that use a Bootstrap-based theme. The Quarto [bsicons](https://github.com/shafayetShafee/bsicons) extension provides a shortcode interface.
 
 
 `<i class="bi bi-lightbulb-fill"></i>`  <i class="bi bi-lightbulb-fill"></i>  
@@ -560,9 +560,9 @@ Images and tables can be automatically numbered by using `label` attribute. Imag
 `<i class="bi bi-cloud-fill"></i>`  <i class="bi bi-cloud-fill"></i>  
 `<i class="bi bi-github"></i>`  <i class="bi bi-github"></i>  
 
-### Fontawesome
+### Font Awesome
 
-To use [fontawesome](https://fontawesome.com/search?m=free) icons as shortcodes, quarto extension [fontawesome](https://github.com/quarto-ext/fontawesome) needs to be installed.
+To use [Font Awesome](https://fontawesome.com/search?m=free) icons with shortcodes, install the Quarto [fontawesome extension](https://github.com/quarto-ext/fontawesome).
 
 Icons can be placed using shortcodes.
 
@@ -581,95 +581,103 @@ Icons can be placed using shortcodes.
 
 Icons can be displayed using the HTML `<i>` tag. Note that not all icons may work.
 
-`Here is a <i class='fa fa-calendar'></i> calendar and a <i class='fa fa-couch'></i> couch.`
+`Here is a <i class="fa fa-calendar"></i> calendar and a <i class="fa fa-couch"></i> couch.`
 
-Here is a <i class='fa fa-calendar'></i> calendar and a <i class='fa fa-couch'></i> couch.
+Here is a <i class="fa fa-calendar"></i> calendar and a <i class="fa fa-couch"></i> couch.
 
-There are many other quarto extensions for icons such as [academicons](https://github.com/schochastics/academicons), [iconify](https://github.com/mcanouil/quarto-iconify) and [lordicons](https://github.com/jmgirard/lordicon).
+There are many other Quarto extensions for icons, such as [academicons](https://github.com/schochastics/academicons), [iconify](https://github.com/mcanouil/quarto-iconify), and [lordicons](https://github.com/jmgirard/lordicon).
 
-For full list of icons check out [FontAwesome](https://fontawesome.com/search?m=free).
+For a full list of icons, see [Font Awesome](https://fontawesome.com/search?m=free).
 
-## Call-Outs
+## Callouts
 
-Call-Out blocks are explained [here](https://quarto.org/docs/authoring/callouts.html).
+[Callout blocks](https://quarto.org/docs/authoring/callouts.html) draw attention to specific information. Quarto provides five types: note, tip, caution, warning, and important.
 
 ```
 ::: {.callout-note}
-This is a call-out.
-:::
-
-::: {.callout-warning}
-This is a call-out.
-:::
-
-::: {.callout-important}
-This is a call-out.
+Use notes for supplementary context that does not require the reader to take action. This should be the default for most things.
 :::
 
 ::: {.callout-tip}
-This is a call-out.
+Use tips for optional advice that can make a task easier or more efficient.
 :::
 
 ::: {.callout-caution}
-This is a call-out.
+Use cautions when an action could have unwanted consequences that the reader should consider first.
 :::
 
-::: {.callout-tip collapse="true"}
-## Call-out with collapse
+::: {.callout-warning}
+Use warnings for actions that could cause mistakes, data loss, or other significant problems.
+:::
 
-This content is behind an accordion.
+::: {.callout-important}
+Use important callouts for essential information the reader must understand before continuing.
 :::
 ```
 
 ::: {.callout-note}
-This is a call-out.
-:::
-
-::: {.callout-warning}
-This is a call-out.
-:::
-
-::: {.callout-important}
-This is a call-out.
+Use notes for supplementary context that does not require the reader to take action. This should be the default for most things.
 :::
 
 ::: {.callout-tip}
-This is a call-out.
+Use tips for optional advice that can make a task easier or more efficient.
 :::
 
 ::: {.callout-caution}
-This is a call-out.
+Use cautions when an action could have unwanted consequences that the reader should consider first.
 :::
+
+::: {.callout-warning}
+Use warnings for actions that could cause mistakes, data loss, or other significant problems.
+:::
+
+::: {.callout-important}
+Use important callouts for essential information the reader must understand before continuing.
+:::
+
+Callout variations.
+
+```
+::: {.callout-tip collapse="true"}
+## Collapsible callout
+
+This content is inside a collapsible callout.
+:::
+```
 
 ::: {.callout-tip collapse="true"}
-## Call-out with collapse
+## Collapsible callout
 
-This content is behind an accordion.
+This content is inside a collapsible callout.
 :::
+
+Simple appearance
 
 ```
 ::: {.callout-note appearance="simple"}
-This is a call-out.
+This is a callout with a simple appearance.
 :::
 ```
 
 ::: {.callout-note appearance="simple"}
-This is a call-out.
+This is a callout with a simple appearance.
 :::
+
+Minimal appearance
 
 ```
 ::: {.callout-note appearance="minimal"}
-This is a call-out.
+This is a callout with a minimal appearance.
 :::
 ```
 
 ::: {.callout-note appearance="minimal"}
-This is a call-out.
+This is a callout with a minimal appearance.
 :::
 
 ## Alerts
 
-This is not a quarto feature, but rather from bootstrap.
+Alerts are Bootstrap components, not Quarto callouts.
 
 ```
 ::: {.alert .alert-primary}
@@ -780,10 +788,10 @@ Organization of content into columns within the body container.
 ```
 :::: {.columns}
 ::: {.column style="background-color: aliceblue"}
-Content is left.
+Content in left column.
 :::
 ::: {.column style="background-color:  #f5b7b1"}
-Content is right.
+Content in right column.
 :::
 ::::
 ```
@@ -988,7 +996,7 @@ Extending content outside the body container.
 .column-margin
 :::
 
-### Panel layout
+### Tabset panel
 
 ```
 ::: {.panel-tabset}
@@ -1017,25 +1025,25 @@ More layout settings are described [here](https://quarto.org/docs/authoring/arti
 
 ## Shortcodes
 
-Shortcodes are sort of like quarto functions.
+Quarto shortcodes are special Markdown directives that generate content.
 
-Two important shortcodes are `meta` and `var`. `meta` allows to read metadata from the yaml block in the current page or from `_quarto.yml`. Here are a few examples:
+The `meta` shortcode prints values from document metadata, including metadata inherited from `_quarto.yml`. Here are a few examples:
 
 `{{{< meta title >}}}` {{< meta title >}}
 
 `{{{< meta description >}}}` {{< meta description >}}
 
-Similarly, `var` allows to read variables from `_variables.yml` if it has been defined. The `include` shortcode allows to add a child qmd document into a specific position in a qmd file. The `kbd` shortcode allows keyboard notations:
+The `var` shortcode prints values from `_variables.yml`, `include` inserts another `.qmd` file, and `kbd` renders keyboard shortcuts:
 
 `Press {{{< kbd Shift-Ctrl-P >}}}` Press {{< kbd Shift-Ctrl-P >}}
 
-The `video` shortcode allows to embed a video.
+The `video` shortcode embeds a video.
 
 `{{{< video https://www.youtube.com/watch?v=_f3latmOhew >}}}`
 
 {{< video https://www.youtube.com/watch?v=_f3latmOhew >}}
 
-Some of the custom shortcodes added with this template are:
+The custom Lua filter adds the following metadata values, which can be read with the built-in `meta` shortcode:
 
 `{{{< meta quarto_version >}}}` {{< meta quarto_version >}}  
 `{{{< meta current_date >}}}` {{< meta current_date >}}  
@@ -1044,7 +1052,7 @@ Some of the custom shortcodes added with this template are:
 `{{{< meta output-dir >}}}` {{< meta output-dir >}}  
 `{{{< meta output-dir-path >}}}` {{< meta output-dir-path >}}  
 
-Additional functionality was added to read **website**, **project** and **format** blocks from `_quarto.yml` under the **custom** metadata key.
+The filter also exposes supported values from the **website**, **project**, and **format** blocks of `_quarto.yml` through the **custom.** prefix.
 
 `{{{< meta custom.website.site-url >}}}` {{< meta custom.website.site-url >}}  
 `{{{< meta custom.project.type >}}}` {{< meta custom.project.type >}}  
@@ -1056,7 +1064,7 @@ Shortcodes are documented [here](https://quarto.org/docs/authoring/shortcodes.ht
 
 Accordion support is provided through the [accordion](https://github.com/royfrancis/accordion) extension.
 
-Accordion contents can be defined in the YAML header as shown below.
+Accordion contents can be defined in the YAML front matter as shown below.
 
 ```yaml
 accordion:
@@ -1065,9 +1073,9 @@ accordion:
       body: "This is **bold** and *italic* text"
 ```
 
-and then called in the body using the shortcode.
+and then rendered in the document body using the shortcode.
 
-```lua
+```markdown
 {{{< accordion ac-1 >}}}
 ```
 
@@ -1075,15 +1083,15 @@ and then called in the body using the shortcode.
 
 Alternatively, an accordion can be defined inline as shown below.
 
-```lua
+```markdown
 {{{< accordion label="my-accordion" header="Click to expand" body="This is the content of the accordion." >}}}
 ```
 
 {{< accordion label="my-accordion" header="Click to expand" body="This is the content of the accordion." >}}
 
-Multiple inline items are defined using JSON.
+Multiple inline items can be defined using JSON.
 
-```
+```markdown
 {{{< accordion label="inline-multi" items='[
   { "header": "Inline Item 1", "body": "Content for inline item 1." },
   { "header": "Inline Item 2", "body": "Content for inline item 2." }
@@ -1097,7 +1105,7 @@ Multiple inline items are defined using JSON.
 
 ## Leaflet maps
 
-Leaflet maps are enabled through the `leaflet` extension. Leaflet maps are documented [here](https://github.com/royfrancis/quarto-leaflet). Add map information to yaml matter or `_metadata.yml` and use the shortcode `{{< leaflet mapname >}}`.
+Leaflet maps are enabled through the `leaflet` extension. Add map configuration to the page's YAML front matter or `_metadata.yml`, then use the `{{< leaflet mapname >}}` shortcode. See the [extension documentation](https://github.com/royfrancis/quarto-leaflet) for details.
 
 ```yaml
 ---
@@ -1126,12 +1134,18 @@ leaflet:
 
 ## General tips
 
--   Use level 2 heading as the highest level
+-   Use level-2 headings (`##`) as the highest heading level:
 
-```
-## Section A
-```
+  ```markdown
+  ## Section A
+  ```
 
--   Add custom css under YAML if needed `css: "my-theme.css"`
--   Check out the [Quarto](https://quarto.org/) website
+-   Add a custom stylesheet in the YAML front matter if needed:
+
+    ```yaml
+    format:
+      html:
+        css: my-theme.css
+    ```
+-   See the [Quarto documentation](https://quarto.org/)
 

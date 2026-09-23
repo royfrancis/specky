@@ -7,11 +7,11 @@ format: html
 engine: knitr
 ---
 
-The custom template is a Quarto website project with html reports and revealjs presentation.
+The custom template is a Quarto website project with HTML reports and Reveal.js presentations.
 
 ## Get started
 
-To download a starter template, run in the terminal:
+Quarto 1.8.25 or later is required. To download the starter template, run:
 
 ```{bash}
 #| eval: false
@@ -19,30 +19,30 @@ To download a starter template, run in the terminal:
 quarto use template royfrancis/specky
 ```
 
-Install required extensions
+The downloaded template does not include `_extensions/`. Install the required extensions before the first render:
 
 ```{bash}
 #| eval: false
 #| filename: bash
-# adds fontawesome icons
+# adds Font Awesome icons
 quarto add --no-prompt quarto-ext/fontawesome
-# adds 2 logo header to slides
+# adds a two-logo header to slides
 quarto add --no-prompt royfrancis/quarto-revealjs-header
-# adds pointer to slides
+# adds a presenter pointer to slides
 quarto add --no-prompt royfrancis/quarto-revealjs-pointer
-# adds code output folding
+# adds collapsible code output
 quarto add --no-prompt mcanouil/quarto-collapse-output@1.4.0
-# adds collapsible accordion component from bootstrap
+# adds Bootstrap accordion components
 quarto add --no-prompt royfrancis/quarto-accordion
-# adds leaflet maps
+# adds Leaflet maps
 quarto add --no-prompt royfrancis/quarto-leaflet
-# adds profile images layout
+# adds team profile layouts
 quarto add --no-prompt royfrancis/quarto-team
-# adds toastui schedule component
+# adds Toast UI schedule components
 quarto add --no-prompt royfrancis/quarto-toastui
 ```
 
-This creates a website template that you can modify as needed. The directory structure is as follows after installing extensions:
+The template command creates a website project that you can modify as needed. After installing the extensions, its key top-level files and directories are:
 
 ```
 .
@@ -66,61 +66,61 @@ This creates a website template that you can modify as needed. The directory str
 
 ## Preview
 
-Quarto allows for live preview of changes.
+Quarto provides a live preview while you edit.
 
 ```{bash}
 #| eval: false
 #| filename: bash
-quarto preview report.qmd
+quarto preview
 ```
 
 ::: {.callout-warning}
-Preview will build all the files in the project. So, this might not be a good option if there are incomplete documents.
+Preview builds the entire project, so it may fail if any document is incomplete.
 :::
 
 ::: {.callout-note}
-Using [freeze](https://quarto.org/docs/projects/code-execution.html) is a good way to speed up rendering as chunks are pre-computed and cached. This also allows you to render pages when the original environment/tools is not available.
+The template sets `freeze: false` by default. Enabling [freeze](https://quarto.org/docs/projects/code-execution.html) stores computational output, which can speed up project renders and allow pages to render when the original computation environment or tools are unavailable.
 :::
 
 ## Render
 
-A quarto document can be rendered from the terminal as follows:
+A Quarto document can be rendered from the terminal as follows:
 
 ```{bash}
 #| eval: false
 #| filename: bash
 
-# render full project (freeze works if enabled)
+# render the full project (freeze works if enabled)
 quarto render
 
-# render specific file (freeze doesn't work for individual files even if enabled)
-quarto render report.qmd
+# render a specific file (freeze is ignored for single-file renders)
+quarto render reports/sample/index.qmd
 ```
 
-This will generate the output files in the `docs/` directory as specified in `_quarto.yml`. The output format is determined by the YAML front matter of each qmd file. For example, `format: html` will generate an html file and `format: revealjs` will generate a revealjs presentation.
+This generates output in the `docs/` directory, as configured by `project: output-dir` in `_quarto.yml`. Global output defaults are defined under `format` in `_quarto.yml`; a document can override them in its YAML front matter. For example, `format: html` produces an HTML page, while `format: revealjs` produces a Reveal.js presentation.
 
 ## Settings
 
-Start by updating the settings. The website/project settings are contained in the `_quarto.yml` file. A website is a quarto project. Projects are documented [here](https://quarto.org/docs/projects/quarto-projects.html) and websites are documented [here](https://quarto.org/docs/websites/).
+Start by updating `_quarto.yml`, which contains the project and website settings. See the documentation for [Quarto projects](https://quarto.org/docs/projects/quarto-projects.html) and [websites](https://quarto.org/docs/websites/).
 
 - The output directory is set to **docs**; `output-dir: docs`
 - Change `site-url` to your intended destination
-- `website: image` sets the path to the opengraph seo image used as preview when sharing links
+- `open-graph: true` enables Open Graph metadata, and `website: image` sets the default image used in social link previews
 - Navigation bar links are set under **website: navbar**. Add or remove as needed
 - Page footer settings are set under **website: page-footer**. Check license. Update as needed
 - HTML report settings are under **format: html:**
-  - This is global settings for all html pages
-  - Custom css styles are defined (`assets/css/styles.scss`)
+  - These are global defaults for all HTML pages and can be overridden in page front matter
+  - A custom SCSS theme is defined (`assets/css/styles.scss`)
   - Table of contents is enabled (`toc: true`)
   - Sections are automatically numbered (`number-sections: true`)
-  - Code wraps down rather than scroll when wider than page width (`code-overflow: wrap`)
+  - Long code lines wrap instead of scrolling horizontally (`code-overflow: wrap`)
   - A default subtitle has been set
-  - Last modified date is added to pages (`date: last-modified`)
-  - A custom image for each report can be set when viewing as listing (`image:`)
+  - Last-modified dates are enabled by default (`date: last-modified`); the home pages override this with `date: ""`
+  - A default listing image is set and can be overridden in page front matter (`image:`)
   - Images can be clicked to open in a lightbox (`lightbox: auto`)
-- RevealJS slides settings are under **format: revealjs**
-  - These are global settings for all revealjs slides
-  - Custom css styles are defined (`assets/css/slides.scss`)
+- Reveal.js presentation settings are under **format: revealjs**
+  - These are global defaults for all Reveal.js presentations and can be overridden in page front matter
+  - A custom SCSS theme is defined (`assets/css/slides.scss`)
   - All items on a slide appear at once (`incremental: false`), override with `.fragment` class
   - Use `##` to define slides (`slide-level: 2`)
   - Chalkboard for scribbling is enabled (`chalkboard: true`)
@@ -130,48 +130,50 @@ Start by updating the settings. The website/project settings are contained in th
   - A default subtitle has been set
   - Adjust slide header logo image, size and link (`header-logo-*`)
 - `execute` settings
-  - code chunks are executed (`eval: true`) and displayed (`echo: true`) by default 
+  - Executable code cells are evaluated (`eval: true`), and their source code is displayed (`echo: true`) by default
   - warnings and messages from chunks are disabled
-  - `freeze` is an option available for projects that allow code chunks to be cached to speed up rendering
+  - `freeze: false` disables storage of computational output by default; set it to `true` or `auto` if needed
 - Add any arbitrary metadata in `_metadata.yml` and use it across the project as `{{{< meta metadata >}}}`. This is used for map information.
-- Custom extensions
-  - Additional functionality through extensions
+- Custom filters and extensions
+  - Extensions provide additional functionality
   - Filter extensions can be added globally in `_quarto.yml` or locally in individual qmd files
   - Add quarto version (`{{{< meta quarto_version >}}}`) or date/time (`{{{< meta current_year >}}}`), enabled through custom lua (`assets/custom.lua`)
   - Code output folding is enabled through the `quarto-collapse-output` extension. This is documented [here](https://github.com/mcanouil/quarto-collapse-output)
-  - Accordions are enabled through the `quarto-accordion` extension. Use the shortcode `{{{< accordion name >}}}` to include an accordion in any qmd file. Accordions are documented [here](https://github.com/royfrancis/quarto-accordion)
+  - Font Awesome icons are enabled through the `fontawesome` extension. Use `{{{< fa icon-name >}}}` to insert an icon. See the [extension documentation](https://github.com/quarto-ext/fontawesome)
+  - Accordions are enabled through the `quarto-accordion` extension. Define named accordion data under `accordion` in page front matter and render it with `{{{< accordion name >}}}`. See `home_faq.qmd` and the [extension documentation](https://github.com/royfrancis/quarto-accordion)
   - Leaflet maps are enabled through the `leaflet` extension. Add map information as metadata in `_metadata.yml` and use the shortcode `{{{< leaflet mapname >}}}` to include the map in any qmd file. Leaflet maps are documented [here](https://github.com/royfrancis/quarto-leaflet)
-  - ToastUI schedule is enabled through the `toastui` extension. Add schedule information as metadata in `_metadata.yml` and use the shortcode `{{{< toastui schedule >}}}` to include the schedule in any qmd file. ToastUI schedule is documented [here](https://github.com/royfrancis/quarto-toastui)
-  - RevealJS [header with logos](https://github.com/royfrancis/quarto-revealjs-header) and [pointer](https://github.com/royfrancis/quarto-revealjs-pointer) extensions are enabled for slides. Press `q` on slides to show the pointer and `q` again to hide it
-  - If the extensions are not used, they can be removed from the project by running `quarto remove extension-name`
-- Add custom css under YAML for individual qmd files if needed: `css: "styles.css"`
+  - Team profiles are enabled through the `team` extension. Define profiles under `team` in page front matter and render a named group with `{{{< team name >}}}`. See `home_about.qmd` and the [extension documentation](https://github.com/royfrancis/quarto-team)
+  - Toast UI schedules are enabled through the `toastui` extension. Define options under `toastui` in page front matter and render a named schedule with `{{{< toastui schedule >}}}`. In this template, `home_schedule.qmd` loads `schedule.csv`; each `calendarId` in the CSV must match an ID under `calendars`. See the [extension documentation](https://github.com/royfrancis/quarto-toastui)
+  - Reveal.js [header with logos](https://github.com/royfrancis/quarto-revealjs-header) and [pointer](https://github.com/royfrancis/quarto-revealjs-pointer) extensions are enabled for slides. Press `q` on slides to show the pointer and `q` again to hide it
+  - Remove an unused extension with `quarto remove <extension-id>`, for example, `quarto remove quarto-ext/fontawesome`
+- Add document-specific CSS under `format: html: css` in page front matter if needed
 
 ## Content
 
-Now you can start adding content. 
+You can now add course content.
 
-{{< fa circle-info >}} The starter template should render completely using quarto alone. You can add R or Python code chunks for example as needed.
+{{< fa circle-info >}} The starter template should render completely using Quarto alone. Add R, Python or Julia code chunks as needed.
 
 - The homepage is **index.qmd**
-- Files starting with **home** are essential pages linked in the top navigation menu. Remove or modify them as needed
-- **home_schedule.qmd** contains toastui schedule component which loads data from schedule.csv
-- **home_contents.qmd** contains a markdown table with links to reports and slides
-- **home_about.qmd** contains profiles of organizers and practical information like venue, map and organizers
+- Files named `home_*.qmd` are site pages. If you add, remove, or rename one, update `website: navbar` in `_quarto.yml` as needed
+- **home_schedule.qmd** configures a Toast UI schedule that loads `schedule.csv`
+- **home_contents.qmd** contains a Markdown table with links to reports and slides
+- **home_about.qmd** contains organizer profiles and practical information such as venue and map details
 - **home_faq.qmd** contains an accordion example with frequently asked questions
 - **home_syllabus.qmd** shows tab panels
+- **home_precourse.qmd** contains preparation instructions and a checklist
 - **home_coc.qmd** contains the NBIS code of conduct
-- All reports are organised under **reports/** as separate folders
-- All slides are organised under **slides/** as separate folders
-- The **index.qmd** file in the root of **reports/** and **slides/** shows listing pages for all reports and slides respectively
+- Reports and slides are organized in separate folders under `reports/` and `slides/`, respectively
+- `reports/index.qmd` and `slides/index.qmd` are listing pages that discover those documents
 
 ## Usage tips and conventions
 
-- Markdown basics are covered [here](https://quarto.org/docs/authoring/markdown-basics.html)
-- Use level 2 heading (`##`) as the highest level
-- Use quarto style chunk options; `#| eval: false` rather than `` `{r eval=FALSE}` ``
-- Qmds starting with `_` such as `_content.qmd` are child documents and are not rendered alone
-- Child qmd files can be included by using `{{{< include _content.qmd >}}}`. They do not work in .ipynb notebooks. Includes is documented [here](https://quarto.org/docs/authoring/includes.html).
+- See Quarto's [Markdown basics](https://quarto.org/docs/authoring/markdown-basics.html)
+- Use level-2 headings (`##`) as the highest heading level
+- Use Quarto-style chunk options, such as `#| eval: false`, rather than `` `{r eval=FALSE}` ``
+- `.qmd` files beginning with `_`, such as `_content.qmd`, are child documents and are not rendered alone
+- Include a child document with `{{{< include _content.qmd >}}}`. Includes do not work in `.ipynb` notebooks. [Includes are documented here](https://quarto.org/docs/authoring/includes.html).
 - Dynamic variables can be defined in `_variables.yml` and used as `{{{< var variable >}}}`. Dynamic variables are documented [here](https://quarto.org/docs/authoring/variables.html).
 - Custom metadata can be defined in `_metadata.yml` and used as `{{{< meta metadata >}}}`
-- When using R or Python, declare all libraries at the beginning of each document
-- Add a session info chunk at the end of qmd documents if code chunks are used. This is good practice to ensure reproducibility and help with debugging if needed. For R, use `sessionInfo()` or `sessioninfo::session_info()`. For Python, use `import session_info; session_info.show()`
+- When using R or Python, declare all libraries in one chunk at the beginning of each document
+- Add a session information chunk at the end of `.qmd` documents that use code. This helps with reproducibility and debugging. For R, use `sessionInfo()` or `sessioninfo::session_info()`. For Python, use `import session_info; session_info.show()`

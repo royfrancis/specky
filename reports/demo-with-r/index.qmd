@@ -15,10 +15,11 @@ library(tidyr)
 library(stringr)
 
 # tables
-library(htmlTable) # enchanced markdown table
+library(knitr)
+library(htmlTable) # enhanced HTML tables
 library(kableExtra) # complete table
 library(formattable) # table with conditional formatting
-library(gt) # enchanced tables
+library(gt) # enhanced tables
 library(DT) # interactive table
 library(reactable) # interactive table
 
@@ -52,9 +53,9 @@ theme_report <- function(basesize = 12) {
 
 ## Code execution
 
-Code can be defined inline where `` `r "\u0060r Sys.Date()\u0060"` `` renders `r Sys.Date()`. 
+R code can be executed inline: `` `r "\u0060r Sys.Date()\u0060"` `` renders as `r Sys.Date()`.
 
-Code can be defined inside code blocks.
+R code can also be executed in code chunks.
 
 ````
 ```{{r}}
@@ -62,22 +63,22 @@ Sys.Date()
 ```
 ````
 
-which shows the source code and output.
+This shows the source code and output.
 
 ```{r}
 Sys.Date()
 ```
 
-Here is another example of executed R code with input and output.
+Here is another example with R source code and output.
 
 ```{r}
 data(iris)
 head(iris[,1:2])
 ```
 
-## Chunk attributes
+## Chunk options
 
-Properties and behaviour of code chunks can be controlled using chunk attributes. This is specified as comment sign of the language and pipe followed by key: value. So for example, in R: `#| eval: false`.
+Code chunk behavior is controlled with chunk options. In R chunks, each option starts with `#|` and uses YAML `key: value` syntax, for example, `#| eval: false`.
 
 In this example, the R source code and results are hidden but the code is evaluated.
 
@@ -104,7 +105,7 @@ Sys.Date()
 Sys.Date()
 ```
 
-There is not built-in implementation to fold code output. Therefore, we use the quarto extension [`quarto-collapse-output`](https://github.com/mcanouil/quarto-collapse-output) to enable this functionality.
+Quarto does not provide built-in output folding, so this template uses the [`quarto-collapse-output`](https://github.com/mcanouil/quarto-collapse-output) extension.
 
 ````
 ```{{r}}
@@ -118,7 +119,7 @@ Sys.Date()
 Sys.Date()
 ```
 
-A code chunk can be given a code filename using the chunk attribute `filename`.
+Use `filename` to display a filename above a code chunk.
 
 ````
 ```{{r}}
@@ -150,7 +151,7 @@ Sys.Date()
 sessionInfo()
 ```
 
-An example showing bash code generated from R.
+An example showing Bash code generated from R:
 
 ````
 ```{{r}}
@@ -170,13 +171,13 @@ d <- "custom"
 cat(paste("mkdir", d))
 ```
 
-Code chunk attributes are documented [here](https://quarto.org/docs/output-formats/html-code.html).
+See Quarto's [execution options](https://quarto.org/docs/computations/execution-options.html) and [HTML code options](https://quarto.org/docs/output-formats/html-code.html).
 
 ## Tables
 
 ### Manual
 
-For simple cases, tables can be manually created in markdown.
+For simple cases, tables can be manually created in Markdown.
 
 ::: {.grid}
 ::: {.g-col-7}
@@ -203,7 +204,7 @@ For simple cases, tables can be manually created in markdown.
 
 ### kable
 
-Simple table using `kable` from R package `knitr`.
+A simple table using `knitr::kable()`.
 
 ```{r}
 library(knitr)
@@ -241,9 +242,9 @@ kable(head(cars))
 kable(head(pressure))
 ```
 
-#### Cross referencing
+#### Cross-referencing
 
-Images and tables can be automatically numbered by using `label` attribute. Image label must start with `fig-` and tables with `tbl-`. Tables and images can also be cross-referenced when using the `label` attribute. For example, the table above can be referenced like `@tbl-dual-table` which renders as @tbl-dual-table.
+Figures and tables can be numbered and cross-referenced by assigning a label that starts with `fig-` or `tbl-`, respectively. For example, `@tbl-dual-table` references the table above and renders as @tbl-dual-table.
 
 #### Margin table
 
@@ -266,7 +267,7 @@ head(cars)
 
 ### paged
 
-Interactive table from R package `rmarkdown`.
+An interactive table using `rmarkdown::paged_table()`.
 
 ```{r}
 library(rmarkdown)
@@ -275,7 +276,7 @@ rmarkdown::paged_table(head(iris))
 
 ### gt
 
-Tables using the [gt](https://gt.rstudio.com/) package. A structured approach to creating tables using grammar of tables with extensive customization options.
+The [gt](https://gt.rstudio.com/) package provides a grammar of tables with extensive customization options.
 
 ```{r}
 library(gt)
@@ -295,7 +296,7 @@ iris |>
 
 ### htmlTable
 
-Markdown tables can be enhanced using the R package [htmlTable](https://github.com/gforge/htmlTable).
+The [htmlTable](https://github.com/gforge/htmlTable) package creates styled HTML tables from R objects.
 
 ```{r}
 library(htmlTable)
@@ -306,7 +307,7 @@ htmlTable(iris1, rgroup=unique(iris1$Species), n.rgroup=rle(as.character(iris1$S
 
 ### kableExtra
 
-More advanced table using [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) and [`formattable`](https://cran.r-project.org/web/packages/formattable/vignettes/formattable-data-frame.html).
+The [`kableExtra`](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) and [`formattable`](https://cran.r-project.org/web/packages/formattable/vignettes/formattable-data-frame.html) packages provide advanced table styling.
 
 ```{r}
 #| tbl-cap: Table using kableextra.
@@ -325,20 +326,20 @@ iris[c(1:4,51:53,105:108),] |>
 
 ### DT
 
-Interactive table using R package [`DT`](https://rstudio.github.io/DT/).
+The [`DT`](https://rstudio.github.io/DT/) package creates interactive data tables.
 
 ```{r}
-#| tbl-cap: Table using datatable.
+#| tbl-cap: Interactive table using DT.
 library(DT)
 
 iris |>
   slice(1:15) |>
-  datatable(options=list(pageLength=7))
+  datatable(options = list(pageLength = 7))
 ```
 
 ### reactable
 
-Advanced interactive tables with [reactable](https://glin.github.io/reactable/index.html).
+The [reactable](https://glin.github.io/reactable/index.html) package creates advanced interactive tables.
 
 ```{r}
 library(reactable)
@@ -356,13 +357,13 @@ reactable(iris[sample(1:150,10),],
 )
 ```
 
-**reactable** creation can be simplified as well as enhanced by using [reactablefmtr](https://github.com/kcuilla/reactablefmtr/).
+The [reactablefmtr](https://github.com/kcuilla/reactablefmtr/) package can simplify and extend reactable tables.
 
 ## Static images using R
 
-Quarto chunks can be used to control image display size using the argument `out.width`.
+Use the `out-width` chunk option to control an image's displayed width.
 
-This image below is displayed at a size of 300 pixels.
+The image below is displayed at 300 pixels wide.
 
 ````
 ```{{r}}
@@ -377,7 +378,7 @@ knitr::include_graphics("assets/image.webp")
 knitr::include_graphics("assets/image.webp")
 ```
 
-This image below is displayed at a size of 75 pixels and a caption added.
+The image below is displayed at 75 pixels wide and has a caption.
 
 ````
 ```{{r}}
@@ -394,7 +395,7 @@ knitr::include_graphics("assets/image.webp")
 knitr::include_graphics("assets/image.webp")
 ```
 
-For more information on figures, see [here](https://quarto.org/docs/authoring/figures.html). For plots generated through R, see section further below.
+See Quarto's [figure documentation](https://quarto.org/docs/authoring/figures.html) for more information. R-generated plots are demonstrated below.
 
 ## Static plots
 
@@ -463,13 +464,14 @@ plot(cars)
 
 ```{r}
 #| column: margin
+#| echo: false
 
 plot(cars)
 ```
 
 ### ggplot2
 
-R package [`ggplot2`](http://ggplot2.org/) is one of the most versatile and complete plotting solutions.
+The [`ggplot2`](https://ggplot2.tidyverse.org/) package provides a grammar of graphics for creating static plots.
 
 ```{r}
 #| fig-height: 6
@@ -490,7 +492,7 @@ iris |>
 
 ### highcharter
 
-R package [`highcharter`](http://jkunst.com/highcharter/) is a wrapper around javascript library [`highcharts`](https://www.highcharts.com/).
+The [`highcharter`](https://jkunst.com/highcharter/) package provides an R interface to the [Highcharts](https://www.highcharts.com/) JavaScript library.
 
 ```{r}
 #| label: fig-highcharter
@@ -509,7 +511,7 @@ htmltools::tagList(list(h))
 
 ### plotly
 
-R package [`plotly`](https://plot.ly/r/) provides R binding around javascript plotting library [`plotly`](https://plot.ly).
+The [`plotly`](https://plotly.com/r/) package provides an R interface to the [Plotly.js](https://plotly.com/) JavaScript library.
 
 ```{r}
 #| label: fig-plotly
@@ -524,7 +526,7 @@ p
 
 ### ggplotly
 
-`plotly` also has a function called `ggplotly` which converts a static ggplot2 object into an interactive plot.
+`plotly::ggplotly()` converts a ggplot2 plot into an interactive Plotly graphic.
 
 ```{r}
 #| fig-height: 5
@@ -544,7 +546,7 @@ ggplotly(p,width=500,height=400)
 
 ### ggiraph
 
-`ggiraph` is also an R package that can be used to convert a static ggplot2 object into an interactive plot.
+The `ggiraph` package adds tooltips, hover effects, and other interactions to ggplot2 graphics.
 
 ```{r}
 #| fig-height: 5
@@ -570,7 +572,7 @@ girafe(code=print(p),
 
 ### dygraphs
 
-R package [`dygraphs`](http://rstudio.github.io/dygraphs/) provides R bindings for javascript library [dygraphs](http://dygraphs.com/) for time series data.
+The [`dygraphs`](https://rstudio.github.io/dygraphs/) package provides R bindings to the [dygraphs](https://dygraphs.com/) JavaScript library for interactive time-series charts.
 
 ```{r}
 #| fig-height: 5
@@ -586,7 +588,7 @@ dygraph(lungDeaths,main="Deaths from Lung Disease (UK)") |>
 
 ### Network graph
 
-R package `networkD3` allows the use of interactive network graphs from the [D3.js](https://d3js.org/) javascript library.
+The `networkD3` package creates interactive network graphs using [D3.js](https://d3js.org/).
 
 ```{r}
 #| label: fig-networkd3
@@ -601,7 +603,7 @@ forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
 
 ### leaflet
 
-R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).
+The [`leaflet`](https://rstudio.github.io/leaflet/) package provides R bindings to the [Leaflet](https://leafletjs.com/) JavaScript library.
 
 ```{r}
 #| label: fig-leaflet
@@ -617,7 +619,7 @@ leaflet(height=500,width=700) |>
 
 ### crosstalk
 
-R package [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) allows `crosstalk` enabled plotting libraries to be linked. Through the shared 'key' variable, data points can be manipulated simultaneously on two independent plots.
+The [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) package links selections and filters across compatible HTML widgets that share a `SharedData` object.
 
 ```{r}
 #| fig-height: 8
@@ -635,11 +637,11 @@ py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) |>
 htmltools::div(lf,py)
 ```
 
-## ObservableJS
+## Observable JS
 
-Quarto supports [ObservableJS](https://observablehq.com/) for interactive visualisations in the browser.
+Quarto supports [Observable JS](https://observablehq.com/) for interactive visualizations in the browser.
 
-Pass data from R to OJS
+Pass data from R to OJS:
 
 ```{r}
 irism <- iris
@@ -651,13 +653,13 @@ ojs_define(ojsd = irism)
 ojsdata = transpose(ojsd)
 ```
 
-Display as a table
+Display the data as a table:
 
 ```{ojs}
 viewof filtered_table = Inputs.table(ojsdata)
 ```
 
-Define inputs
+Define inputs:
 
 ```{ojs}
 viewof x = Inputs.select(Object.keys(ojsdata[0]), {value: "sepal_length", multiple: false, label: "X axis"})
@@ -667,7 +669,7 @@ viewof x = Inputs.select(Object.keys(ojsdata[0]), {value: "sepal_length", multip
 viewof y = Inputs.select(Object.keys(ojsdata[0]), {value: "sepal_width", multiple: false, label: "Y axis"})
 ```
 
-Display plot
+Display the plot:
 
 ```{ojs}
 Plot.plot({
@@ -684,20 +686,27 @@ Plot.plot({
 })
 ```
 
-ObservableJS in quarto [documentation](https://quarto.org/docs/interactive/index.html#observable-js).
+See Quarto's [Observable JS documentation](https://quarto.org/docs/interactive/ojs/).
 
 ## Icons
 
-Icons can be placed programatically through R using the R package `fontawesome`.
+Icons can be generated from R with the `fontawesome` package.
 
 `` `r "\u0060r fontawesome::fa('lightbulb')\u0060"` ``
 
 `r fontawesome::fa("lightbulb")`
 
-Optional arguments are height and fill.
+`height` and `fill` are optional arguments.
 
 `` `r "\u0060r fontawesome::fa('lightbulb',height='30px',fill='steelblue')\u0060"` ``
 
 `r fontawesome::fa("lightbulb",height='30px',fill='steelblue')`
 
-For full list of icons check out [FontAwesome](https://fontawesome.com/search?m=free).
+See [Font Awesome](https://fontawesome.com/search?m=free) for a full list of icons.
+
+## Session information
+
+```{r}
+#| echo: false
+sessionInfo()
+```

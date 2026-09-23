@@ -1,18 +1,18 @@
 ---
-title: "ObservableJS and Mermaid"
+title: "Observable JS and Mermaid"
 author: "Roy Francis"
-description: "This document showcases use of OJS and mermaid in quarto."
+description: "This document showcases the use of OJS and Mermaid in Quarto."
 image: "/assets/images/featured.webp"
 format: html
 ---
 
-## ObservableJS
+## Observable JS
 
-Quarto natively supports [ObservableJS](https://observablehq.com/) for interactive visualisations and analysis in the browser. OJS in quarto is documented [here](https://quarto.org/docs/interactive/index.html#observable-js).
+Quarto natively supports [Observable JS](https://observablehq.com/) for interactive visualizations and analysis in the browser. OJS in Quarto is documented [here](https://quarto.org/docs/interactive/index.html#observable-js).
 
 ### Read CSV
 
-Specify `ojs` as the language. Read in a CSV file as a JSON object.
+Specify `ojs` as the language. Read a CSV file as an array of row objects.
 
 ````
 ```{{ojs}}
@@ -29,7 +29,7 @@ data
 
 ### Table
 
-Display JSON object as a table.
+Display the data as a table.
 
 ```{ojs}
 viewof raw_table = Inputs.table(data)
@@ -37,7 +37,7 @@ viewof raw_table = Inputs.table(data)
 
 ### Scatterplot
 
-Pick the variable for point color.
+Select variables for point color and the x- and y-axes.
 
 ::: {.alert .alert-secondary}
 
@@ -67,11 +67,11 @@ Plot.plot({
 })
 ```
 
-## MermaidJS
+## Mermaid
 
-Quarto natively supports diagrams using [mermaid](https://mermaid.js.org/). Using mermaid in quarto is documented [here](https://quarto.org/docs/authoring/diagrams.html).
+Quarto natively supports diagrams using [Mermaid](https://mermaid.js.org/). Using Mermaid in Quarto is documented [here](https://quarto.org/docs/authoring/diagrams.html).
 
-### Flow diagram
+### Flowchart
 
 Specify `mermaid` as the language.
 
