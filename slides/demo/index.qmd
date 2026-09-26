@@ -412,19 +412,19 @@ This paragraph is red.
 This is a callout.
 :::
 
-::: {.callout-warning}
-This is a callout.
-:::
-
-::: {.callout-important}
-This is a callout.
-:::
-
 ::: {.callout-tip}
 This is a callout.
 :::
 
 ::: {.callout-caution}
+This is a callout.
+:::
+
+::: {.callout-warning}
+This is a callout.
+:::
+
+::: {.callout-important}
 This is a callout.
 :::
 ```
@@ -436,19 +436,19 @@ This is a callout.
 This is a callout.
 :::
 
-::: callout-warning
-This is a callout.
-:::
-
-::: callout-important
-This is a callout.
-:::
-
 ::: callout-tip
 This is a callout.
 :::
 
 ::: callout-caution
+This is a callout.
+:::
+
+::: callout-warning
+This is a callout.
+:::
+
+::: callout-important
 This is a callout.
 :::
 
@@ -946,9 +946,9 @@ title-slide-attributes:
 ## General tips
 
 - Use `##` as the top level heading for each slide
-- Add custom CSS with a `css: "styles.css"` YAML option.
-- Export HTML to PDF using [DeckTape](https://github.com/astefanutti/decktape).
-- Read the complete [Quarto Reveal.js documentation](https://quarto.org/docs/presentations/revealjs/).
+- Add custom CSS with a `css: "styles.css"` YAML option
+- Export HTML to PDF using [DeckTape](https://github.com/astefanutti/decktape)
+- Read the complete [Quarto Reveal.js documentation](https://quarto.org/docs/presentations/revealjs/)
 
 ##  {background-image="../../assets/images/home.webp"}
 
