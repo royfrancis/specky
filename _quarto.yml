@@ -171,10 +171,13 @@ format:
     header-logo-left: assets/logos/nbis.webp
     # set the left header logo height
     header-logo-left-height: 25px
-    # link the left header logo to this URL
+    # link the left header logo to this URL [literal-link]
     header-logo-left-url: ../../home_contents.html
+    # display this logo on the right side of the header
     header-logo-right: assets/logos/scilifelab.webp
+    # set the right header logo height
     header-logo-right-height: 25px
+    # link the right header logo to this URL [literal-link]
     header-logo-right-url: ../../home_contents.html
     # load these custom Reveal.js template partials
     template-partials:

@@ -116,7 +116,7 @@ Start by updating `_quarto.yml`, which contains the project and website settings
   - Long code lines wrap instead of scrolling horizontally (`code-overflow: wrap`)
   - A default subtitle has been set
   - Last-modified dates are enabled by default (`date: last-modified`); the home pages override this with `date: ""`
-  - A default listing image is set and can be overridden in page front matter (`image:`)
+  - A default listing image is set and can be overridden in page front matter (`image:`); a page-level override resolves relative to that document's own folder, not the project root, so reaching a project asset needs a depth-correct relative path such as `../../assets/images/example.webp`
   - Images can be clicked to open in a lightbox (`lightbox: auto`)
 - Reveal.js presentation settings are under **format: revealjs**
   - These are global defaults for all Reveal.js presentations and can be overridden in page front matter
@@ -124,11 +124,11 @@ Start by updating `_quarto.yml`, which contains the project and website settings
   - All items on a slide appear at once (`incremental: false`), override with `.fragment` class
   - Use `##` to define slides (`slide-level: 2`)
   - Chalkboard for scribbling is enabled (`chalkboard: true`)
-  - A custom image for each presentation can be set when viewing as listing (`image:`)
+  - A custom image for each presentation can be set when viewing as listing (`image:`); the same folder-relative resolution described above for HTML reports applies
   - Set title slide graphic image (`hero:`)
   - Set title slide background image (`title-slide-attributes: data-background-image:`)
   - A default subtitle has been set
-  - Adjust slide header logo image, size and link (`header-logo-*`)
+  - Adjust slide header logo image, size and link (`header-logo-*`); the `header-logo-*-url` values are used as-is with no automatic path resolution, so they must be written relative to where the presentation actually renders (`../../home_contents.html` for this template's fixed `slides/<name>/index.qmd` depth)
 - `execute` settings
   - Executable code cells are evaluated (`eval: true`), and their source code is displayed (`echo: true`) by default
   - warnings and messages from chunks are disabled

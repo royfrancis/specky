@@ -2,7 +2,7 @@
 title: "Quarto with R"
 description: "Executable R features in Quarto Reveal.js presentations"
 author: "Roy Francis"
-image: "/assets/images/featured.webp"
+image: "../../assets/images/featured.webp"
 format: revealjs
 ---
 
