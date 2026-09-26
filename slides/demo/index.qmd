@@ -2,7 +2,7 @@
 title: "Quarto"
 description: "General Quarto and Reveal.js presentation features"
 author: "Roy Francis"
-image: "/assets/images/featured.webp"
+image: "../../assets/images/featured.webp"
 format: revealjs
 accordion:
   - ac-1:

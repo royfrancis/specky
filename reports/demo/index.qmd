@@ -2,7 +2,7 @@
 title: "Quarto"
 author: "Roy Francis"
 description: "This document showcases some of Quarto's built-in capabilities and demonstrates the custom theme, styles, and usage."
-image: "/assets/images/featured.webp"
+image: "../../assets/images/featured.webp"
 format: html
 accordion:
   - ac-1:
