@@ -78,7 +78,7 @@ quarto preview
 Preview builds the entire project, so it may fail if any document is incomplete.
 :::
 
-::: {.callout-note}
+::: {.callout-tip}
 The template sets `freeze: false` by default. Enabling [freeze](https://quarto.org/docs/projects/code-execution.html) stores computational output, which can speed up project renders and allow pages to render when the original computation environment or tools are unavailable.
 :::
 
@@ -156,7 +156,7 @@ You can now add course content.
 
 - The homepage is **index.qmd**
 - Files named `home_*.qmd` are site pages. If you add, remove, or rename one, update `website: navbar` in `_quarto.yml` as needed
-- **home_schedule.qmd** configures a Toast UI schedule that loads `schedule.csv`
+- **home_schedule.qmd** configures a Toast UI schedule that loads `schedule.csv`. It is recommended that events are 15mins or longer for better display.
 - **home_contents.qmd** contains a Markdown table with links to reports and slides
 - **home_about.qmd** contains organizer profiles and practical information such as venue and map details
 - **home_faq.qmd** contains an accordion example with frequently asked questions
