@@ -762,20 +762,20 @@ Simple markdown table
 
 ```markdown
 ::: {layout-ncol=3}
-![Caption for figure 1](assets/image.webp){#fig-layout-1}
+![Caption for figure 1](assets/image.webp){#fig-layout-1 fig-align="center"}
 
-![Caption for figure 2](assets/image.webp){#fig-layout-2}
+![Caption for figure 2](assets/image.webp){#fig-layout-2 fig-align="center"}
 
-![Caption for figure 3](assets/image.webp){#fig-layout-3}
+![Caption for figure 3](assets/image.webp){#fig-layout-3 fig-align="center"}
 :::
 ```
 
 ::: {layout-ncol=3}
-![Caption for figure 1](assets/image.webp){#fig-layout-1}
+![Caption for figure 1](assets/image.webp){#fig-layout-1 fig-align="center"}
 
-![Caption for figure 2](assets/image.webp){#fig-layout-2}
+![Caption for figure 2](assets/image.webp){#fig-layout-2 fig-align="center"}
 
-![Caption for figure 3](assets/image.webp){#fig-layout-3}
+![Caption for figure 3](assets/image.webp){#fig-layout-3 fig-align="center"}
 :::
 
 ## Images • Absolute positioning

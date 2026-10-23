@@ -17,6 +17,9 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      # site timestamps use the system time zone, so build in Swedish time
+      TZ: Europe/Stockholm
     steps:
       - name: Check out repo
         uses: actions/checkout@v6
@@ -58,7 +61,7 @@ jobs:
           version: 1.10.18
       - run: quarto --version
       - run: quarto add --no-prompt quarto-ext/fontawesome
-      - run: quarto add --no-prompt mcanouil/quarto-collapse-output@1.4.0
+      - run: quarto add --no-prompt mcanouil/quarto-collapse-output
       - run: quarto add --no-prompt royfrancis/quarto-revealjs-header
       - run: quarto add --no-prompt royfrancis/quarto-revealjs-pointer
       - run: quarto add --no-prompt royfrancis/quarto-accordion

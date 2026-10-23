@@ -4,8 +4,6 @@
 
 /* colours, fonts, size ---------------------------------------------------------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Nunito:ital,wght@0,200..700;1,200..700&display=swap');
-
 $primary: #95b540;
 $secondary: #BDD775;
 $tertiary: #E9F2D1;
@@ -15,7 +13,7 @@ $code-color: #496985;
 $code-block-bg: WhiteSmoke;
 $font-family-sans-serif: 'Nunito', 'Source Sans Pro', 'Helvetica', sans-serif;
 $font-family-monospace: 'Fira Mono', 'Ubuntu Mono', 'Liberation Mono', 'Lucida Console', 'Courier', monospace;
-$font-family-headings: $font-family-sans-serif;
+$headings-font-family: $font-family-sans-serif;
 $mermaid-font-family: 'Nunito', 'Source Sans Pro', 'Helvetica', sans-serif;
 $font-size-root: 18px;
 $code-font-size: 15px;
@@ -38,7 +36,7 @@ $footer-fg: DimGray;
 /*-- scss:rules --*/
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: $font-family-headings;
+  font-family: $headings-font-family;
 }
 
 /* major third scale */
@@ -72,15 +70,6 @@ h1,h2,h3,h4,h5,h6 {
 
 .navbar-logo {
   max-height: 20px;
-}
-
-/* listing */
-
-.listing-image img {
-  height: 40px;
-  width: 60px;
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 /* table */

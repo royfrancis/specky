@@ -191,6 +191,8 @@ iris |>
   knitr::kable()
 ```
 
+[For more code highlighting documentation, see [here](https://quarto.org/docs/presentations/revealjs/#code-blocks).]{.smaller}
+
 ## Images with knitr
 
 R chunks can use `out-width` to control image dimensions.

@@ -40,14 +40,14 @@ library(fontawesome) # icons
 
 # custom ggplot theme
 theme_report <- function(basesize = 12) {
-    theme_bw(base_size = basesize) %+replace%
-        theme(
-            panel.border = element_blank(),
-            panel.grid.minor = element_blank(),
-            panel.grid.major.x = element_blank(),
-            legend.position = "top",
-            legend.direction = "horizontal"
-        )
+  theme_bw(base_size = basesize) %+replace%
+    theme(
+      panel.border = element_blank(),
+      panel.grid.minor = element_blank(),
+      panel.grid.major.x = element_blank(),
+      legend.position = "top",
+      legend.direction = "horizontal"
+    )
 }
 ```
 

@@ -12,8 +12,9 @@ accordion:
       body: Yes, if you meet the attendance, practical exercise, and group project requirements.
     - header: 2. Can I join late or leave early?
       body: Contact us in advance, and we can discuss on a case-by-case basis.
-    - header: 3. What if I get sick during the course?
-      body: Tell us and stay home until you feel better. We will help minimize the impact on your learning where possible. Contact us if you need assistance.
+    - header: 3. What if I fall ill during the workshop?
+      body: Please inform us immediately and for on-site workshops, stay home until you feel better. We prioritize the well-being of all participants and staff. Further details will be handled on a case-by-case basis.
+      id: feelingsick
     - header: 4. Can you accommodate dietary requirements?
       body: List your dietary requirements on the registration form. We will inform the restaurant, which offers alternatives and can prepare special meals when needed.
     - header: 5. What if I experience discrimination or harassment?

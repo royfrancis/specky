@@ -304,18 +304,18 @@ This image is now 30% of the available width.
 
 ```
 ::: {#fig-mylabel layout-ncol=2}
-![Caption for figure 1](assets/image.webp){width="40%"}
+![Caption for figure 1](assets/image.webp){width="40%" fig-align="center"}
 
-![Caption for figure 2](assets/image.webp){width="40%"}
+![Caption for figure 2](assets/image.webp){width="40%" fig-align="center"}
 
 These figures are interesting.
 :::
 ```
 
 ::: {#fig-mylabel layout-ncol="2"}
-![Caption for figure 1](assets/image.webp){width="40%"}
+![Caption for figure 1](assets/image.webp){width="40%" fig-align="center"}
 
-![Caption for figure 2](assets/image.webp){width="40%"}
+![Caption for figure 2](assets/image.webp){width="40%" fig-align="center"}
 
 These figures are interesting.
 :::
