@@ -17,8 +17,6 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    env:
-      TZ: Europe/Stockholm
     steps:
       - name: Check out repo
         uses: actions/checkout@v6
@@ -68,15 +66,10 @@ jobs:
       - run: quarto add --no-prompt royfrancis/quarto-team
       - run: quarto add --no-prompt royfrancis/quarto-toastui
 
-      - name: Check timezone
-        shell: bash
-        run: |
-          echo "TZ=$TZ"
-          date
-          quarto pandoc --lua-filter=<(printf '%s\n' 'function Pandoc(doc) io.stderr:write(os.date("%c %Z"), "\n"); return doc end') -t plain </dev/null
-
       - name: Render Quarto Project
         uses: quarto-dev/quarto-actions/render@v2
+        env:
+          TZ: Europe/Stockholm
 
       - name: Configure Github Pages
         uses: actions/configure-pages@v6
