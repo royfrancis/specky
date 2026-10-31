@@ -21,12 +21,22 @@ execute:
 ::: {.home-grid-child-left}
 
 ## [Specky: Course Template]{.large}
-### A quarto course template
 
-- [Report](reports/sample/index.html)
-- [Presentation](slides/sample/index.html)
+::: {.tagline}
+A Quarto website template for courses and workshops
+:::
 
-For usage, instructions and demo examples, see [Contents](home_contents.html)
+::: {.home-buttons}
+
+[{{< fa file-lines >}} Report](reports/sample/index.html){.btn .btn-primary}
+
+[{{< fa file-powerpoint >}} Slides](slides/sample/index.html){.btn .btn-primary}
+
+[{{< fa book-open >}} Contents](home_contents.html){.btn .btn-tertiary}
+
+:::
+
+See **Contents** page for usage, instructions and demo examples.
 
 ---
 

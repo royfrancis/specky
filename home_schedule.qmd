@@ -32,21 +32,27 @@ toastui:
       - id: "session"
         name: "Session"
         color: inherit
-        backgroundColor: "#D6EAF8"
-        dragBackgroundColor: "#D6EAF8"
-        borderColor: "#85C1E9"
+        backgroundColor: "#CEE198"
+        dragBackgroundColor: "#CEE198"
+        borderColor: "#6F883B"
       - id: "free"
         name: "Free"
         color: inherit
-        backgroundColor: "#FCF3CF"
-        dragBackgroundColor: "#FCF3CF"
-        borderColor: "#F7DC6F"
+        backgroundColor: "#F5F5F5"
+        dragBackgroundColor: "#F5F5F5"
+        borderColor: "#9399A0"
       - id: "extra"
         name: "Extra"
         color: inherit
-        backgroundColor: "#E8DAEF"
-        dragBackgroundColor: "#E8DAEF"
-        borderColor: "#BB8FCE"
+        backgroundColor: "#AAD4EE"
+        dragBackgroundColor: "#AAD4EE"
+        borderColor: "#4177A8"
+      - id: "unused"
+        name: "Unused"
+        color: inherit
+        backgroundColor: "#F4B8B1"
+        dragBackgroundColor: "#F4B8B1"
+        borderColor: "#A8505F"
 format: html
 ---
 

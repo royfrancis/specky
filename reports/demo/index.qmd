@@ -768,13 +768,13 @@ Hidden content
 ### Conditional content
 
 ````
-::: {{.content-visible when-format="html"}}
+::: {.content-visible when-format="html"}
 Will only appear in HTML.
 :::
 ````
 
 ````
-::: {{.content-hidden when-format="html"}}
+::: {.content-hidden when-format="html"}
 Will not appear in HTML.
 :::
 ````
@@ -1062,7 +1062,7 @@ Shortcodes are documented [here](https://quarto.org/docs/authoring/shortcodes.ht
 
 ## Accordions
 
-Accordion support is provided through the [accordion](https://github.com/royfrancis/accordion) extension.
+Accordion support is provided through the [accordion](https://github.com/royfrancis/quarto-accordion) extension.
 
 Accordion contents can be defined in the YAML front matter as shown below.
 
@@ -1105,7 +1105,7 @@ Multiple inline items can be defined using JSON.
 
 ## Leaflet maps
 
-Leaflet maps are enabled through the `leaflet` extension. Add map configuration to the page's YAML front matter or `_metadata.yml`, then use the `{{< leaflet mapname >}}` shortcode. See the [extension documentation](https://github.com/royfrancis/quarto-leaflet) for details.
+Leaflet maps are enabled through the `leaflet` extension. Add map configuration to the page's YAML front matter or `_metadata.yml`, then use the `{{{< leaflet mapname >}}}` shortcode. See the [extension documentation](https://github.com/royfrancis/quarto-leaflet) for details.
 
 ```yaml
 ---

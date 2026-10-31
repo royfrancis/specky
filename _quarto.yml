@@ -97,8 +97,6 @@ format:
     date: last-modified
     # format displayed dates with day, month, and year
     date-format: "DD-MMM-YYYY"
-    # use this image as the default page image, for listing
-    image: "assets/images/featured.webp"
     # images can be opened in a lightbox
     lightbox: auto
   # configure Reveal.js presentation output
@@ -145,8 +143,6 @@ format:
     chalkboard: true
     # show icons in callout blocks
     callout-icon: true
-    # use this image as the default image, used in listing
-    image: "assets/images/featured.webp"
     # use this image as the presentation hero image on title slide
     hero: "assets/images/slide-hero.webp"
     # set attributes for the title slide
@@ -155,6 +151,8 @@ format:
       data-background-image: "assets/images/cover.webp"
       # scale the background image to cover the slide
       data-background-size: "cover"
+      # anchor the background image to the right edge
+      data-background-position: "right"
       # render the background image fully opaque
       data-background-opacity: "1"
     # set the default presentation subtitle

@@ -81,3 +81,32 @@ body {
 .home-grid-child-left h2 {
     margin-top: 0.5em;
 }
+
+/* headline, tagline and buttons */
+
+.home-grid-child-left h1 {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.home-grid-child-left .tagline {
+  margin-bottom: 1.25em;
+  font-size: 1.15em;
+}
+
+.home-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin-bottom: 1.5em;
+}
+
+.home-buttons p {
+  margin: 0;
+}

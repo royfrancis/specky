@@ -14,7 +14,7 @@ For a demo site and usage, see [here](https://royfrancis.github.io/specky).
 
 ## Usage
 
-- Recommended quarto 1.8.25 or higher
+- Requires Quarto 1.8.25 or higher (enforced in `_quarto.yml`)
 - To download and use a starter template, run in the terminal
 
 :exclamation: Demo files are not downloaded
@@ -29,7 +29,7 @@ quarto use template royfrancis/specky
 quarto add --no-prompt quarto-ext/fontawesome
 quarto add --no-prompt royfrancis/quarto-revealjs-header
 quarto add --no-prompt royfrancis/quarto-revealjs-pointer
-quarto add --no-prompt mcanouil/quarto-collapse-output@1.4.0
+quarto add --no-prompt mcanouil/quarto-collapse-output
 quarto add --no-prompt royfrancis/quarto-accordion
 quarto add --no-prompt royfrancis/quarto-leaflet
 quarto add --no-prompt royfrancis/quarto-team
@@ -59,6 +59,8 @@ Here are a few examples of this template in action:
 - Built using [Quarto](https://quarto.org/)
 - Uses the [fontawesome extension](https://github.com/quarto-ext/fontawesome) for icons
 - Uses the [collapse-output extension](https://github.com/mcanouil/quarto-collapse-output) for code output folding
+- Uses the [revealjs-header](https://github.com/royfrancis/quarto-revealjs-header) and [revealjs-pointer](https://github.com/royfrancis/quarto-revealjs-pointer) extensions for the slide logo header and presenter pointer
+- Uses the [accordion](https://github.com/royfrancis/quarto-accordion), [leaflet](https://github.com/royfrancis/quarto-leaflet), [team](https://github.com/royfrancis/quarto-team) and [toastui](https://github.com/royfrancis/quarto-toastui) extensions for accordions, maps, team profiles and the schedule
 
 ---
 

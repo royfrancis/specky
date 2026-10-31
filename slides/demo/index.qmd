@@ -97,7 +97,6 @@ More control is possible with the `.incremental` class and `.fragment` class.
 :::{.column width="50%" .fragment}
 
 ```
-:::
 ::: {.fragment}
 Content A
 :::
@@ -253,14 +252,10 @@ abcdefghijklmnopqrstuvwxyzåäö
 This is subscript `H~2~O` H~2~O and superscript `2^10^` 2^10^
 
 ```markdown
-::: {.blockquote}
-This line is quoted.
-:::
+> This line is quoted.
 ```
 
-::: {.blockquote}
-This line is quoted.
-:::
+> This line is quoted.
 
 :::
 ::: {.column width="40%" .fragment}
@@ -356,18 +351,20 @@ In a Reveal.js presentation, `.aside` content is pushed to the bottom.
 ::: {.column width="50%" .fragment}
 
 ```markdown
-1. Incremental item 1
-2. Incremental item 2
+1. Item 1
+2. Item 2
+3. Item 3
 ```
 
-1. Incremental item 1
-2. Incremental item 2
-3. Incremental item 3
+1. Item 1
+2. Item 2
+3. Item 3
 
 ```markdown
 :::{.incremental}
 1. Incremental item 1
 2. Incremental item 2
+3. Incremental item 3
 :::
 ```
 
