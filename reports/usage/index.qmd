@@ -57,6 +57,7 @@ The template command creates a website project that you can modify as needed. Af
 ├── home_schedule.qmd
 ├── home_syllabus.qmd
 ├── index.qmd
+├── LICENSE
 ├── schedule.csv
 ├── _metadata.yml
 ├── _quarto.yml
@@ -115,7 +116,7 @@ Start by updating `_quarto.yml`, which contains the project and website settings
   - Sections are automatically numbered (`number-sections: true`)
   - Long code lines wrap instead of scrolling horizontally (`code-overflow: wrap`)
   - A default subtitle has been set
-  - Last-modified dates are enabled by default (`date: last-modified`); the home pages override this with `date: ""`
+  - Last-modified dates are enabled by default (`date: last-modified`); the home pages override this with `date: ""`. Locally the date is the file modification time; on CI a fresh checkout resets file times, so every page shows the build date
   - Listing cards use the `image-placeholder` of the listing page (`reports/index.qmd`, `slides/index.qmd`) unless a page sets `image:` in its front matter; `image:` also becomes the page's social preview, otherwise `website: image` is used. A page-level override resolves relative to that document's own folder, not the project root, so reaching a project asset needs a depth-correct relative path such as `../../assets/images/example.webp`
   - Images can be clicked to open in a lightbox (`lightbox: auto`)
 - Reveal.js presentation settings are under **format: revealjs**
@@ -157,7 +158,7 @@ You can now add course content.
 - The homepage is **index.qmd**
 - Files named `home_*.qmd` are site pages. If you add, remove, or rename one, update `website: navbar` in `_quarto.yml` as needed
 - **home_schedule.qmd** configures a Toast UI schedule that loads `schedule.csv`. It is recommended that events are 15mins or longer for better display.
-- **home_contents.qmd** contains a Markdown table with links to reports and slides
+- **home_contents.qmd** contains Markdown tables with links to the sample report and slides
 - **home_about.qmd** contains organizer profiles and practical information such as venue and map details
 - **home_faq.qmd** contains an accordion example with frequently asked questions
 - **home_syllabus.qmd** shows tab panels

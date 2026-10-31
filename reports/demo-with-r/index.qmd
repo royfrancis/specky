@@ -2,7 +2,7 @@
 title: "Quarto with R"
 author: "Roy Francis"
 description: "This document showcases the use of R."
-image: "/assets/images/featured.webp"
+image: "../../assets/images/featured.webp"
 format: html
 ---
 
@@ -290,7 +290,7 @@ iris |>
       Petal.Length = "Petal Length", Petal.Width = "Petal Width"
     ) |>
     tab_source_note(
-        source_note = md("Source: Iris data. Anderson, 1936; Fisher, 1936)")
+        source_note = md("Source: Iris data (Anderson, 1936; Fisher, 1936)")
     )
 ```
 
@@ -559,7 +559,7 @@ p <- ggplot(iris,aes(x=Sepal.Length,y=Petal.Length,colour=Species))+
       geom_point_interactive(aes(tooltip=paste0("<b>Petal Length:</b> ",Petal.Length,"\n<b>Sepal Length: </b>",Sepal.Length,"\n<b>Species: </b>",Species)),size=2)+
   theme_bw()
 
-tooltip_css <- "background-color:#e7eef3;font-family:Roboto;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;"
+tooltip_css <- "background-color:#e7eef3;font-family:Nunito;padding:10px;border-style:solid;border-width:2px;border-color:#125687;border-radius:5px;"
 
 girafe(code=print(p),
   options=list(

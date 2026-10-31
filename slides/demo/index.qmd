@@ -915,11 +915,11 @@ flowchart LR
   C --> E[Result two]
 ```
 
-## Colourful {background-color="#ABEBC6"}
+## Colorful {background-color="#ABEBC6"}
 
-`## Colourful {background-color="#ABEBC6"}`
+`## Colorful {background-color="#ABEBC6"}`
 
-This slide has a colourful background.
+This slide has a colorful background.
 
 ## Big image {background-image="assets/image.webp"}
 

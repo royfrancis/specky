@@ -302,7 +302,7 @@ legend("bottomright", legend = levels(iris$Species), col = c("coral", "steelblue
 
 ## Static plots • ggplot2
 
-Plotting using [`ggplot2`](http://ggplot2.org/).
+Plotting using [`ggplot2`](https://ggplot2.tidyverse.org/).
 
 ```{r}
 #| fig-height: 6
@@ -317,7 +317,7 @@ iris |>
 
 ## Interactive time series • `dygraphs`
 
-R package [`dygraphs`](http://rstudio.github.io/dygraphs/) provides R bindings for javascript library [dygraphs](http://dygraphs.com/) for time series data.
+R package [`dygraphs`](https://rstudio.github.io/dygraphs/) provides R bindings for javascript library [dygraphs](http://dygraphs.com/) for time series data.
 
 ```{r}
 #| fig-height: 4
@@ -345,7 +345,7 @@ htmltools::tagList(h)
 
 ## Interactive plots • plotly
 
-R package [`plotly`](https://plot.ly/r/) provides R binding around javascript plotting library [`plotly`](https://plot.ly).
+R package [`plotly`](https://plotly.com/r/) provides R binding around javascript plotting library [`plotly`](https://plotly.com).
 
 ```{r}
 library(plotly)
@@ -399,7 +399,7 @@ forceNetwork(Links=MisLinks,Nodes=MisNodes,Source="source",
 
 ## Interactive maps • Leaflet
 
-R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](http://leafletjs.com/).
+R package [`leaflet`](https://rstudio.github.io/leaflet/) provides R bindings for javascript mapping library; [leafletjs](https://leafletjs.com/).
 
 ```{r}
 library(leaflet)
@@ -420,7 +420,7 @@ R package [`crosstalk`](https://rstudio.github.io/crosstalk/index.html) allows c
 library(crosstalk)
 shared_quakes <- SharedData$new(quakes[sample(nrow(quakes), 100),])
 lf <- leaflet(shared_quakes,height=300) |>
-        addTiles(urlTemplate='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') |>
+        addTiles(urlTemplate='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png') |>
         addMarkers()
 py <- plot_ly(shared_quakes,x=~depth,y=~mag,size=~stations,height=300) |> add_markers()
 div(div(lf,style="float:left;width:49%"),div(py,style="float:right;width:49%"))
@@ -428,7 +428,7 @@ div(div(lf,style="float:left;width:49%"),div(py,style="float:right;width:49%"))
 
 ## ObservableJS
 
-- Quarto supports [ObservableJS](https://observablehq.com/) for interactive visualisations in the browser.
+- Quarto supports [ObservableJS](https://observablehq.com/) for interactive visualizations in the browser.
 
 :::: {.columns}
 ::: {.column width="50%"}
