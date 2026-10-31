@@ -18,12 +18,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     env:
-      # site timestamps use the system time zone, so build in Swedish time
       TZ: Europe/Stockholm
     steps:
       - name: Check out repo
         uses: actions/checkout@v6
 
+      - name: Check timezone
+      shell: bash
+      run: |
+        echo "TZ=$TZ"
+        date
+        quarto pandoc --lua-filter=<(printf '%s\n' 'function Pandoc(doc) io.stderr:write(os.date("%c %Z"), "\n"); return doc end') -t plain </dev/null
+        
       - name: Setup R
         uses: r-lib/actions/setup-r@v2
 
