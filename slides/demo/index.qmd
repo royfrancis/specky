@@ -96,7 +96,7 @@ More control is possible with the `.incremental` class and `.fragment` class.
 :::
 :::{.column width="50%" .fragment}
 
-```
+```markdown
 ::: {.fragment}
 Content A
 :::
@@ -285,13 +285,14 @@ Normal text\
 
 ## Buttons and badges
 
-`[button]{.btn}`  [button]{.btn}
+`[[button](http://example.com)]{.btn}`  [[button](http://example.com)]{.btn}
 
-`[button]{.btn .btn-primary}`  [button]{.btn .btn-primary}
+`[[button](http://example.com)]{.btn .btn-primary}`  [[button](http://example.com)]{.btn .btn-primary}
 
-`[button]{.btn .btn-secondary}`  [button]{.btn .btn-secondary}
+`[[button](http://example.com)]{.btn .btn-secondary}`  [[button](http://example.com)]{.btn .btn-secondary}
 
-`[button]{.btn .btn-tertiary}`  [button]{.btn .btn-tertiary}
+`[[button](http://example.com)]{.btn .btn-tertiary}`  [[button](http://example.com)]{.btn .btn-tertiary}
+
 
 `This is a [badge]{.badge .badge-primary}`  
 This is a [badge]{.badge .badge-primary}

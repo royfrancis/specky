@@ -36,7 +36,7 @@ A Quarto website template for courses and workshops
 
 :::
 
-See **Contents** page for the sample report and slides. For usage and instructions, see the [usage guide](https://royfrancis.github.io/specky/reports/usage/index.html).
+See **Contents** page for the sample report and slides. For usage and instructions, see the [usage guide](reports/usage/index.html).
 
 ---
 

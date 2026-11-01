@@ -40,7 +40,6 @@ website:
         href: "home_about.qmd"
       - icon: github
         href: https://github.com/royfrancis/specky
-        # name the icon-only link for screen readers
         aria-label: "GitHub repository"
   # configure the shared page footer
   page-footer:
