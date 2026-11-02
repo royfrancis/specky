@@ -55,7 +55,7 @@ jobs:
       - name: Setup quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
-          version: 1.10.18
+          version: 1.11.9
       - run: quarto --version
       - run: quarto add --no-prompt quarto-ext/fontawesome
       - run: quarto add --no-prompt mcanouil/quarto-collapse-output

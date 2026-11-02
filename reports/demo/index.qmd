@@ -340,9 +340,9 @@ Here are some [Bootstrap](https://getbootstrap.com/docs/5.0/utilities/shadows/) 
 ### Using HTML
 
 The image below is displayed at 30% width.\
-`<img src="assets/image.webp" alt="Wooden dock overlooking a lake" style="width:30%;"/>`
+`<img src="assets/image.webp" style="width:30%;"/>`
 
-<img src="assets/image.webp" alt="Wooden dock overlooking a lake" style="width:30%;"/>
+<img src="assets/image.webp" style="width:30%;"/>
 
 For more information on figures, see [here](https://quarto.org/docs/authoring/figures.html). Images generated through code are not covered here.
 
